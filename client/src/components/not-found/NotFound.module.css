@@ -1,0 +1,33 @@
+.notFound {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Inter';
+    color: #191919;
+    position: relative;
+    margin: 90px auto;
+}
+
+.notfoundImg {
+    width: 450px;
+    height: auto;
+
+}
+
+.notfoundText {
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.homeLink {
+    color: #C80D44;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 13px;
+    margin-top: 20px;
+}
+
+.homeLink:hover {
+    text-decoration: underline;
+}
