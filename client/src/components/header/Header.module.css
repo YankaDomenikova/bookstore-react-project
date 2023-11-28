@@ -5,7 +5,6 @@ header {
     display: flex;
     flex-direction: column;
     font-family: 'Inter', sans-serif;
-
 }
 
 .headerTop {
@@ -13,20 +12,23 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 13px 40px;
-    background-color: #fcfcfc;
+
+}
+
+.link {
+    color: #191919;
+    font-size: 15px;
+    font-weight: 400;
+    text-decoration: none;
 
 }
 
 .links li {
     display: inline-block;
-    list-style-type: none;
-    margin-right: 10px;
+    list-style-type: nonse;
+    margin-right: 13px;
 }
 
-
-.links li a {
-    text-decoration: none;
-}
 
 .linkMain,
 .logoWrapper,
@@ -34,11 +36,6 @@ header {
     min-width: 180px;
 }
 
-.linksMain li .link {
-    color: #191919;
-    font-size: 14px;
-    font-weight: 400;
-}
 
 .logoWrapper {
     display: flex;
@@ -46,25 +43,44 @@ header {
     justify-content: center;
 }
 
-.logoWrapper .logoImg {
-    max-height: 40px;
+.logoImg {
+    max-height: 28px;
     margin-right: 2px;
     width: auto;
 }
 
-.logoWrapper .siteTitle {
-    font-size: 26px;
+.siteTitle {
+    font-size: 28px;
+    font-weight: 300;
 }
 
 .shopping {
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
 }
 
-.shopping .shoppingCart {
-    margin-right: 15px;
+.shoppingCart {
+    margin-right: 20px;
+    position: relative;
 }
+
+.cartItemsQuantity {
+    position: absolute;
+    bottom: -3px;
+    left: 15px;
+    background: #C80D44;
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    color: #fcfcfc;
+    font-size: 9px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .shopping .loginButton {
     background: #191919;
@@ -76,12 +92,18 @@ header {
     font-weight: 200;
 }
 
+.authLink {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 
 .headerBottom {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 13px 0;
+    padding: 11px 0;
     background: #191919;
     border-top: 2px solid #C80D44;
     border-bottom: 2px solid #E7DB75;
@@ -91,5 +113,5 @@ header {
     color: #fcfcfc;
     font-weight: 200;
     margin: 0 5px;
-    font-size: 15px;
+    font-size: 14px;
 }
