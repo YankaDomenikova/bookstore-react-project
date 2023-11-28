@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+
+header {
+    display: flex;
+    flex-direction: column;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.headerTop {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background-color: #fcfcfc;
+
+}
+
+.links li {
+    display: inline-block;
+    list-style-type: none;
+    margin-right: 10px;
+}
+
+
+.links li a {
+    text-decoration: none;
+}
+
+.linkMain,
+.logoWrapper,
+.shopping {
+    min-width: 180px;
+}
+
+.linksMain li .link {
+    color: #191919;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.logoWrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoWrapper .logoImg {
+    max-height: 40px;
+    margin-right: 2px;
+    width: auto;
+}
+
+.logoWrapper .siteTitle {
+    font-size: 26px;
+}
+
+.shopping {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.shopping .shoppingCart {
+    margin-right: 15px;
+}
+
+.shopping .loginButton {
+    background: #191919;
+    color: #fcfcfc;
+    border: none;
+    padding: 8px 22px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 200;
+}
+
+
+.headerBottom {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 0;
+    background: #191919;
+    border-top: 2px solid #C80D44;
+    border-bottom: 2px solid #E7DB75;
+}
+
+.bookLinks .link {
+    color: #fcfcfc;
+    font-weight: 200;
+    margin: 0 5px;
+}
