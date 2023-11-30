@@ -1,0 +1,174 @@
+.contentContainer {
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    font-family: 'Inter', sans-serif;
+}
+
+.sideDesign {
+    height: 100%;
+    width: 40%;
+}
+
+.sideDesign.register {
+    height: 100%;
+    width: 40%;
+    transform: rotate(180deg);
+}
+
+.sideDesign img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.authSection {
+    height: 100%;
+    width: 48%;
+    background: #fcfcfc;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.authSection.registerSection {
+    align-items: flex-end;
+
+}
+
+.formHeading {
+    margin-bottom: 53px;
+    font-weight: 500;
+    font-size: 33px;
+
+}
+
+
+.authForm {
+    width: 330px;
+}
+
+.inputWrapper {
+    position: relative;
+}
+
+.formInput {
+    width: 100%;
+    height: 48px;
+    background: transparent;
+    outline: none;
+    border: 2px solid #C80D44;
+    border-radius: 4px;
+    color: #C80D44;
+    padding: 0 18px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.formInput::placeholder {
+    color: transparent;
+}
+
+.passwordWrapper {
+    margin-top: 40px;
+}
+
+.passwordWrapper .formInput {
+    padding: 0 48px 0 18px;
+}
+
+.usernameWrapper {
+    margin-bottom: 40px;
+}
+
+.formLabel {
+    color: #C80D44;
+    position: absolute;
+    top: 16px;
+    left: 17px;
+    background: #fcfcfc;
+    padding: 0 2px;
+    pointer-events: none;
+    transform-origin: left center;
+    transition: transform 250ms;
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.formInput:focus + .formLabel,
+.formInput:not(:placeholder-shown) + .formLabel {
+    transform: translate(5px, -24px) scale(0.90);
+
+}
+
+.showPasswordBtn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none;
+    background: transparent;
+}
+
+.showPasswordBtn img {
+    height: 28px;
+    width: 28px;
+}
+
+
+.details {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 25px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.forgotPassword {
+    color: #C80D44;
+    text-decoration: none;
+}
+
+.rememberMe {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #C80D44;
+
+}
+
+.rememberMe input[type="checkbox"] {
+    accent-color: black;
+    color: #E7DB75;
+    margin-right: 2px;
+}
+
+.loginBtn {
+    width: 100%;
+    background: #191919;
+    color: #E7DB75;
+    height: 51px;
+    border-radius: 5px;
+    margin-top: 40px;
+    font-size: 16px;
+    font-family: 'Inter';
+    font-weight: 300;
+}
+
+.linkAuth {
+    display: flex;
+    margin-top: 20px;
+    font-size: 15px;
+}
+
+.linkAuth p a {
+    color: #C80D44;
+}
