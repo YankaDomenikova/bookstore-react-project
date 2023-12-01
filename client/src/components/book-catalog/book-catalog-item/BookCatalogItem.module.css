@@ -1,0 +1,66 @@
+.catalogItem {
+    border: 1px solid hsl(54, 70%, 78%);
+    width: 178px;
+    height: 332px;
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    border-radius: 3px;
+    margin: 0 20px 25px 20px;
+    /* margin: 0 20px 20px 20px; */
+}
+
+
+.imageWrapper {
+    height: 180px;
+    width: 100%;
+    overflow: hidden;
+    border-radius: 2px;
+}
+
+.imageWrapper img {
+    width: 100%;
+    height: auto;
+}
+
+.bookDetails {
+    margin-top: 6px;
+}
+
+.bookTitle {
+    width: 145px;
+    color: #C80D44;
+    font-size: 16px;
+    font-weight: 400;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 14px;
+}
+
+.authorName {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+.bookPrice {
+    font-weight: 400;
+    margin-top: 5px;
+    font-weight: 400;
+
+}
+
+.addToBasketBtn {
+    font-family: 'Inter';
+    width: 100%;
+    height: 36px;
+    margin-top: auto;
+    background: #191919;
+    color: #fcfcfc;
+    font-size: 12px;
+    font-weight: 200;
+    border-radius: 3px;
+}
