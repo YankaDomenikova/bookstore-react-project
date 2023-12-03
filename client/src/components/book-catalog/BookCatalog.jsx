@@ -1,5 +1,6 @@
-import styles from './BookCatalog.module.css'
 import BookCatalogItem from './book-catalog-item/BookCatalogItem';
+
+import styles from './BookCatalog.module.css'
 
 export default function BookCatalog() {
     return (

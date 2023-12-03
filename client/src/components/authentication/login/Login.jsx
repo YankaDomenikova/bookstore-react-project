@@ -1,7 +1,9 @@
 import { useState } from 'react';
+import { Link } from 'react-router-dom';
+
+import { Paths } from '../../../paths/paths';
 
 import styles from '../Auth.module.css';
-
 import eyeOpenIcon from '../../../assets/eye-open-solid-svgrepo-com.svg'
 import eyeClosedIcon from '../../../assets/eye-close-solid-svgrepo-com.svg'
 
@@ -50,7 +52,7 @@ export default function Login() {
                 </form>
 
                 <div className={styles.linkAuth}>
-                    <p>No account? <a href="" class="">Sign in</a> </p>
+                    <p>No account? <Link to={Paths.Register} class="">Sign in</Link> </p>
                 </div>
 
             </section>

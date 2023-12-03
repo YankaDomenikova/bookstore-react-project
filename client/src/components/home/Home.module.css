@@ -1,0 +1,18 @@
+.container {
+    background: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 300px;
+}
+
+.container button {
+    background-color: #C80D44;
+    border: none;
+    color: #fcfcfc;
+    height: 50px;
+    width: 175px;
+    margin-top: 20px;
+    border-radius: 3px;
+}

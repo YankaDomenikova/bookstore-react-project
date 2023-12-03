@@ -11,13 +11,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 13px 40px;
+    padding: 10px 40px;
 
 }
 
 .link {
     color: #191919;
-    font-size: 15px;
+    font-size: 14px;
     font-weight: 400;
     text-decoration: none;
 
@@ -30,10 +30,10 @@ header {
 }
 
 
-.linkMain,
+.linksMain,
 .logoWrapper,
 .shopping {
-    min-width: 180px;
+    min-width: 150px;
 }
 
 
@@ -44,13 +44,13 @@ header {
 }
 
 .logoImg {
-    max-height: 28px;
+    max-height: 22px;
     margin-right: 2px;
     width: auto;
 }
 
 .siteTitle {
-    font-size: 28px;
+    font-size: 20px;
     font-weight: 300;
 }
 
@@ -103,15 +103,17 @@ header {
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 11px 0;
+    padding: 8px 0;
     background: #191919;
-    border-top: 2px solid #C80D44;
-    border-bottom: 2px solid #E7DB75;
+    border-top: 3px solid #C80D44;
+    border-bottom: 3px solid #E7DB75;
 }
+
+
 
 .bookLinks .link {
     color: #fcfcfc;
     font-weight: 200;
     margin: 0 5px;
-    font-size: 14px;
+    font-size: 13px;
 }
