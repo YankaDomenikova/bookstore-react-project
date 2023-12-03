@@ -6,7 +6,10 @@
     font-family: 'Inter';
     color: #191919;
     position: relative;
-    margin: 80px auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .notfoundImg {

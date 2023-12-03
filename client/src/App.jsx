@@ -18,7 +18,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<MainLayout />}>
+        <Route path={Paths.Home} element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path={Paths.Catalog} element={<BookCatalog />} />
         </Route>

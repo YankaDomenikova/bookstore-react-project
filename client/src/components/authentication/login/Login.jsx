@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useAsyncValue, useNavigate } from 'react-router-dom';
 
 import { Paths } from '../../../paths/paths';
 
@@ -9,6 +9,7 @@ import eyeClosedIcon from '../../../assets/eye-close-solid-svgrepo-com.svg'
 
 export default function Login() {
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const showPasswordHandler = () => {
         setShowPassword(!showPassword);
@@ -16,6 +17,12 @@ export default function Login() {
 
     return (
         <div className={styles.contentContainer}>
+            <button
+                className={`${styles.backBtn} ${styles.backBtnLogin}`}
+                onClick={() => navigate(-1)}
+            >
+                Go back
+            </button>
             <section className={styles.sideDesign}>
                 <img src="design.png" alt="" />
             </section>

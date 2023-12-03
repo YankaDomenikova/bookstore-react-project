@@ -23,10 +23,10 @@ export default function Header() {
                         </li>
                     </ul>
                 </div>
-                <div className={styles.logoWrapper}>
+                <Link className={styles.logoWrapper} to={Paths.Home}>
                     <img className={styles.logoImg} src="logo.png" alt="" />
                     <p className={styles.siteTitle}>Bookstore</p>
-                </div>
+                </Link>
                 <div className={styles.shopping}>
                     <div className={styles.shoppingCart}>
                         <img src={basketIcon} alt="" />

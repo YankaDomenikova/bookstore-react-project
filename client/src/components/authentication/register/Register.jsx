@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import { Paths } from '../../../paths/paths';
 
@@ -9,6 +9,7 @@ import eyeClosedIcon from '../../../assets/eye-close-solid-svgrepo-com.svg'
 
 export default function Register() {
     const [showPassword, setShowPassword] = useState(false);
+    const navigate = useNavigate();
 
     const showPasswordHandler = () => {
         setShowPassword(!showPassword);
@@ -16,6 +17,13 @@ export default function Register() {
 
     return (
         <div className={styles.contentContainer}>
+            <button
+                className={`${styles.backBtn} ${styles.backBtnRegister}`}
+                onClick={() => navigate(-1)}
+            >
+                Go back
+            </button>
+
             <section className={`${styles.authSection} ${styles.registerSection}`}>
                 <div className={styles.wrapper}>
                     <h1 className={styles.formHeading}>Register</h1>

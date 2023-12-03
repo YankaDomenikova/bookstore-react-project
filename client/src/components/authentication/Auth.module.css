@@ -6,6 +6,7 @@
     align-items: center;
     justify-content: space-between;
     font-family: 'Inter', sans-serif;
+    position: relative;
 }
 
 .sideDesign {
@@ -171,4 +172,24 @@
 
 .linkAuth p a {
     color: #C80D44;
+}
+
+.backBtn {
+    position: absolute;
+    top: 12px;
+
+    border: none;
+    background: transparent;
+    color: #C80D44;
+    text-transform: uppercase;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.backBtnLogin {
+    right: 15px;
+}
+
+.backBtnRegister {
+    left: 15px;
 }
