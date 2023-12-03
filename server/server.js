@@ -1339,59 +1339,399 @@
     	}
     };
     var seedData = {
-    	recipes: {
-    		"3987279d-0ad4-4afb-8ca9-5b256ae3b298": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Easy Lasagna",
-    			img: "assets/lasagna.jpg",
-    			ingredients: [
-    				"1 tbsp Ingredient 1",
-    				"2 cups Ingredient 2",
-    				"500 g  Ingredient 3",
-    				"25 g Ingredient 4"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551279012
-    		},
-    		"8f414b4f-ab39-4d36-bedb-2ad69da9c830": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Grilled Duck Fillet",
-    			img: "assets/roast.jpg",
-    			ingredients: [
-    				"500 g  Ingredient 1",
-    				"3 tbsp Ingredient 2",
-    				"2 cups Ingredient 3"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551344360
-    		},
-    		"985d9eab-ad2e-4622-a5c8-116261fb1fd2": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Roast Trout",
-    			img: "assets/fish.jpg",
-    			ingredients: [
-    				"4 cups Ingredient 1",
-    				"1 tbsp Ingredient 2",
-    				"1 tbsp Ingredient 3",
-    				"750 g  Ingredient 4",
-    				"25 g Ingredient 5"
-    			],
-    			steps: [
-    				"Prepare ingredients",
-    				"Mix ingredients",
-    				"Cook until done"
-    			],
-    			_createdOn: 1613551388703
-    		}
-    	},
+        categories: {
+            "d9e9296e-c2ef-48df-b5b6-3df05e99ace0": {
+                name: "Romance",
+                _id: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
+            },
+            "e5f56f1e-5631-48a1-8fc5-9f374424306f": {
+                name: "Horror",
+                _id: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+            },
+            "12a0f886-7146-4fe7-8366-460b5c5e5da1": {
+                name: "Poetry",
+                _id: "12a0f886-7146-4fe7-8366-460b5c5e5da1",
+            },
+            "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5": {
+                name: "Science Fiction",
+                _id: "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5",
+            },
+            "0491d909-5169-4ee6-abf5-5b0d57015d92": {
+                name: "Arts & Photography",
+                _id: "0491d909-5169-4ee6-abf5-5b0d57015d92",
+            },
+            "ee7b8979-9eee-4b05-a59c-c0026d321e0e": {
+                name: "Biography & Memoir",
+                _id: "ee7b8979-9eee-4b05-a59c-c0026d321e0e",
+            },
+        },
+        books: {
+            // Romance books
+            "b867ae43-c435-488b-89b0-5764ec6f65b9": {
+                title: "Throne of Glass",
+                author: "Sarah J. Maas",
+                price: 17.67,
+                description: "Enter the world of Throne of Glass with the first book in the #1 bestselling series by Sarah J. Maas.In a land without magic, an assassin is summoned to the castle. She has no love for the vicious king who rules from his throne of glass, but she has not come to kill him. She has come to win her freedom. If she defeats twenty-three murderers, thieves, and warriors in a competition, she will be released from prison to serve as the King's Champion.Her name is Celaena Sardothien.The Crown Prince will provoke her. The Captain of the Guard will protect her. And a princess from a faraway country will befriend her. But something rotten dwells in the castle, and it's there to kill. When her competitors start dying mysteriously, one by one, Celaena's fight for freedom becomes a fight for survival-and a desperate quest to root out the evil before it destroys her world.Thrilling and fierce, Throne of Glass is the first book in the #1 New York Times bestselling series that has captivated readers worldwide.",
+                publishDate: "February 14, 2023",
+                publisher: "Bloomsbury Publishing",
+                pages: 432,
+                dimensions: "14x24x6",
+                language: "English",
+                format: "Paperback",
+                quantity: 15,
+                rating: 0,
+                imgageUrl: "",
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1C8F2cL20FLYULOnncesEQqpwDornJkHi",
+                _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
+                _id: "b867ae43-c435-488b-89b0-5764ec6f65b9"
+            },
+            "024d5155-2c67-4c10-b3a5-ae5969c466b3": {
+                title: "Baumgartner",
+                author: "Paul Auster",
+                price: 25.11,
+                description: "Paul Auster's brilliant eighteenth novel opens with a scorched pot of water, which Sy Baumgartner -- phenomenologist, noted author, and soon-to-be retired philosophy professor - has just forgotten on the stove.Baumgartner's life had been defined by his deep, abiding love for his wife, Anna, who was killed in a swimming accident nine years earlier. Now 71, Baumgartner continues to struggle to live in her absence as the novel sinuously unfolds into spirals of memory and reminiscence, delineated in episodes spanning from 1968, when Sy and Anna meet as broke students working and writing in New York, through their passionate relationship over the next forty years, and back to Baumgartner's youth in Newark and his Polish-born father's life as a dress-shop owner and failed revolutionary.",
+                publishDate: "November 07, 2023",
+                publisher: "Atlantic Monthly Press",
+                pages: 208,
+                dimensions: "4x24x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 3,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1zzQNptXchrJCHjZHR37IfGQaZszwhz4G",
+                _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
+                _id: "024d5155-2c67-4c10-b3a5-ae5969c466b3"
+            },
+            "7056d2f6-9fb6-4e8a-8ecd-6f41aab4f0a7": {
+                title: "Pride and Prejudice (Revised)",
+                author: "Jane Austen",
+                price: 41.85,
+                description: "With its 'light and bright and sparkling' dialogue, its romantic denouement and its lively heroine, Pride and Prejudice is Jane Austen's most perennially popular novel. The love story of Elizabeth Bennet and Fitzwilliam Darcy, who misjudge, then challenge and change each other, is also a novel about the search for happiness and self- knowledge in a world of strict social rules, where a woman must marry well to survive.",
+                publishDate: "December 31, 2002",
+                publisher: "Penguin Group",
+                pages: 488,
+                dimensions: "14x20x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 5,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1oEYt9dVQ8hdVlD2mQmh6tdM9WP_GGMcu",
+                _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
+                _id: "7056d2f6-9fb6-4e8a-8ecd-6f41aab4f0a7"
+            },
+            "113ac548-14d5-4b84-9abd-1af36b4978db": {
+                title: "Romeo and Juliet",
+                author: "William Shakespeare",
+                price: 14.87,
+                description: "In Romeo and Juliet, Shakespeare creates a violent world, in which two young people fall in love. It is not simply that their families disapprove; the Montagues and the Capulets are engaged in a blood feud. In this death-filled setting, the movement from love at first sight to the lovers' final union in death seems almost inevitable. And yet, this play set in an extraordinary world has become the quintessential story of young love. In part because of its exquisite language, it is easy to respond as if it were about all young lovers. The authoritative edition of Romeo and Juliet from The Folger Shakespeare Library, the trusted and widely used Shakespeare series for students and general readers, includes: \n-Freshly edited text based on the best early printed version of the play \n-Newly revised explanatory notes conveniently placed on pages facing the text of the play \n-Scene-by-scene plot summaries \n-A key to the play's famous lines and phrases \n-An introduction to reading Shakespeare's language \n-An essay by a leading Shakespeare scholar providing a modern perspective on the play \n-Fresh images from the Folger Shakespeare Library's vast holdings of rare books \n-An up-to-date annotated guide to further reading",
+                publishDate: "January 01, 2004",
+                publisher: "Simon & Schuster",
+                pages: 336,
+                dimensions: "11x17x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 10,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1PjioAn9cO2HT-0ZDyDgnebmiBaN1UUYQ",
+                _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
+                _id: "113ac548-14d5-4b84-9abd-1af36b4978db"
+            },
+            "8aca35e0-e55c-4d8c-87a0-6ea6dcd0cac2": {
+                title: "Terms and Conditions",
+                author: "Auren Asher",
+                price: 16.73,
+                description: "'m destined to become the next CEO of my family's media empire. The only problem? My grandfather's inheritance clause. Fulfilling his dying wish of getting married and having an heir seemed impossible until my assistant volunteers for the job. Our marriage was supposed to be the perfect solution to my biggest problem.  But the more we act in love for the public, the more unsure I feel about our contract.  Caring about Iris was never part of the deal. Especially not when breaking her heart is inevitable.",
+                publishDate: "February 24, 2022",
+                publisher: "Bloom Books",
+                pages: 480,
+                dimensions: "13x20x3",
+                language: "English",
+                format: "Paperback",
+                quantity: 3,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=13I9rvu6TwSbspx_CWBT3RkQLir0o-GhC",
+                _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
+                _id: "8aca35e0-e55c-4d8c-87a0-6ea6dcd0cac2"
+            },
+            "70e68a6b-78be-42e4-9f49-f465d75ed7d4": {
+                title: "Jane Eyre",
+                author: "Charlotte Brontë",
+                price: 13.94,
+                description: "When Jane Eyre was first published in 1847, it became an instant bestseller, so popular that the publisher commissioned a second printing in just three months. The story of a young girl--plain, poor, and alone--who endures abuse, abandonment, and ridicule only to become a loving, compassionate young woman of great moral character remains Charlotte Brontë's greatest achievement. Now available as part of the Word Cloud Classics series, Jane Eyre is a must-have addition to the libraries of all classic literature lovers.",
+                publishDate: "September 01, 2012",
+                publisher: "Canterbury Classics",
+                pages: 464,
+                dimensions: "14x20x3.5",
+                language: "English",
+                format: "Imitation leather",
+                quantity: 15,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=17Sq-qQiK-lPE6C6BibsDbRbeOrXmaQc0",
+                _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
+                _id: "70e68a6b-78be-42e4-9f49-f465d75ed7d4"
+            },
+            // Horror books
+            "842c31bc-8dc1-4327-b65b-af5b881bf25e": {
+                title: "Silver Nitrate",
+                author: "Silvia Moreno-Garcia",
+                price: 26.04,
+                description: "Montserrat has always been overlooked. She's a talented sound editor, but she's left out of the boys' club running the film industry in '90s Mexico City. And she's all but invisible to her best friend, Tristán, a charming if faded soap opera star, though she's been in love with him since childhood. Then Tristán discovers his new neighbor is the cult horror director Abel Urueta, and the legendary auteur claims he can change their lives--even if his tale of a Nazi occultist imbuing magic into highly volatile silver nitrate stock sounds like sheer fantasy. The magic film was never finished, which is why, Urueta swears, his career vanished overnight. He is cursed. Now the director wants Montserrat and Tristán to help him shoot the missing scene and lift the curse . . . but Montserrat soon notices a dark presence following her, and Tristán begins seeing the ghost of his ex-girlfriend. As they work together to unravel the mystery of the film and the obscure occultist who once roamed their city, Montserrat and Tristán may find that sorcerers and magic are not only the stuff of movies.",
+                publishDate: "July 18, 2023",
+                publisher: "Del Rey Books",
+                pages: 336,
+                dimensions: "16x23x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 6,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1ZlzFbYoyjNR8FscsuD2ifqeVe4sAnYcQ",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "842c31bc-8dc1-4327-b65b-af5b881bf25e"
+            },
+            "8b0ee033-a244-4397-83d4-2faaf481b028": {
+                title: "The Haunting of Hill House",
+                author: "Shirley Jackson",
+                price: 15.81,
+                description: "First published in 1959, Shirley Jackson's The Haunting of Hill House has been hailed as a perfect work of unnerving terror. It is the story of four seekers who arrive at a notoriously unfriendly pile called Hill House: Dr. Montague, an occult scholar looking for solid evidence of a \"haunting\"; Theodora, his lighthearted assistant; Eleanor, a friendless, fragile young woman well acquainted with poltergeists; and Luke, the future heir of Hill House. At first, their stay seems destined to be merely a spooky encounter with inexplicable phenomena. But Hill House is gathering its powers--and soon it will choose one of them to make its own.",
+                publishDate: "December 01, 2006",
+                publisher: "Penguin Group",
+                pages: 208,
+                dimensions: "12x16x2",
+                language: "English",
+                format: "Paperback",
+                quantity: 15,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1QAG9OHMjnGClqoEK3T9eQfLHCpKCQddQ",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "8b0ee033-a244-4397-83d4-2faaf481b028"
+            },
+            "dfb6a4ac-10e6-4ccf-8c40-7c60e6792b5a": {
+                title: "Carmilla",
+                author: "Joseph Sheridan Lefanu",
+                price: 15.81,
+                description: "Isolated in a remote mansion in a central European forest, Laura longs for companionship - until a carriage accident brings another young woman into her life: the secretive and sometimes erratic Carmilla. As Carmilla's actions become more puzzling and volatile, Laura develops bizarre symptoms, and as her health goes into decline, Laura and her father discover something monstrous. Joseph Sheridan Le Fanu's compelling tale of a young woman's seduction by a female vampire was a source of influence for Bram Stoker's Dracula, which it predates by over a quarter century. Carmilla was originally serialized from 1871 to 1872 and went on to inspire adaptations in film, opera, and beyond, including the cult classic web series by the same name.",
+                publishDate: "November 26, 2019",
+                publisher: "Lanternfish Press",
+                pages: 144,
+                dimensions: "12x16x2",
+                language: "English",
+                format: "Paperback",
+                quantity: 12,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1BABLMbqONgm_gSlxoRm7Cl753ZAancRX",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "dfb6a4ac-10e6-4ccf-8c40-7c60e6792b5a"
+            },
+            "088b34d7-f1bc-4f57-9bea-1fea2e1a5ef2": {
+                title: "The Fisherman",
+                author: "John Langan",
+                price: 19.99,
+                description: "In upstate New York, in the woods around Woodstock, Dutchman's Creek flows out of the Ashokan Reservoir. Steep-banked, fast-moving, it offers the promise of fine fishing, and of something more, a possibility too fantastic to be true. When Abe and Dan, two widowers who have found solace in each other's company and a shared passion for fishing, hear rumors of the Creek, and what might be found there, the remedy to both their losses, they dismiss it as just another fish story. Soon, though, the men find themselves drawn into a tale as deep and old as the Reservoir. It's a tale of dark pacts, of long-buried secrets, and of a mysterious figure known as Der Fisher: the Fisherman. It will bring Abe and Dan face to face with all that they have lost, and with the price they must pay to regain it.",
+                publishDate: "June 30, 2016",
+                publisher: "Word Horde",
+                pages: 282,
+                dimensions: "17x3.5x22",
+                language: "English",
+                format: "Paperback",
+                quantity: 3,
+                rating: 0,
+                imgageUrl: "https://doc-04-04-docs.googleusercontent.com/docs/securesc/23i3f2ea7bb9ndtr616d5h7vqiigjkb2/llecntamcbojrnffr4quf7sl6jfg8c2m/1701626250000/12472768031585789172/12472768031585789172/1UwJFsHmcHqG-SxB77qVw-wqeKyKrW3j2?e=view&ax=AEqgLxn9k9WLWMDlvxp-jpSRpY9jXl2yNGIOhOZysYqYc20SNDh9UVPFNSXzWwfuWnqpQ1hHnnux6AMdDT6IGM3GG6LrTBjxE_GoN4XM5c4Q3c9n-dxOIavHetk2E8wUvUo7_Kf5UZROYkU5Hx0JUwSbvY-gIeC5Rr1Mfvrw6xn8hdgJyD62bv6MWvmZApB-oYtMHSzHN0cMgVlKe2maxbULoz9SkTfRNkKl-9lfv62EJgUX2prDrkE-CjazQgsjFKqSsbKQk8VLY0pqh_NU5e1jJ1VTBC2zLnIVQ8gVOjdpFtA0x2xv_GePNQbB4UfFn5eW3sdE1PAqsHZXvcZXKPaIhWlOhQvGT65g6O_12SiwASd3NNn6GKybK3g3ZRzd2GaPY5GHOVg8v5qC72AHY9mW0Zdl3sxKR7WESOYP53vSCTeM030zPQ2vT4O0sVKKqZRP0Qr1xz_Rt5XPEmALRrtv6y6H_F2Ia2t62e5amZRc31_svEs9YabjTCqe5YrBIVy8CWGCQUivjBPvMF_bKVzsl5bE0JQsDY8_BP4lYVjuJzmTuY9LZDXsOdNENScqj3gRzhWFGNXFxy8Dj4F4R0R1O5Meck5Gjzn6FLE1ij0lkvT-9e2_Fv4YWJLdWQoH12KsL4CA4IBQu-newTriMtgUnqDEUAllFvQ2q6UfwVpWl1wuAezZvB-XFXKMMKFYgsCQo9GZiyZu8MUo7ZCoYUqwOA5D4o-yJ-Xo15U0EGiHppzkn88Fy_XxNLLHsBBMIKDJL8N5C4loWXq830pboIbVoKMkIXcnoiJus_CDW0FsVNYTZvPsEedFcDMxb_Pluxa38kh1X1HQWKu8x8gYOdg4xTLdNQhQp5H31tc-MfIUN6Q&uuid=e21ba438-fcc2-4a5e-b0d6-f76fe8bf5229&authuser=0",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "088b34d7-f1bc-4f57-9bea-1fea2e1a5ef2"
+            },
+            "69bd8ce7-22d6-433c-b3fd-5211082958d4": {
+                title: "It",
+                author: "Stephen King ",
+                price: 20.45,
+                description: "Welcome to Derry, Maine. It's a small city, a place as hauntingly familiar as your own hometown. Only in Derry the haunting is real. They were seven teenagers when they first stumbled upon the horror. Now they are grown-up men and women who have gone out into the big world to gain success and happiness. But the promise they made twenty-eight years ago calls them reunite in the same place where, as teenagers, they battled an evil creature that preyed on the city's children. Now, children are being murdered again and their repressed memories of that terrifying summer return as they prepare to once again battle the monster lurking in Derry's sewers.",
+                publishDate: "January 05, 2016",
+                publisher: "Scribner Book Company",
+                pages: 1168,
+                dimensions: "16.5x22x6",
+                language: "English",
+                format: "Paperback",
+                quantity: 3,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1Q6_D1tXRQI52BFrO38eQsOINBQBAZqEJ",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "69bd8ce7-22d6-433c-b3fd-5211082958d4"
+            },
+            "c9151a95-99fc-4dd7-b12c-76bf6c8c73f5": {
+                title: "The Metamorphosis",
+                author: "Franz Kafka",
+                price: 214.29,
+                description: "\"The Metamorphosis\" (original German title: \"Die Verwandlung\") is a short novel by Franz Kafka, first published in 1915. It is often cited as one of the seminal works of fiction of the 20th century and is widely studied in colleges and universities across the western world. The story begins with a traveling salesman, Gregor Samsa, waking to find himself transformed into an insect.",
+                publishDate: "January 01, 1915",
+                publisher: "12th Media Services",
+                pages: 44,
+                dimensions: "16.5x20x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 3,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1l_wq5ct1tdb6iOsuD_SWJonnGPhpOpOD",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "c9151a95-99fc-4dd7-b12c-76bf6c8c73f5"
+            },
+            // Poetry books
+            "e0fb574b-efc2-4804-b439-9f45bb86155f": {
+                title: "The Iliad",
+                author: "Homer",
+                price: 37.15,
+                description: "When Emily Wilson's translation of The Odyssey appeared in 2017--revealing the ancient poem in a contemporary idiom that was \"fresh, unpretentious and lean\" (Madeline Miller, Washington Post)--critics lauded it as \"a revelation\" (Susan Chira, New York Times) and \"a cultural landmark\" (Charlotte Higgins, Guardian) that would forever change how Homer is read in English. Now Wilson has returned with an equally revelatory translation of Homer's other great epic--the most revered war poem of all time. The Iliad roars with the clamor of arms, the bellowing boasts of victors, the fury and grief of loss, and the anguished cries of dying men. It sings, too, of the sublime magnitude of the world--the fierce beauty of nature and the gods' grand schemes beyond the ken of mortals. In Wilson's hands, this thrilling, magical, and often horrifying tale now gallops at a pace befitting its legendary battle scenes, in crisp but resonant language that evokes the poem's deep pathos and reveals palpably real, even \"complicated,\" characters--both human and divine.",
+                publishDate: "September 26, 2023",
+                publisher: "W. W. Norton & Company",
+                pages: 848,
+                dimensions: "16.4x24x3.8",
+                language: "English",
+                format: "Hardcover",
+                quantity: 2,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1KlPUK72T5Ey6TUx47rs051cKgD0jRlQ0",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "e0fb574b-efc2-4804-b439-9f45bb86155f"
+            },
+            "7217df16-2c14-4141-8baf-3df5f3f475b2": {
+                title: "Women Holding Things",
+                author: "Maira Kalman",
+                price: 30.23,
+                description: "Women Holding Things includes the bright, bold images featured in the booklet as well as an additional sixty-seven new paintings highlighted by thoughtful and intimate anecdotes, recollections, and ruminations. Most are portraits of women, both ordinary and famous, including Virginia Woolf, Sally Hemings, Hortense Cezanne, Gertrude Stein, as well as Kalman's family members and other real-life people. These women hold a range of objects, from the mundane--balloons, a cup, a whisk, a chicken, a hat--to the abstract--dreams and disappointments, sorrow and regret, joy and love.",
+                publishDate: "October 18, 2022",
+                publisher: "Harper",
+                pages: 176,
+                dimensions: "14x20x2.5",
+                language: "English",
+                format: "Hardcover",
+                quantity: 6,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1Y5Zra43NMVe-OaIfpcEPdq3qXD8pQhcN",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "7217df16-2c14-4141-8baf-3df5f3f475b2"
+            },
+            "31bb3eaa-7afe-4131-84c4-45b45efcbfa7": {
+                title: "Above Ground",
+                author: "Clint Smith",
+                price: 2.11,
+                description: "March 28, 2023",
+                publishDate: "",
+                publisher: "Little Brown and Company",
+                pages: 128,
+                dimensions: "12.5x24x3.6",
+                language: "English",
+                format: "Hardcover",
+                quantity: 8,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1IuPADte7rQznTjCZRWxoU9qEeJjMhd44",
+                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _id: "31bb3eaa-7afe-4131-84c4-45b45efcbfa7"
+            },
+            // Science Fiction books
+            "85611f43-9987-4c3e-b9b8-9ebcbef8b59b": {
+                title: "Prophet Song",
+                author: "Paul Lynch",
+                price: 24.18,
+                description: "On a dark, wet evening in Dublin, scientist and mother-of-four Eilish Stack answers her front door to find two officers from Ireland's newly formed secret police on her step. They have arrived to interrogate her husband, a trade unionist. Ireland is falling apart, caught in the grip of a government turning towards tyranny. As the life she knows and the ones she loves disappear before her eyes, Eilish must contend with the dystopian logic of her new, unraveling country. How far will she go to save her family? And what-or who--is she willing to leave behind?",
+                publishDate: "December 05, 2023",
+                publisher: "Atlantic Monthly Press",
+                pages: 320,
+                dimensions: "12.5x2x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 2,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1iNqxer196eKUXmnUZFxzUfy4BAHMuJns",
+                _categoryId: "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5",
+                _id: "85611f43-9987-4c3e-b9b8-9ebcbef8b59b"
+            },
+            "0a9aa176-57ee-47b8-9b1d-888ab95fe7b7": {
+                title: "Jurassic Park",
+                author: "Michael Crichton",
+                price: 9.29,
+                description: "\"[Michael] Crichton's dinosaurs are genuinely frightening.\"--Chicago Sun-Times An astonishing technique for recovering and cloning dinosaur DNA has been discovered. Now humankind's most thrilling fantasies have come true. Creatures extinct for eons roam Jurassic Park with their awesome presence and profound mystery, and all the world can visit them--for a price. Until something goes wrong. . . .",
+                publishDate: "September 25, 2012",
+                publisher: "Ballantine Books",
+                pages: 464,
+                dimensions: "9x15x2.5",
+                language: "English",
+                format: "Mass Market Paperbound",
+                quantity: 9,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1iX9I1yJPAnYQ-4S1gdr2kqm1o7GTT_OZ",
+                _categoryId: "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5",
+                _id: "0a9aa176-57ee-47b8-9b1d-888ab95fe7b7"
+            },
+            // "Arts & Photography books
+            "2d54f0f0-d38d-407a-93a2-ba5b5873d422": {
+                title: "Eyeliner: A Cultural History",
+                author: "Zahra Hankir",
+                price: 24.18,
+                description: "From the distant past to the present, with fingers and felt-tipped pens, metallic powders and gel pots, humans have been drawn to lining their eyes. The aesthetic trademark of figures ranging from Nefertiti to Amy Winehouse, eyeliner is one of our most enduring cosmetic tools; ancient royals and Gen Z beauty influencers alike would attest to its uniquely transformative power. It is undeniably fun--yet it is also far from frivolous. Seen through Zahra Hankir's (kohl-lined) eyes, this ubiquitous but seldom-examined product becomes a portal to history, proof both of the stunning variety among cultures across time and space and of our shared humanity. Through intimate reporting and conversations--with nomads in Chad, geishas in Japan, dancers in India, drag queens in New York, and more--Eyeliner embraces the rich history and significance of its namesake, especially among communities of color. What emerges is an unexpectedly moving portrait of a tool that, in various corners of the globe, can signal religious devotion, attract potential partners, ward off evil forces, shield eyes from the sun, transform faces into fantasies, and communicate volumes without saying a word.",
+                publishDate: "November 14, 2023",
+                publisher: "Penguin Books",
+                pages: 368,
+                dimensions: "12x18x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 5,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1xBeFBAhOxAiHY2EewFbFYDIHxpPCHbN7",
+                _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
+                _id: "2d54f0f0-d38d-407a-93a2-ba5b5873d422"
+            },
+            "669f2160-521f-4e80-8398-cdf32acd868a": {
+                title: "Architecture: A Very Short Introduction",
+                author: "Andrew Ballantyne",
+                price: 64.95,
+                description: "This highly original and sophisticated look at architecture helps us to understand the cultural significance of the buildings that surround us. It avoids the traditional style-spotting approach and instead gives us an idea of what it is about buildings that moves us, and what it is that makes them important artistically and culturally. The book begins by looking at how architecture acquires meaning through tradition, and concludes with the exoticism of the recent avant-garde period. Illustrations of particular buildings help to anchor the general points with specific examples, from ancient Egypt to the present day.",
+                publishDate: "December 19, 2002",
+                publisher: "Oxford University Press, USA",
+                pages: 152,
+                dimensions: "11x18x1",
+                language: "English",
+                format: "Paperback",
+                quantity: 10,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1MVmZyFbbU1m3vKTvM2FUB0AI0mRbs6AK",
+                _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
+                _id: "669f2160-521f-4e80-8398-cdf32acd868a"
+            },
+            // Biography & Memoir books
+            "775a119a-3cce-48c5-8e26-19b2639956e8": {
+                title: "My Name Is Barbra",
+                author: "Barbra Streisand",
+                price: 43.71,
+                description: "Barbra Streisand is by any account a living legend, a woman who in a career spanning six decades has excelled in every area of entertainment. She is among the handful of EGOT winners (Emmy, Grammy, Oscar, and Tony) and has one of the greatest and most recognizable voices in the history of popular music. She has been nominated for a Grammy 46 times, and with Yentl she became the first woman to write, produce, direct, and star in a major motion picture. In My Name Is Barbra, she tells her own story about her life and extraordinary career, from growing up in Brooklyn to her first star-making appearances in New York nightclubs to her breakout performance in Funny Girl on stage and winning the Oscar for that performance on film. Then came a long string of successes in every medium in the years that followed. The book is, like Barbra herself, frank, funny, opinionated, and charming. She recounts her early struggles to become an actress, eventually turning to singing to earn a living; the recording of some of her acclaimed albums; the years of effort involved in making Yentl; her direction of The Prince of Tides; her friendships with figures ranging from Marlon Brando to Madeleine Albright; her political advocacy; and the fulfillment she's found in her marriage to James Brolin. No entertainer's memoir has been more anticipated than Barbra Streisand's, and this engrossing and delightful book will be eagerly welcomed by her millions of fans.",
+                publishDate: "November 07, 2023",
+                publisher: "Viking",
+                pages: 992,
+                dimensions: "1.5x25x6",
+                language: "English",
+                format: "Hardcover",
+                quantity: 7,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1iNBjXgRHuZFccS4ev22S3NJSbCTgwf8l",
+                _categoryId: "ee7b8979-9eee-4b05-a59c-c0026d321e0e",
+                _id: "775a119a-3cce-48c5-8e26-19b2639956e8"
+            },
+            "6eb0a28d-7ace-403c-8e26-5c52b71afe5b": {
+                title: "Napoleon: A Life",
+                author: "Andrew Roberts",
+                price: 23.25,
+                description: "Austerlitz, Borodino, Waterloo: his battles are among the greatest in history, but Napoleon Bonaparte was far more than a military genius and astute leader of men. Like George Washington and his own hero Julius Caesar, he was one of the greatest soldier-statesmen of all times.  Andrew Roberts's Napoleon is the first one-volume biography to take advantage of the recent publication of Napoleon's thirty-three thousand letters, which radically transform our understanding of his character and motivation. At last we see him as he was: protean multitasker, decisive, surprisingly willing to forgive his enemies and his errant wife Josephine. Like Churchill, he understood the strategic importance of telling his own story, and his memoirs, dictated from exile on St. Helena, became the single bestselling book of the nineteenth century.",
+                publishDate: "October 20, 2015",
+                publisher: "Penguin Books",
+                pages: 976,
+                dimensions: "15.5x18x5",
+                language: "English",
+                format: "Paperback",
+                quantity: 12,
+                rating: 0,
+                imgageUrl: "https://drive.google.com/uc?export=view&id=1qNlKyVbjTe3TmSzbiUewYyrhgS_BzSl4",
+                _categoryId: "ee7b8979-9eee-4b05-a59c-c0026d321e0e",
+                _id: "6eb0a28d-7ace-403c-8e26-5c52b71afe5b"
+            },
+        },
+    	
     	comments: {
     		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
     			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
@@ -1401,248 +1741,7 @@
     			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
     		}
     	},
-    	records: {
-    		i01: {
-    			name: "John1",
-    			val: 1,
-    			_createdOn: 1613551388703
-    		},
-    		i02: {
-    			name: "John2",
-    			val: 1,
-    			_createdOn: 1613551388713
-    		},
-    		i03: {
-    			name: "John3",
-    			val: 2,
-    			_createdOn: 1613551388723
-    		},
-    		i04: {
-    			name: "John4",
-    			val: 2,
-    			_createdOn: 1613551388733
-    		},
-    		i05: {
-    			name: "John5",
-    			val: 2,
-    			_createdOn: 1613551388743
-    		},
-    		i06: {
-    			name: "John6",
-    			val: 3,
-    			_createdOn: 1613551388753
-    		},
-    		i07: {
-    			name: "John7",
-    			val: 3,
-    			_createdOn: 1613551388763
-    		},
-    		i08: {
-    			name: "John8",
-    			val: 2,
-    			_createdOn: 1613551388773
-    		},
-    		i09: {
-    			name: "John9",
-    			val: 3,
-    			_createdOn: 1613551388783
-    		},
-    		i10: {
-    			name: "John10",
-    			val: 1,
-    			_createdOn: 1613551388793
-    		}
-    	},
-    	catches: {
-    		"07f260f4-466c-4607-9a33-f7273b24f1b4": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			angler: "Paulo Admorim",
-    			weight: 636,
-    			species: "Atlantic Blue Marlin",
-    			location: "Vitoria, Brazil",
-    			bait: "trolled pink",
-    			captureTime: 80,
-    			_createdOn: 1614760714812,
-    			_id: "07f260f4-466c-4607-9a33-f7273b24f1b4"
-    		},
-    		"bdabf5e9-23be-40a1-9f14-9117b6702a9d": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			angler: "John Does",
-    			weight: 554,
-    			species: "Atlantic Blue Marlin",
-    			location: "Buenos Aires, Argentina",
-    			bait: "trolled pink",
-    			captureTime: 120,
-    			_createdOn: 1614760782277,
-    			_id: "bdabf5e9-23be-40a1-9f14-9117b6702a9d"
-    		}
-    	},
-    	furniture: {
-    	},
-    	orders: {
-    	},
-    	movies: {
-    		"1240549d-f0e0-497e-ab99-eb8f703713d7": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Black Widow",
-    			description: "Natasha Romanoff aka Black Widow confronts the darker parts of her ledger when a dangerous conspiracy with ties to her past arises. Comes on the screens 2020.",
-    			img: "https://miro.medium.com/max/735/1*akkAa2CcbKqHsvqVusF3-w.jpeg",
-    			_createdOn: 1614935055353,
-    			_id: "1240549d-f0e0-497e-ab99-eb8f703713d7"
-    		},
-    		"143e5265-333e-4150-80e4-16b61de31aa0": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Wonder Woman 1984",
-    			description: "Diana must contend with a work colleague and businessman, whose desire for extreme wealth sends the world down a path of destruction, after an ancient artifact that grants wishes goes missing.",
-    			img: "https://pbs.twimg.com/media/ETINgKwWAAAyA4r.jpg",
-    			_createdOn: 1614935181470,
-    			_id: "143e5265-333e-4150-80e4-16b61de31aa0"
-    		},
-    		"a9bae6d8-793e-46c4-a9db-deb9e3484909": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Top Gun 2",
-    			description: "After more than thirty years of service as one of the Navy's top aviators, Pete Mitchell is where he belongs, pushing the envelope as a courageous test pilot and dodging the advancement in rank that would ground him.",
-    			img: "https://i.pinimg.com/originals/f2/a4/58/f2a458048757bc6914d559c9e4dc962a.jpg",
-    			_createdOn: 1614935268135,
-    			_id: "a9bae6d8-793e-46c4-a9db-deb9e3484909"
-    		}
-    	},
-    	likes: {
-    	},
-    	ideas: {
-    		"833e0e57-71dc-42c0-b387-0ce0caf5225e": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "Best Pilates Workout To Do At Home",
-    			description: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Minima possimus eveniet ullam aspernatur corporis tempore quia nesciunt nostrum mollitia consequatur. At ducimus amet aliquid magnam nulla sed totam blanditiis ullam atque facilis corrupti quidem nisi iusto saepe, consectetur culpa possimus quos? Repellendus, dicta pariatur! Delectus, placeat debitis error dignissimos nesciunt magni possimus quo nulla, fuga corporis maxime minus nihil doloremque aliquam quia recusandae harum. Molestias dolorum recusandae commodi velit cum sapiente placeat alias rerum illum repudiandae? Suscipit tempore dolore autem, neque debitis quisquam molestias officia hic nesciunt? Obcaecati optio fugit blanditiis, explicabo odio at dicta asperiores distinctio expedita dolor est aperiam earum! Molestias sequi aliquid molestiae, voluptatum doloremque saepe dignissimos quidem quas harum quo. Eum nemo voluptatem hic corrupti officiis eaque et temporibus error totam numquam sequi nostrum assumenda eius voluptatibus quia sed vel, rerum, excepturi maxime? Pariatur, provident hic? Soluta corrupti aspernatur exercitationem vitae accusantium ut ullam dolor quod!",
-    			img: "./images/best-pilates-youtube-workouts-2__medium_4x3.jpg",
-    			_createdOn: 1615033373504,
-    			_id: "833e0e57-71dc-42c0-b387-0ce0caf5225e"
-    		},
-    		"247efaa7-8a3e-48a7-813f-b5bfdad0f46c": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			title: "4 Eady DIY Idea To Try!",
-    			description: "Similique rem culpa nemo hic recusandae perspiciatis quidem, quia expedita, sapiente est itaque optio enim placeat voluptates sit, fugit dignissimos tenetur temporibus exercitationem in quis magni sunt vel. Corporis officiis ut sapiente exercitationem consectetur debitis suscipit laborum quo enim iusto, labore, quod quam libero aliquid accusantium! Voluptatum quos porro fugit soluta tempore praesentium ratione dolorum impedit sunt dolores quod labore laudantium beatae architecto perspiciatis natus cupiditate, iure quia aliquid, iusto modi esse!",
-    			img: "./images/brightideacropped.jpg",
-    			_createdOn: 1615033452480,
-    			_id: "247efaa7-8a3e-48a7-813f-b5bfdad0f46c"
-    		},
-    		"b8608c22-dd57-4b24-948e-b358f536b958": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			title: "Dinner Recipe",
-    			description: "Consectetur labore et corporis nihil, officiis tempora, hic ex commodi sit aspernatur ad minima? Voluptas nesciunt, blanditiis ex nulla incidunt facere tempora laborum ut aliquid beatae obcaecati quidem reprehenderit consequatur quis iure natus quia totam vel. Amet explicabo quidem repellat unde tempore et totam minima mollitia, adipisci vel autem, enim voluptatem quasi exercitationem dolor cum repudiandae dolores nostrum sit ullam atque dicta, tempora iusto eaque! Rerum debitis voluptate impedit corrupti quibusdam consequatur minima, earum asperiores soluta. A provident reiciendis voluptates et numquam totam eveniet! Dolorum corporis libero dicta laborum illum accusamus ullam?",
-    			img: "./images/dinner.jpg",
-    			_createdOn: 1615033491967,
-    			_id: "b8608c22-dd57-4b24-948e-b358f536b958"
-    		}
-    	},
-    	catalog: {
-    		"53d4dbf5-7f41-47ba-b485-43eccb91cb95": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			make: "Table",
-    			model: "Swedish",
-    			year: 2015,
-    			description: "Medium table",
-    			price: 235,
-    			img: "./images/table.png",
-    			material: "Hardwood",
-    			_createdOn: 1615545143015,
-    			_id: "53d4dbf5-7f41-47ba-b485-43eccb91cb95"
-    		},
-    		"f5929b5c-bca4-4026-8e6e-c09e73908f77": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Sofa",
-    			model: "ES-549-M",
-    			year: 2018,
-    			description: "Three-person sofa, blue",
-    			price: 1200,
-    			img: "./images/sofa.jpg",
-    			material: "Frame - steel, plastic; Upholstery - fabric",
-    			_createdOn: 1615545572296,
-    			_id: "f5929b5c-bca4-4026-8e6e-c09e73908f77"
-    		},
-    		"c7f51805-242b-45ed-ae3e-80b68605141b": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			make: "Chair",
-    			model: "Bright Dining Collection",
-    			year: 2017,
-    			description: "Dining chair",
-    			price: 180,
-    			img: "./images/chair.jpg",
-    			material: "Wood laminate; leather",
-    			_createdOn: 1615546332126,
-    			_id: "c7f51805-242b-45ed-ae3e-80b68605141b"
-    		}
-    	},
-    	teams: {
-    		"34a1cab1-81f1-47e5-aec3-ab6c9810efe1": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			name: "Storm Troopers",
-    			logoUrl: "/assets/atat.png",
-    			description: "These ARE the droids we're looking for",
-    			_createdOn: 1615737591748,
-    			_id: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1"
-    		},
-    		"dc888b1a-400f-47f3-9619-07607966feb8": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Team Rocket",
-    			logoUrl: "/assets/rocket.png",
-    			description: "Gotta catch 'em all!",
-    			_createdOn: 1615737655083,
-    			_id: "dc888b1a-400f-47f3-9619-07607966feb8"
-    		},
-    		"733fa9a1-26b6-490d-b299-21f120b2f53a": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			name: "Minions",
-    			logoUrl: "/assets/hydrant.png",
-    			description: "Friendly neighbourhood jelly beans, helping evil-doers succeed.",
-    			_createdOn: 1615737688036,
-    			_id: "733fa9a1-26b6-490d-b299-21f120b2f53a"
-    		}
-    	},
-    	members: {
-    		"cc9b0a0f-655d-45d7-9857-0a61c6bb2c4d": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616236790262,
-    			_updatedOn: 1616236792930
-    		},
-    		"61a19986-3b86-4347-8ca4-8c074ed87591": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237188183,
-    			_updatedOn: 1616237189016
-    		},
-    		"8a03aa56-7a82-4a6b-9821-91349fbc552f": {
-    			_ownerId: "847ec027-f659-4086-8032-5173e2f9c93a",
-    			teamId: "733fa9a1-26b6-490d-b299-21f120b2f53a",
-    			status: "member",
-    			_createdOn: 1616237193355,
-    			_updatedOn: 1616237195145
-    		},
-    		"9be3ac7d-2c6e-4d74-b187-04105ab7e3d6": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237231299,
-    			_updatedOn: 1616237235713
-    		},
-    		"280b4a1a-d0f3-4639-aa54-6d9158365152": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "dc888b1a-400f-47f3-9619-07607966feb8",
-    			status: "member",
-    			_createdOn: 1616237257265,
-    			_updatedOn: 1616237278248
-    		},
-    		"e797fa57-bf0a-4749-8028-72dba715e5f8": {
-    			_ownerId: "60f0cf0b-34b0-4abd-9769-8c42f830dffc",
-    			teamId: "34a1cab1-81f1-47e5-aec3-ab6c9810efe1",
-    			status: "member",
-    			_createdOn: 1616237272948,
-    			_updatedOn: 1616237293676
-    		}
-    	}
+    	
     };
     var rules$1 = {
     	users: {
