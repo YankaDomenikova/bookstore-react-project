@@ -14,6 +14,7 @@ import MainLayout from './layouts/MainLayout';
 import { Paths } from './paths/paths';
 
 import "./App.module.css";
+import BookDetails from './components/book-details/BookDetails';
 
 function App() {
     return (
@@ -22,6 +23,7 @@ function App() {
                 <Route path={Paths.Home} element={<MainLayout />}>
                     <Route index element={<Home />} />
                     <Route path={Paths.Catalog} element={<BookCatalog />} />
+                    <Route path={Paths.BookDetails} element={<BookDetails />} />
                 </Route>
 
                 <Route path={Paths.Login} element={<Login />} />

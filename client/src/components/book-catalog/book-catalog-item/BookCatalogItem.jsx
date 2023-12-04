@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styles from './BookCatalogItem.module.css';
 
 export default function BookCatalogItem({
@@ -10,7 +11,9 @@ export default function BookCatalogItem({
     return (
         <div className={styles.catalogItem}>
             <div className={styles.imageWrapper}>
-                <img src={imageUrl} alt="image" />
+                <Link to={`/catalog/${_id}`} >
+                    <img src={imageUrl} alt="image" />
+                </Link>
             </div>
             <div className={styles.bookDetails}>
                 <p className={styles.bookTitle}>{title}</p>

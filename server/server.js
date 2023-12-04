@@ -1378,7 +1378,7 @@
                 dimensions: "14x24x6",
                 language: "English",
                 format: "Paperback",
-                quantity: 15,
+                quantity: 0,
                 rating: 0,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1C8F2cL20FLYULOnncesEQqpwDornJkHi",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",

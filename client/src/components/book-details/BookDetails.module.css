@@ -1,0 +1,158 @@
+.pageContent {
+    width: 65%;
+    margin: auto;
+    margin-top: 60px;
+    color: #191919;
+}
+
+.detailsContainer {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-gap: 60px;
+    border-bottom: 1px solid #E7DB75;
+    padding-bottom: 60px;
+    margin-bottom: 60px;
+}
+
+.imageWrapper,
+.information {
+    width: 320px;
+}
+
+.imageWrapper {
+    background: hsl(0, 0%, 96%);
+    border-radius: 2px;
+    height: 360px;
+    display: flex;
+}
+
+.imageWrapper img {
+    height: 92%;
+    width: auto;
+    margin: auto;
+    border-radius: 2px;
+}
+
+.details {
+    height: 330px;
+    ;
+    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.bookTitle {
+    font-size: 23px;
+    font-weight: 400;
+}
+
+.bookAuthor {
+    font-weight: 500;
+    font-size: 14px;
+
+}
+
+.bookAuthor span {
+    font-size: 12px;
+}
+
+.ratingOverview {
+    display: flex;
+    align-items: baseline;
+    font-size: 15px;
+}
+
+.starRating {
+    position: relative;
+    font-size: 20px;
+    color: hsl(0, 0%, 89%);
+}
+
+.starRating .rating {
+    color: #C80D44;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.totalRating {
+    font-size: 15px;
+    margin-left: 5px;
+}
+
+.infoOverview {
+    display: flex;
+    align-items: center;
+    /* margin-top: 20px; */
+}
+
+.infoOverview img {
+    height: 24px;
+}
+
+
+.infoOverview p {
+    font-size: 10px;
+    line-height: 10px;
+    margin-left: 5px;
+}
+
+.quantity {
+    color: #C07A12;
+    /* margin-top: 20px; */
+    font-size: 13px;
+}
+
+.delivery {
+    display: flex;
+    align-items: center;
+}
+
+.delivery p {
+    font-size: 12px;
+    margin-left: 3px;
+}
+
+.delivery img {
+    height: 20px;
+}
+
+.bookPrice {
+    color: #C80D44;
+    font-weight: 400;
+}
+
+.addToBasket {
+    background: #191919;
+    width: 200px;
+    height: 45px;
+    color: #fcfcfc;
+    border-radius: 2px;
+}
+
+.information h2,
+.description h2 {
+    color: #C80D44;
+    font-weight: 500;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.information ul {
+    list-style-type: none;
+}
+
+.information ul li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+}
+
+.description p {
+    font-style: italic;
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 14px;
+}

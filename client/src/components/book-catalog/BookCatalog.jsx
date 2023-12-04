@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 import BookCatalogItem from './book-catalog-item/BookCatalogItem';
 
@@ -10,7 +11,7 @@ export default function BookCatalog() {
     const [categories, setCategories] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3030/data/books")
+        fetch("http://localhost:3030/data/books?select=_id,title,author,price,imageUrl")
             .then(res => res.json())
             .then(data => setBooks(data));
 
@@ -24,14 +25,16 @@ export default function BookCatalog() {
     return (
 
         <div className={styles.content}>
-            <div class={styles.filtersContainer}>
-                <div class={styles.filterHeading}>
+            <div className={styles.filtersContainer}>
+                <div className={styles.filterHeading}>
                     <img src={filtersIcon} alt="" />
                     <h3>Categories</h3>
                 </div>
-                <div class={styles.categories}>
+                <div className={styles.categories}>
                     <ul>
-                        {categories.map(cat => <li key={cat._id}>{cat.name}</li>)}
+                        {categories.map(cat => <li key={cat._id}>
+                            <Link to='/'>{cat.name}</Link>
+                        </li>)}
                     </ul>
                 </div>
             </div>

@@ -56,5 +56,10 @@
 
 .categories ul li {
     list-style-type: none;
+    margin: 3px 0;
+}
 
+.categories ul li a {
+    text-decoration: none;
+    color: #191919;
 }
