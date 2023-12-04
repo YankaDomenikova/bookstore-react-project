@@ -59,7 +59,7 @@ export default function Login() {
                 </form>
 
                 <div className={styles.linkAuth}>
-                    <p>No account? <Link to={Paths.Register} class="">Sign in</Link> </p>
+                    <p>No account? <Link to={Paths.Register}>Sign in</Link> </p>
                 </div>
 
             </section>

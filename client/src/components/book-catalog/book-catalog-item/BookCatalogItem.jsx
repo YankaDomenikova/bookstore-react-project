@@ -1,15 +1,21 @@
 import styles from './BookCatalogItem.module.css';
 
-export default function BookCatalogItem() {
+export default function BookCatalogItem({
+    _id,
+    title,
+    author,
+    price,
+    imageUrl
+}) {
     return (
         <div className={styles.catalogItem}>
             <div className={styles.imageWrapper}>
-                <img src="" alt="image" />
+                <img src={imageUrl} alt="image" />
             </div>
             <div className={styles.bookDetails}>
-                <p className={styles.bookTitle}>Lorem ipsum dolor sit amet consectetur adipisicing elit</p>
-                <p className={styles.authorName}>by Author name</p>
-                <p className={styles.bookPrice}>$ 20.95</p>
+                <p className={styles.bookTitle}>{title}</p>
+                <p className={styles.authorName}>by {author}</p>
+                <p className={styles.bookPrice}>$ {price}</p>
             </div>
             <button className={styles.addToBasketBtn}>Add to basket</button>
         </div>

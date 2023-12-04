@@ -1380,8 +1380,7 @@
                 format: "Paperback",
                 quantity: 15,
                 rating: 0,
-                imgageUrl: "",
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1C8F2cL20FLYULOnncesEQqpwDornJkHi",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1C8F2cL20FLYULOnncesEQqpwDornJkHi",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "b867ae43-c435-488b-89b0-5764ec6f65b9"
             },
@@ -1398,7 +1397,7 @@
                 format: "Hardcover",
                 quantity: 3,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1zzQNptXchrJCHjZHR37IfGQaZszwhz4G",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1zzQNptXchrJCHjZHR37IfGQaZszwhz4G",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "024d5155-2c67-4c10-b3a5-ae5969c466b3"
             },
@@ -1415,7 +1414,7 @@
                 format: "Hardcover",
                 quantity: 5,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1oEYt9dVQ8hdVlD2mQmh6tdM9WP_GGMcu",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1oEYt9dVQ8hdVlD2mQmh6tdM9WP_GGMcu",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "7056d2f6-9fb6-4e8a-8ecd-6f41aab4f0a7"
             },
@@ -1432,7 +1431,7 @@
                 format: "Hardcover",
                 quantity: 10,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1PjioAn9cO2HT-0ZDyDgnebmiBaN1UUYQ",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1PjioAn9cO2HT-0ZDyDgnebmiBaN1UUYQ",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "113ac548-14d5-4b84-9abd-1af36b4978db"
             },
@@ -1449,7 +1448,7 @@
                 format: "Paperback",
                 quantity: 3,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=13I9rvu6TwSbspx_CWBT3RkQLir0o-GhC",
+                imageUrl: "https://drive.google.com/uc?export=view&id=13I9rvu6TwSbspx_CWBT3RkQLir0o-GhC",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "8aca35e0-e55c-4d8c-87a0-6ea6dcd0cac2"
             },
@@ -1466,7 +1465,7 @@
                 format: "Imitation leather",
                 quantity: 15,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=17Sq-qQiK-lPE6C6BibsDbRbeOrXmaQc0",
+                imageUrl: "https://drive.google.com/uc?export=view&id=17Sq-qQiK-lPE6C6BibsDbRbeOrXmaQc0",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "70e68a6b-78be-42e4-9f49-f465d75ed7d4"
             },
@@ -1484,7 +1483,7 @@
                 format: "Hardcover",
                 quantity: 6,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1ZlzFbYoyjNR8FscsuD2ifqeVe4sAnYcQ",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1ZlzFbYoyjNR8FscsuD2ifqeVe4sAnYcQ",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "842c31bc-8dc1-4327-b65b-af5b881bf25e"
             },
@@ -1501,7 +1500,7 @@
                 format: "Paperback",
                 quantity: 15,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1QAG9OHMjnGClqoEK3T9eQfLHCpKCQddQ",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1QAG9OHMjnGClqoEK3T9eQfLHCpKCQddQ",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "8b0ee033-a244-4397-83d4-2faaf481b028"
             },
@@ -1518,7 +1517,7 @@
                 format: "Paperback",
                 quantity: 12,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1BABLMbqONgm_gSlxoRm7Cl753ZAancRX",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1BABLMbqONgm_gSlxoRm7Cl753ZAancRX",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "dfb6a4ac-10e6-4ccf-8c40-7c60e6792b5a"
             },
@@ -1535,8 +1534,7 @@
                 format: "Paperback",
                 quantity: 3,
                 rating: 0,
-                imgageUrl: "https://doc-04-04-docs.googleusercontent.com/docs/securesc/23i3f2ea7bb9ndtr616d5h7vqiigjkb2/llecntamcbojrnffr4quf7sl6jfg8c2m/1701626250000/12472768031585789172/12472768031585789172/1UwJFsHmcHqG-SxB77qVw-wqeKyKrW3j2?e=view&ax=AEqgLxn9k9WLWMDlvxp-jpSRpY9jXl2yNGIOhOZysYqYc20SNDh9UVPFNSXzWwfuWnqpQ1hHnnux6AMdDT6IGM3GG6LrTBjxE_GoN4XM5c4Q3c9n-dxOIavHetk2E8wUvUo7_Kf5UZROYkU5Hx0JUwSbvY-gIeC5Rr1Mfvrw6xn8hdgJyD62bv6MWvmZApB-oYtMHSzHN0cMgVlKe2maxbULoz9SkTfRNkKl-9lfv62EJgUX2prDrkE-CjazQgsjFKqSsbKQk8VLY0pqh_NU5e1jJ1VTBC2zLnIVQ8gVOjdpFtA0x2xv_GePNQbB4UfFn5eW3sdE1PAqsHZXvcZXKPaIhWlOhQvGT65g6O_12SiwASd3NNn6GKybK3g3ZRzd2GaPY5GHOVg8v5qC72AHY9mW0Zdl3sxKR7WESOYP53vSCTeM030zPQ2vT4O0sVKKqZRP0Qr1xz_Rt5XPEmALRrtv6y6H_F2Ia2t62e5amZRc31_svEs9YabjTCqe5YrBIVy8CWGCQUivjBPvMF_bKVzsl5bE0JQsDY8_BP4lYVjuJzmTuY9LZDXsOdNENScqj3gRzhWFGNXFxy8Dj4F4R0R1O5Meck5Gjzn6FLE1ij0lkvT-9e2_Fv4YWJLdWQoH12KsL4CA4IBQu-newTriMtgUnqDEUAllFvQ2q6UfwVpWl1wuAezZvB-XFXKMMKFYgsCQo9GZiyZu8MUo7ZCoYUqwOA5D4o-yJ-Xo15U0EGiHppzkn88Fy_XxNLLHsBBMIKDJL8N5C4loWXq830pboIbVoKMkIXcnoiJus_CDW0FsVNYTZvPsEedFcDMxb_Pluxa38kh1X1HQWKu8x8gYOdg4xTLdNQhQp5H31tc-MfIUN6Q&uuid=e21ba438-fcc2-4a5e-b0d6-f76fe8bf5229&authuser=0",
-                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1UwJFsHmcHqG-SxB77qVw-wqeKyKrW3j2",
                 _id: "088b34d7-f1bc-4f57-9bea-1fea2e1a5ef2"
             },
             "69bd8ce7-22d6-433c-b3fd-5211082958d4": {
@@ -1552,7 +1550,7 @@
                 format: "Paperback",
                 quantity: 3,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1Q6_D1tXRQI52BFrO38eQsOINBQBAZqEJ",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1Q6_D1tXRQI52BFrO38eQsOINBQBAZqEJ",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "69bd8ce7-22d6-433c-b3fd-5211082958d4"
             },
@@ -1569,7 +1567,7 @@
                 format: "Hardcover",
                 quantity: 3,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1l_wq5ct1tdb6iOsuD_SWJonnGPhpOpOD",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1l_wq5ct1tdb6iOsuD_SWJonnGPhpOpOD",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "c9151a95-99fc-4dd7-b12c-76bf6c8c73f5"
             },
@@ -1587,7 +1585,7 @@
                 format: "Hardcover",
                 quantity: 2,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1KlPUK72T5Ey6TUx47rs051cKgD0jRlQ0",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1KlPUK72T5Ey6TUx47rs051cKgD0jRlQ0",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "e0fb574b-efc2-4804-b439-9f45bb86155f"
             },
@@ -1604,7 +1602,7 @@
                 format: "Hardcover",
                 quantity: 6,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1Y5Zra43NMVe-OaIfpcEPdq3qXD8pQhcN",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1Y5Zra43NMVe-OaIfpcEPdq3qXD8pQhcN",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "7217df16-2c14-4141-8baf-3df5f3f475b2"
             },
@@ -1621,7 +1619,7 @@
                 format: "Hardcover",
                 quantity: 8,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1IuPADte7rQznTjCZRWxoU9qEeJjMhd44",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1IuPADte7rQznTjCZRWxoU9qEeJjMhd44",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "31bb3eaa-7afe-4131-84c4-45b45efcbfa7"
             },
@@ -1639,7 +1637,7 @@
                 format: "Hardcover",
                 quantity: 2,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1iNqxer196eKUXmnUZFxzUfy4BAHMuJns",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1iNqxer196eKUXmnUZFxzUfy4BAHMuJns",
                 _categoryId: "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5",
                 _id: "85611f43-9987-4c3e-b9b8-9ebcbef8b59b"
             },
@@ -1656,7 +1654,7 @@
                 format: "Mass Market Paperbound",
                 quantity: 9,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1iX9I1yJPAnYQ-4S1gdr2kqm1o7GTT_OZ",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1iX9I1yJPAnYQ-4S1gdr2kqm1o7GTT_OZ",
                 _categoryId: "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5",
                 _id: "0a9aa176-57ee-47b8-9b1d-888ab95fe7b7"
             },
@@ -1674,7 +1672,7 @@
                 format: "Hardcover",
                 quantity: 5,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1xBeFBAhOxAiHY2EewFbFYDIHxpPCHbN7",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1xBeFBAhOxAiHY2EewFbFYDIHxpPCHbN7",
                 _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
                 _id: "2d54f0f0-d38d-407a-93a2-ba5b5873d422"
             },
@@ -1691,7 +1689,7 @@
                 format: "Paperback",
                 quantity: 10,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1MVmZyFbbU1m3vKTvM2FUB0AI0mRbs6AK",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1MVmZyFbbU1m3vKTvM2FUB0AI0mRbs6AK",
                 _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
                 _id: "669f2160-521f-4e80-8398-cdf32acd868a"
             },
@@ -1709,7 +1707,7 @@
                 format: "Hardcover",
                 quantity: 7,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1iNBjXgRHuZFccS4ev22S3NJSbCTgwf8l",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1iNBjXgRHuZFccS4ev22S3NJSbCTgwf8l",
                 _categoryId: "ee7b8979-9eee-4b05-a59c-c0026d321e0e",
                 _id: "775a119a-3cce-48c5-8e26-19b2639956e8"
             },
@@ -1726,7 +1724,7 @@
                 format: "Paperback",
                 quantity: 12,
                 rating: 0,
-                imgageUrl: "https://drive.google.com/uc?export=view&id=1qNlKyVbjTe3TmSzbiUewYyrhgS_BzSl4",
+                imageUrl: "https://drive.google.com/uc?export=view&id=1qNlKyVbjTe3TmSzbiUewYyrhgS_BzSl4",
                 _categoryId: "ee7b8979-9eee-4b05-a59c-c0026d321e0e",
                 _id: "6eb0a28d-7ace-403c-8e26-5c52b71afe5b"
             },

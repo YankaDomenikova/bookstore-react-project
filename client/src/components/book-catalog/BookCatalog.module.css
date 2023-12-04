@@ -1,9 +1,60 @@
+.content {
+    width: 80vw;
+    display: flex;
+    margin: auto;
+    margin-top: 25px;
+    font-family: 'Jost', sans-serif;
+}
+
+
 .catalogContainer {
     width: 70%;
     height: 100%;
     margin: 0 auto;
+    padding-top: 40px;
+}
+
+.bookHeading {
+    color: #C80D44;
+    margin-left: 20px;
+    font-weight: 400;
+}
+
+.books {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
+    margin-top: 20px;
     font-family: 'Jost', sans-serif;
+}
+
+.filtersContainer {
+    width: 20%;
     padding-top: 40px;
+    padding-left: 30px;
+}
+
+.filterHeading {
+    display: flex;
+    align-items: center;
+}
+
+.filterHeading h3 {
+    margin-left: 5px;
+    font-weight: 400;
+
+}
+
+.filterHeading img {
+    height: 23px;
+    width: 23px;
+}
+
+.categories {
+    font-size: 16px;
+    margin-top: 10px;
+}
+
+.categories ul li {
+    list-style-type: none;
+
 }

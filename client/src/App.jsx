@@ -9,27 +9,28 @@ import BookCatalogItem from "./components/book-catalog/book-catalog-item/BookCat
 import BookCatalog from "./components/book-catalog/BookCatalog";
 import NotFound from "./components/not-found/NotFound";
 
+import MainLayout from './layouts/MainLayout';
+
 import { Paths } from './paths/paths';
 
 import "./App.module.css";
-import MainLayout from './layouts/MainLayout';
 
 function App() {
-  return (
-    <>
-      <Routes>
-        <Route path={Paths.Home} element={<MainLayout />}>
-          <Route index element={<Home />} />
-          <Route path={Paths.Catalog} element={<BookCatalog />} />
-        </Route>
+    return (
+        <>
+            <Routes>
+                <Route path={Paths.Home} element={<MainLayout />}>
+                    <Route index element={<Home />} />
+                    <Route path={Paths.Catalog} element={<BookCatalog />} />
+                </Route>
 
-        <Route path={Paths.Login} element={<Login />} />
-        <Route path={Paths.Register} element={<Register />} />
-        <Route path={Paths.NotFound} element={<NotFound />} />
-      </Routes>
-    </>
+                <Route path={Paths.Login} element={<Login />} />
+                <Route path={Paths.Register} element={<Register />} />
+                <Route path={Paths.NotFound} element={<NotFound />} />
+            </Routes>
+        </>
 
-  )
+    )
 }
 
 export default App
