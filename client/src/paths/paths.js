@@ -1,9 +1,9 @@
 export const Paths = {
     Home: '/',
     Catalog: '/catalog',
-    BooksByCategory: '/catalog/:categoryId',
+    BooksByCategory: '/catalog/category/:categoryId',
     Bestsellers: 'catalog/:isBestseller',
-    BookDetails: 'catalog/:bookId',
+    BookDetails: 'catalog/book/:bookId',
     Contacts: 'contacts',
     Login: '/login',
     Register: '/register',

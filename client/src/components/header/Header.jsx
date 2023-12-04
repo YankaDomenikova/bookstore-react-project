@@ -51,19 +51,14 @@ export default function Header() {
                     <ul>
                         <li>
                             <Link to={Paths.Catalog} className={styles.link}>
-                                Catalog
+                                Book Catalog
                             </Link>
                         </li>
-                        <li>
+                        {/* <li>
                             <Link to='/bestsellers' className={styles.link}>
                                 Bestsellers
                             </Link>
-                        </li>
-                        <li>
-                            <Link to='/sales' className={styles.link}>
-                                Sales
-                            </Link>
-                        </li>
+                        </li> */}
                     </ul>
                 </div>
             </div>

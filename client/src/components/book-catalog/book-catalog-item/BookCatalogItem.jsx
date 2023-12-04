@@ -6,12 +6,12 @@ export default function BookCatalogItem({
     title,
     author,
     price,
-    imageUrl
+    imageUrl,
 }) {
     return (
         <div className={styles.catalogItem}>
             <div className={styles.imageWrapper}>
-                <Link to={`/catalog/${_id}`} >
+                <Link to={`/catalog/book/${_id}`} >
                     <img src={imageUrl} alt="image" />
                 </Link>
             </div>

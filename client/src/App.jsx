@@ -23,6 +23,7 @@ function App() {
                 <Route path={Paths.Home} element={<MainLayout />}>
                     <Route index element={<Home />} />
                     <Route path={Paths.Catalog} element={<BookCatalog />} />
+                    <Route path={Paths.BooksByCategory} element={<BookCatalog />} />
                     <Route path={Paths.BookDetails} element={<BookDetails />} />
                 </Route>
 
