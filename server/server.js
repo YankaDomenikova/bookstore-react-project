@@ -1348,6 +1348,10 @@
                 name: "Horror",
                 _id: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
             },
+            "8d04c99d-a900-4440-8d67-64ead7e2298f": {
+                name: "Mystery, Thrillers, & Crime",
+                _id: "8d04c99d-a900-4440-8d67-64ead7e2298f"
+            },
             "12a0f886-7146-4fe7-8366-460b5c5e5da1": {
                 name: "Poetry",
                 _id: "12a0f886-7146-4fe7-8366-460b5c5e5da1",
@@ -1363,6 +1367,10 @@
             "ee7b8979-9eee-4b05-a59c-c0026d321e0e": {
                 name: "Biography & Memoir",
                 _id: "ee7b8979-9eee-4b05-a59c-c0026d321e0e",
+            },
+            "c1036218-4964-418e-9a1e-c7aca28ad160": {
+                name: "Science & Technology",
+                _id: "c1036218-4964-418e-9a1e-c7aca28ad160",
             },
         },
         books: {
@@ -1380,6 +1388,7 @@
                 format: "Paperback",
                 quantity: 0,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1C8F2cL20FLYULOnncesEQqpwDornJkHi",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "b867ae43-c435-488b-89b0-5764ec6f65b9"
@@ -1397,6 +1406,7 @@
                 format: "Hardcover",
                 quantity: 3,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1zzQNptXchrJCHjZHR37IfGQaZszwhz4G",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "024d5155-2c67-4c10-b3a5-ae5969c466b3"
@@ -1414,6 +1424,7 @@
                 format: "Hardcover",
                 quantity: 5,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1oEYt9dVQ8hdVlD2mQmh6tdM9WP_GGMcu",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "7056d2f6-9fb6-4e8a-8ecd-6f41aab4f0a7"
@@ -1431,6 +1442,7 @@
                 format: "Hardcover",
                 quantity: 10,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1PjioAn9cO2HT-0ZDyDgnebmiBaN1UUYQ",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "113ac548-14d5-4b84-9abd-1af36b4978db"
@@ -1448,6 +1460,7 @@
                 format: "Paperback",
                 quantity: 3,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=13I9rvu6TwSbspx_CWBT3RkQLir0o-GhC",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "8aca35e0-e55c-4d8c-87a0-6ea6dcd0cac2"
@@ -1465,6 +1478,7 @@
                 format: "Imitation leather",
                 quantity: 15,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=17Sq-qQiK-lPE6C6BibsDbRbeOrXmaQc0",
                 _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
                 _id: "70e68a6b-78be-42e4-9f49-f465d75ed7d4"
@@ -1483,6 +1497,7 @@
                 format: "Hardcover",
                 quantity: 6,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1ZlzFbYoyjNR8FscsuD2ifqeVe4sAnYcQ",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "842c31bc-8dc1-4327-b65b-af5b881bf25e"
@@ -1500,6 +1515,7 @@
                 format: "Paperback",
                 quantity: 15,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1QAG9OHMjnGClqoEK3T9eQfLHCpKCQddQ",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "8b0ee033-a244-4397-83d4-2faaf481b028"
@@ -1517,6 +1533,7 @@
                 format: "Paperback",
                 quantity: 12,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1BABLMbqONgm_gSlxoRm7Cl753ZAancRX",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "dfb6a4ac-10e6-4ccf-8c40-7c60e6792b5a"
@@ -1534,6 +1551,7 @@
                 format: "Paperback",
                 quantity: 3,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1UwJFsHmcHqG-SxB77qVw-wqeKyKrW3j2",
                 _id: "088b34d7-f1bc-4f57-9bea-1fea2e1a5ef2"
             },
@@ -1550,6 +1568,7 @@
                 format: "Paperback",
                 quantity: 3,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1Q6_D1tXRQI52BFrO38eQsOINBQBAZqEJ",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "69bd8ce7-22d6-433c-b3fd-5211082958d4"
@@ -1567,6 +1586,7 @@
                 format: "Hardcover",
                 quantity: 3,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1l_wq5ct1tdb6iOsuD_SWJonnGPhpOpOD",
                 _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
                 _id: "c9151a95-99fc-4dd7-b12c-76bf6c8c73f5"
@@ -1585,6 +1605,7 @@
                 format: "Hardcover",
                 quantity: 2,
                 rating: 0,
+                isBestseller: true,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1KlPUK72T5Ey6TUx47rs051cKgD0jRlQ0",
                 _categoryId: "12a0f886-7146-4fe7-8366-460b5c5e5da1",
                 _id: "e0fb574b-efc2-4804-b439-9f45bb86155f"
@@ -1602,26 +1623,10 @@
                 format: "Hardcover",
                 quantity: 6,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1Y5Zra43NMVe-OaIfpcEPdq3qXD8pQhcN",
                 _categoryId: "12a0f886-7146-4fe7-8366-460b5c5e5da1",
                 _id: "7217df16-2c14-4141-8baf-3df5f3f475b2"
-            },
-            "31bb3eaa-7afe-4131-84c4-45b45efcbfa7": {
-                title: "Above Ground",
-                author: "Clint Smith",
-                price: 2.11,
-                description: "March 28, 2023",
-                publishDate: "",
-                publisher: "Little Brown and Company",
-                pages: 128,
-                dimensions: "12.5x24x3.6",
-                language: "English",
-                format: "Hardcover",
-                quantity: 8,
-                rating: 0,
-                imageUrl: "https://drive.google.com/uc?export=view&id=1IuPADte7rQznTjCZRWxoU9qEeJjMhd44",
-                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
-                _id: "31bb3eaa-7afe-4131-84c4-45b45efcbfa7"
             },
             // Science Fiction books
             "85611f43-9987-4c3e-b9b8-9ebcbef8b59b": {
@@ -1637,6 +1642,7 @@
                 format: "Hardcover",
                 quantity: 2,
                 rating: 0,
+                isBestseller: true,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1iNqxer196eKUXmnUZFxzUfy4BAHMuJns",
                 _categoryId: "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5",
                 _id: "85611f43-9987-4c3e-b9b8-9ebcbef8b59b"
@@ -1654,11 +1660,12 @@
                 format: "Mass Market Paperbound",
                 quantity: 9,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1iX9I1yJPAnYQ-4S1gdr2kqm1o7GTT_OZ",
                 _categoryId: "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5",
                 _id: "0a9aa176-57ee-47b8-9b1d-888ab95fe7b7"
             },
-            // "Arts & Photography books
+            // Arts & Photography books
             "2d54f0f0-d38d-407a-93a2-ba5b5873d422": {
                 title: "Eyeliner: A Cultural History",
                 author: "Zahra Hankir",
@@ -1672,6 +1679,7 @@
                 format: "Hardcover",
                 quantity: 5,
                 rating: 0,
+                isBestseller: true,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1xBeFBAhOxAiHY2EewFbFYDIHxpPCHbN7",
                 _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
                 _id: "2d54f0f0-d38d-407a-93a2-ba5b5873d422"
@@ -1689,6 +1697,7 @@
                 format: "Paperback",
                 quantity: 10,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1MVmZyFbbU1m3vKTvM2FUB0AI0mRbs6AK",
                 _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
                 _id: "669f2160-521f-4e80-8398-cdf32acd868a"
@@ -1707,6 +1716,7 @@
                 format: "Hardcover",
                 quantity: 7,
                 rating: 0,
+                isBestseller: true,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1iNBjXgRHuZFccS4ev22S3NJSbCTgwf8l",
                 _categoryId: "ee7b8979-9eee-4b05-a59c-c0026d321e0e",
                 _id: "775a119a-3cce-48c5-8e26-19b2639956e8"
@@ -1724,11 +1734,174 @@
                 format: "Paperback",
                 quantity: 12,
                 rating: 0,
+                isBestseller: false,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1qNlKyVbjTe3TmSzbiUewYyrhgS_BzSl4",
                 _categoryId: "ee7b8979-9eee-4b05-a59c-c0026d321e0e",
                 _id: "6eb0a28d-7ace-403c-8e26-5c52b71afe5b"
             },
-        },
+            // Science & Technology Books
+            "84caebad-46a3-4d13-8d8a-d197c4e4fce4": {
+                title: "White Holes",
+                author: "Carlo Rovelli",
+                price: 26.00,
+                description: "Let us journey, with beloved physicist Carlo Rovelli, into the heart of a black hole. We slip beyond its horizon and tumble down this crack in the universe. As we plunge, we see geometry fold. Time and space pull and stretch. And finally, at the black hole's core, space and time dissolve, and a white hole is born. Rovelli has dedicated his career to uniting the time-warping ideas of general relativity and the perplexing uncertainties of quantum mechanics. In White Holes, he reveals the mind of a scientist at work. He traces the ongoing adventure of his own cutting-edge research, investigating whether all black holes could eventually turn into white holes, equally compact objects in which the arrow of time is reversed. Rovelli writes just as compellingly about the work of a scientist as he does the marvels of the universe. He shares the fear, uncertainty, and frequent disappointment of exploring hypotheses and unknown worlds, and the delight of chasing new ideas to unexpected conclusions. Guiding us beyond the horizon, he invites us to experience the fever and the disquiet of science--and the strange and startling life of a white hole.",
+                publishDate: "October 31, 2023",
+                publisher: "Riverhead Books",
+                pages: 176,
+                dimensions: "15.5x18x2.3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 15,
+                rating: 0,
+                isBestseller: false,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1R5vxbx7Onw8kq5wX96kTh_pYIiURahlL",
+                _categoryId: "c1036218-4964-418e-9a1e-c7aca28ad160",
+                _id: "84caebad-46a3-4d13-8d8a-d197c4e4fce4"
+            },
+            "947bc628-797d-4f52-ac9b-8e0ff7d57dc6": {
+                title: "To Infinity and Beyond: A Journey of Cosmic Discovery",
+                author: "Neil Degrasse Tyson, Lindsey Nyx Walker",
+                price: 27.90,
+                description: "No one can make the mysteries of the universe more comprehensible and fun than Neil deGrasse Tyson. Drawing on mythology, history, and literature--alongside his trademark wit and charm--Tyson and StarTalk senior producer Lindsey Nyx Walker bring planetary science down to Earth and principles of astrophysics within reach. In this entertaining book, illustrated with vivid photographs and art, readers travel through space and time, starting with the Big Bang and voyaging to the far reaches of the universe and beyond. Along the way, science greets pop culture as Tyson explains the triumphs--and bloopers--in Hollywood's blockbusters: all part of an entertaining ride through the cosmos.",
+                publishDate: "September 12, 2023",
+                publisher: "National Geographic Society",
+                pages: 320,
+                dimensions: "13x20x3.5",
+                language: "English",
+                format: "Hardcover",
+                quantity: 7,
+                rating: 0,
+                isBestseller: false,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1YxBfOXzHcnsn54MrnAUxoUNMqCi7DfSN",
+                _categoryId: "c1036218-4964-418e-9a1e-c7aca28ad160",
+                _id: "947bc628-797d-4f52-ac9b-8e0ff7d57dc6"
+            },
+            "2075ac4e-5995-4d0f-8306-8195e9f00f05": {
+                title: "On the Origin of Time: Stephen Hawking's Final Theory",
+                author: "Thomas Hertog",
+                price: 26.96,
+                description: "Perhaps the biggest question Stephen Hawking tried to answer in his extraordinary life was how the universe could have created conditions so perfectly hospitable to life. In order to solve this mystery, Hawking studied the big bang origin of the universe, but his early work ran into a crisis when the math predicted many big bangs producing a multiverse--countless different universes, most of which would be far too bizarre to ​harbor life.\nHoled up in the theoretical physics department at Cambridge, Stephen Hawking and his friend and collaborator Thomas Hertog worked on this problem for twenty years, developing a new theory of the cosmos that could account for the emergence of life. Peering into the extreme quantum physics of cosmic holograms and venturing far back in time to our deepest roots, they were startled to find a deeper level of evolution in which the physical laws themselves transform and simplify until particles, forces, and even time itself fades away. This discovery led them to a revolutionary idea: The laws of physics are not set in stone but are born and co-evolve as the universe they govern takes shape. As Hawking's final days drew near, the two collaborators published their theory, which proposed a radical new Darwinian perspective on the origins of our universe.",
+                publishDate: "April 11, 2023",
+                publisher: "Bantam",
+                pages: 352,
+                dimensions: "16x25x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 14,
+                rating: 0,
+                isBestseller: false,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1vT2gN6T1GunsYtSlf8gpEKa9EqBQ1Ua1",
+                _categoryId: "c1036218-4964-418e-9a1e-c7aca28ad160",
+                _id: "2075ac4e-5995-4d0f-8306-8195e9f00f05"
+            },
+            "df3a6362-7411-4c81-9dde-0e1964ce74cf": {
+                title: "The Maid",
+                author: "Nita Prose",
+                price: 16.74,
+                description: "Molly Gray is not like everyone else. She struggles with social skills and misreads the intentions of others. Her gran used to interpret the world for her, codifying it into simple rules that Molly could live by. Since Gran died a few months ago, twenty-five-year-old Molly has been navigating life's complexities all by herself. No matter--she throws herself with gusto into her work as a hotel maid. Her unique character, along with her obsessive love of cleaning and proper etiquette, make her an ideal fit for the job. She delights in donning her crisp uniform each morning, stocking her cart with miniature soaps and bottles, and returning guest rooms at the Regency Grand Hotel to a state of perfection. But Molly's orderly life is upended the day she enters the suite of the infamous and wealthy Charles Black, only to find it in a state of disarray and Mr. Black himself dead in his bed. Before she knows what's happening, Molly's unusual demeanor has the police targeting her as their lead suspect. She quickly finds herself caught in a web of deception, one she has no idea how to untangle. Fortunately for Molly, friends she never knew she had unite with her in a search for clues to what really happened to Mr. Black--but will they be able to find the real killer before it's too late?",
+                publishDate: "January 03, 2023",
+                publisher: "Ballantine Books",
+                pages: 336,
+                dimensions: "13x21x2",
+                language: "English",
+                format: "Paperback",
+                quantity: 14,
+                rating: 0,
+                isBestseller: true,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1MO589wt09ht8aCiRBJQpkc4pADSBKaZ0",
+                _categoryId: "8d04c99d-a900-4440-8d67-64ead7e2298f",
+                _id: "df3a6362-7411-4c81-9dde-0e1964ce74cf"
+            },
+            "ed0abca9-bcd5-47a7-83bc-96921d542d82": {
+                title: "Most Delicious Poison: The Story of Nature's Toxins--From Spices to Vices",
+                author: "Noah Whiteman",
+                price: 27.90,
+                description: "A deadly secret lurks within our spice racks, medicine cabinets, backyard gardens, and private stashes. Scratch beneath the surface of a coffee bean, a red pepper flake, a poppy seed, a mold spore, a foxglove leaf, a magic-mushroom cap, a marijuana bud, or an apple seed, and we find a bevy of strange chemicals. We use these to greet our days (caffeine), titillate our tongues (capsaicin), recover from surgery (opioids), cure infections (penicillin), mend our hearts (digoxin), bend our minds (psilocybin), calm our nerves (CBD), and even kill our enemies (cyanide). But why do plants and fungi produce such chemicals? And how did we come to use and abuse some of them?",
+                publishDate: "October 24, 2023",
+                publisher: "Little Brown Spark",
+                pages: 304,
+                dimensions: "16x21x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 7,
+                rating: 0,
+                isBestseller: true,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1xZhaWuVbyQejkMBmREVIhbW1UAnD-uz2",
+                _categoryId: "c1036218-4964-418e-9a1e-c7aca28ad160",
+                _id: "ed0abca9-bcd5-47a7-83bc-96921d542d82"
+            },
+            "0047313e-79fc-4039-944e-f5d0e9e00e62": {
+                title: "My Murder",
+                author: "Katie Williams",
+                price: 25.11,
+                description: "What if the murder you had to solve was your own? Lou is a happily married mother of an adorable toddler. She's also the victim of a local serial killer. Recently brought back to life and returned to her grieving family by a government project, she is grateful for this second chance. But as the new Lou re-adapts to her old routines, and as she bonds with other female victims, she realizes that disturbing questions remain about what exactly preceded her death and how much she can really trust those around her. Now it's not enough to care for her child, love her husband, and work the job she's always enjoyed--she must also figure out the circumstances of her death. Darkly comic, tautly paced, and full of surprises, My Murder is a devour-in-one-sitting, clever twist on the classic thriller.",
+                publishDate: "June 06, 2023",
+                publisher: "Riverhead Books",
+                pages: 304,
+                dimensions: "15.5x19x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 11,
+                rating: 0,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1SstJiVJaG9lkQQeSoFE_Ak1loRHb7Eeh",
+                isBestseller: false,
+                _categoryId: "8d04c99d-a900-4440-8d67-64ead7e2298f",
+                _id: "0047313e-79fc-4039-944e-f5d0e9e00e62"
+            },
+            "b452b58a-c6a0-4b85-b52f-2d654a2ceb56": {
+                title: "The Secret History",
+                author: "Donna Tartt",
+                price: 16.74,
+                description: "Under the influence of a charismatic classics professor, a group of clever, eccentric misfits at a New England college discover a way of thought and life a world away from their banal contemporaries. But their search for the transcendent leads them down a dangerous path, beyond human constructs of morality.",
+                publishDate: "April 13, 2004",
+                publisher: "Vintage",
+                pages: 576,
+                dimensions: "13x18x2.5",
+                language: "English",
+                format: "Paperback",
+                quantity: 18,
+                isBestseller: false,
+                rating: 0,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1GbounDSFkB2oJ6vLZI5x01Xj1pzEiqTC",
+                _categoryId: "8d04c99d-a900-4440-8d67-64ead7e2298f",
+                _id: "b452b58a-c6a0-4b85-b52f-2d654a2ceb56"
+            },
+            "b1d52fcd-e27c-40c8-8ed1-c80e2ec986b1": {
+                title: "Haruki Murakami Manga Stories 1: Super-Frog Saves Tokyo, the Seventh Man, Birthday Girl, Where I'm Likely to Find It",
+                author: "Haruki Murakami",
+                price: 19.99,
+                description: "Haruki Murakami's novels, essays and short stories have sold millions of copies worldwide and been translated into dozens of languages. Now for the first time, many of Murakami's best-loved short stories are available in graphic novel form in English. Haruki Murakami Manga Stories 1 is the first of three volumes, which will present a total of 9 short stories from Murakami's bestselling collections.",
+                publishDate: "October 24, 2023",
+                publisher: "Tuttle Publishing",
+                pages: 144,
+                dimensions: "15.5x20.5x2",
+                language: "English",
+                format: "Hardcover",
+                quantity: 16,
+                isBestseller: true,
+                rating: 0,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1UPsknl4WlY3HglQT4Aw31tfUh7ixIlXh",
+                _categoryId: "8d04c99d-a900-4440-8d67-64ead7e2298f",
+                _id: "b1d52fcd-e27c-40c8-8ed1-c80e2ec986b1"
+            },
+            // "": {
+            //     title: "",
+            //     author: "",
+            //     price: ,
+            //     description: "",
+            //     publishDate: "",
+            //     publisher: "",
+            //     pages: ,
+            //     dimensions: "",
+            //     language: "",
+            //     format: "",
+            //     quantity: ,
+            //     rating: ,
+            //     imageUrl: "",
+            //     _categoryId: "",
+            //     _id: ""
+            // },
+         },
     	
     	comments: {
     		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
