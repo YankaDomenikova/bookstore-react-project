@@ -9,11 +9,11 @@ import filtersIcon from '../../assets/filter-options-preferences-settings-svgrep
 export default function BookCatalog() {
     const [books, setBooks] = useState([]);
     const [categories, setCategories] = useState([]);
-    const { categoryId } = useParams();
+    const { categoryName, categoryId, } = useParams();
 
 
     let url;
-    if (categoryId) {
+    if (categoryId && categoryName) {
         url = `http://localhost:3030/data/books?select=_id,title,author,price,imageUrl&where=_categoryId%3D%22${categoryId}%22`;
     } else {
         //url = "http://localhost:3030/data/books?select=_id,title,author,price,imageUrl&load=gategory%3D_categoryId%3Acategories";
@@ -43,7 +43,7 @@ export default function BookCatalog() {
                     <ul>
                         <li><Link to={"/catalog"}>All Books</Link></li>
                         {categories.map(cat => <li key={cat._id}>
-                            <Link to={`/catalog/category/${cat._id}`}>{cat.name}</Link>
+                            <Link to={`/catalog/${cat.name}/${cat._id}`}>{cat.name}</Link>
                         </li>)}
                     </ul>
                 </div>
@@ -51,9 +51,7 @@ export default function BookCatalog() {
 
             <div className={styles.catalogContainer}>
                 <h2 className={styles.bookHeading}>
-                    {/* {categoryId ? category.name : "All "} Books */}
-
-                    All Books
+                    {categoryId ? categoryName : "All "} Books
                 </h2>
                 <div className={styles.books}>
                     {books.map(book => <BookCatalogItem key={book._id} {...book} />)}
