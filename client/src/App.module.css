@@ -7,3 +7,18 @@
     box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
+
+/* width */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: rgba(231, 219, 116, 0.15)
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #191919;
+}

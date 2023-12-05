@@ -1586,7 +1586,7 @@
                 quantity: 2,
                 rating: 0,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1KlPUK72T5Ey6TUx47rs051cKgD0jRlQ0",
-                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _categoryId: "12a0f886-7146-4fe7-8366-460b5c5e5da1",
                 _id: "e0fb574b-efc2-4804-b439-9f45bb86155f"
             },
             "7217df16-2c14-4141-8baf-3df5f3f475b2": {
@@ -1603,7 +1603,7 @@
                 quantity: 6,
                 rating: 0,
                 imageUrl: "https://drive.google.com/uc?export=view&id=1Y5Zra43NMVe-OaIfpcEPdq3qXD8pQhcN",
-                _categoryId: "e5f56f1e-5631-48a1-8fc5-9f374424306f",
+                _categoryId: "12a0f886-7146-4fe7-8366-460b5c5e5da1",
                 _id: "7217df16-2c14-4141-8baf-3df5f3f475b2"
             },
             "31bb3eaa-7afe-4131-84c4-45b45efcbfa7": {

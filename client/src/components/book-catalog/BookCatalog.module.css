@@ -1,9 +1,10 @@
 .content {
     width: 80vw;
-    min-height: 80vh;
+    min-height: 85vh;
     display: flex;
     margin: auto;
     margin-top: 25px;
+    margin-bottom: 45px;
     font-family: 'Jost', sans-serif;
 }
 

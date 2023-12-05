@@ -1,12 +1,103 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 
-header {
-    display: flex;
-    flex-direction: column;
-    font-family: 'Inter', sans-serif;
-}
+ header {
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     padding: 0 48px;
+     height: 50px;
+     background: #191919;
+     border-top: 2px solid #C80D44;
+     border-bottom: 2px solid #E7DB75;
+     color: #fcfcfc;
+     font-family: 'Inter', sans-serif;
 
+ }
+
+ .logo,
+ nav,
+ .shopping {
+     min-width: 280px;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+ }
+
+ .logo {
+     justify-content: flex-start;
+     text-decoration: none;
+ }
+
+ .logo h1 {
+     font-weight: 200;
+     font-size: 17px;
+     color: #fcfcfc;
+ }
+
+ .logo img {
+     height: 20px;
+     margin-right: 5px
+ }
+
+
+ .navLinks {
+     list-style-type: none;
+     display: inline-block;
+ }
+
+ .navLinks li {
+     display: inline-block;
+ }
+
+ .navLinks li a {
+     margin: 0 12px;
+
+ }
+
+ .link {
+     text-decoration: none;
+     color: #fcfcfc;
+     font-size: 13px;
+     font-weight: 200;
+     font-family: 'Inter';
+ }
+
+ .shopping {
+     justify-content: flex-end;
+ }
+
+ .basket {
+     margin-right: 25px;
+     position: relative;
+ }
+
+ .basket img {
+     height: 20px;
+ }
+
+ .quantity {
+     position: absolute;
+     top: 13px;
+     right: -8px;
+     height: 16px;
+     width: 16px;
+     border-radius: 50%;
+     background: #C80D44;
+     text-align: center;
+     font-size: 10px;
+     line-height: 16px;
+ }
+
+ .auth {
+     display: flex;
+ }
+
+ .avatar {
+     height: 30px;
+ }
+
+ /*
 .headerTop {
     display: flex;
     align-items: center;
@@ -117,4 +208,4 @@ header {
     font-weight: 200;
     margin: 0 5px;
     font-size: 13px;
-}
+} */

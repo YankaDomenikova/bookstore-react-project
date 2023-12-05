@@ -31,7 +31,7 @@
 .bookTitle {
     width: 145px;
     color: #C80D44;
-    font-size: 16px;
+    font-size: 14px;
     font-weight: 400;
     overflow: hidden;
     display: -webkit-box;
@@ -42,7 +42,7 @@
 }
 
 .authorName {
-    font-size: 13px;
+    font-size: 11px;
     font-weight: 400;
 }
 
