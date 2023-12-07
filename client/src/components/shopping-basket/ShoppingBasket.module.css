@@ -1,0 +1,234 @@
+.pageContent {
+    width: 70%;
+    margin: 80px auto;
+}
+
+.pageContent h2 {
+    color: #C80D44;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+.warpper {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.basketContent {
+    width: 63%;
+    position: relative;
+}
+
+.basketContent .emptyBasketMessage {
+    color: #191919;
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-40%, -50%);
+}
+
+.basketContent .basketItems {
+    border-top: 1px solid rgba(231, 219, 116, 0.35);
+}
+
+.basketItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(231, 219, 116, 0.35);
+    padding: 17px 15px;
+}
+
+.bookInfo {
+    display: flex;
+}
+
+.bookInfo img {
+    height: 65px;
+    margin-right: 8px;
+}
+
+.bookTitle {
+    color: #C80D44;
+    font-size: 13px;
+}
+
+.author {
+    font-size: 11px;
+}
+
+.availability {
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+.availability.inStock {
+    color: #338525;
+}
+
+.availability.limited {
+    color: #C07A12;
+}
+
+.quantityControls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75px;
+}
+
+.quantityControls button {
+    background: transparent;
+    border: none;
+    height: 14px;
+    cursor: pointer;
+}
+
+.qty {
+    font-size: 13px;
+}
+
+.remove {
+    background: transparent;
+    border: none;
+    height: 12px;
+    cursor: pointer;
+}
+
+.quantityControls button img,
+.remove img {
+    height: 100%;
+}
+
+.priceByQuantity {
+    font-weight: 500;
+    font-size: 13px;
+}
+
+
+.additionalInfo {
+    width: 30%;
+}
+
+.orderDetails {
+    border: 1px solid rgba(231, 219, 116, 1);
+    border-radius: 4px;
+    padding: 35px 28px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 220px;
+    font-weight: 500;
+}
+
+.orderDetails h4 {
+    font-weight: 600;
+}
+
+h4.total {
+    font-size: 14px;
+}
+
+.orderDetails p {
+    font-size: 12px;
+    margin: 8px 0;
+}
+
+.row {
+    width: 100%;
+}
+
+.row span {
+    text-align: right;
+    float: right;
+}
+
+.checkoutBtn {
+    background: #191919;
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+
+.checkoutBtn a {
+    color: #fcfcfc;
+    font-size: 15px;
+    font-weight: 300;
+    text-decoration: none;
+}
+
+.coupons {
+    margin-top: 35px;
+}
+
+.coupons h5,
+.payment h5 {
+    color: #C80D44;
+    font-weight: 500;
+    font-size: 13px;
+}
+
+.coupons .input {
+    margin-top: 5px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+
+.coupons .input input {
+    background: transparent;
+    outline: none;
+    border: 1px solid #E7DB75;
+    border-radius: 3px;
+    width: 215px;
+    height: 30px;
+    color: #191919;
+    padding: 0 15px;
+    font-size: 13px;
+}
+
+.coupons .input button {
+    background: #191919;
+    color: #fcfcfc;
+    border: none;
+    font-size: 10px;
+    font-weight: 300;
+    border-radius: 3px;
+    width: 85px;
+}
+
+.payment {
+    margin-top: 40px;
+}
+
+.paymentMethods {
+    display: flex;
+    align-items: center;
+    margin-top: -5px;
+}
+
+.paymentMethods span {
+    font-size: 10px;
+    margin-right: 18px;
+}
+
+.paymentMethods img {
+    height: 28px;
+    margin-right: 18px;
+}
+
+.paymentMethods img.paypal {
+    height: 35px;
+}
+
+.returnInfo {
+    font-size: 9px;
+    margin-top: 25px;
+}
+
+.returnInfo p span {
+    text-decoration: underline;
+}

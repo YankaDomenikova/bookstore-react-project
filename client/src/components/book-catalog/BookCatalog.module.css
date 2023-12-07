@@ -19,7 +19,7 @@
 .bookHeading {
     color: #C80D44;
     margin-left: 20px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .books {
@@ -33,37 +33,45 @@
     width: 20%;
     padding-top: 40px;
     padding-left: 30px;
+
 }
 
 .filterHeading {
     display: flex;
     align-items: center;
+    margin-bottom: 12px;
 }
 
 .filterHeading h3 {
     margin-left: 5px;
+    font-size: 17px;
     font-weight: 400;
-
+    color: #C80D44;
 }
 
 .filterHeading img {
-    height: 23px;
-    width: 23px;
+    height: 19px;
+    width: 19px;
 }
 
 .categories {
-    font-size: 16px;
+    font-size: 15px;
     margin-top: 10px;
 }
 
 .categories ul li {
     list-style-type: none;
-    margin: 3px 0;
+    margin: 7px 0;
 }
 
 .categories ul li a {
     text-decoration: none;
     color: #191919;
+    font-size: 15px;
+}
+
+.categories ul li a:hover {
+    color: #C80D44;
 }
 
 .noBooksMessage {

@@ -129,7 +129,8 @@
     width: 200px;
     height: 45px;
     color: #fcfcfc;
-    border-radius: 2px;
+    border-radius: 3px;
+    border: none;
 }
 
 .information h2,

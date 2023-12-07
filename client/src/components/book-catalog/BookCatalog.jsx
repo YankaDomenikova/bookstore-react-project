@@ -12,24 +12,27 @@ export default function BookCatalog() {
     const { categoryName, categoryId, } = useParams();
 
 
-    let url;
-    if (categoryId && categoryName) {
-        url = `http://localhost:3030/data/books?select=_id,title,author,price,imageUrl&where=_categoryId%3D%22${categoryId}%22`;
-    } else {
-        //url = "http://localhost:3030/data/books?select=_id,title,author,price,imageUrl&load=gategory%3D_categoryId%3Acategories";
-        url = "http://localhost:3030/data/books?select=_id%2Ctitle%2Cauthor%2Cprice%2CimageUrl%2C_categoryId&load=category%3D_categoryId%3Acategories";
-    }
+    // let url;
+    // if (categoryId) {
+    //     url = `http://localhost:3030/data/books?select=_id,title,author,price,imageUrl&where=_categoryId%3D%22${categoryId}%22`;
+    // } else {
+    //     //url = "http://localhost:3030/data/books?select=_id,title,author,price,imageUrl&load=gategory%3D_categoryId%3Acategories";
+    //     url = "http://localhost:3030/data/books?select=_id%2Ctitle%2Cauthor%2Cprice%2CimageUrl%2C_categoryId";
+    // }
 
     useEffect(() => {
-
-        fetch(url)
+        fetch("http://localhost:3030/data/books?select=_id%2Ctitle%2Cauthor%2Cprice%2CimageUrl%2C_categoryId")
             .then(res => res.json())
             .then(data => setBooks(data));
 
         fetch("http://localhost:3030/data/categories")
             .then(res => res.json())
             .then(data => setCategories(data));
-    }, [categoryId]);
+    }, []);
+
+    const filteredBooks = categoryId
+        ? books.filter(book => book._categoryId === categoryId)
+        : books;
 
     return (
 
@@ -51,14 +54,16 @@ export default function BookCatalog() {
 
             <div className={styles.catalogContainer}>
                 <h2 className={styles.bookHeading}>
-                    {categoryId ? categoryName : "All "} Books
+                    {categoryId ? categoryName : "All Books"}
                 </h2>
                 <div className={styles.books}>
-                    {books.map(book => <BookCatalogItem key={book._id} {...book} />)}
+                    {filteredBooks.map(book => <BookCatalogItem key={book._id} {...book} />)}
                 </div>
 
-                {books.length === 0 && (
-                    <h3 className={styles.noBooksMessage}> No books in this category</h3>
+                {filteredBooks.length === 0 && (
+                    <h3 className={styles.noBooksMessage}>
+                        {categoryId ? " No books in this category" : "No books yet"}
+                    </h3>
                 )}
             </div>
         </div>

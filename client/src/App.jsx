@@ -13,6 +13,7 @@ import MainLayout from './layouts/MainLayout';
 import { Paths } from './paths/paths';
 
 import "./App.module.css";
+import ShoppingBasket from './components/shopping-basket/ShoppingBasket';
 
 function App() {
     return (
@@ -24,6 +25,7 @@ function App() {
                     <Route path={Paths.BooksByCategory} element={<BookCatalog />} />
                     <Route path={Paths.Bestsellers} element={<Bestsellers />} />
                     <Route path={Paths.BookDetails} element={<BookDetails />} />
+                    <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
                 </Route>
 
                 <Route path={Paths.Login} element={<Login />} />

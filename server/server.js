@@ -1352,8 +1352,12 @@
                 name: "Mystery, Thrillers, & Crime",
                 _id: "8d04c99d-a900-4440-8d67-64ead7e2298f"
             },
+            "3ba68fc3-fc14-40c9-8de6-33a936cba1ad": {
+                name: "Manga",
+                _id: "3ba68fc3-fc14-40c9-8de6-33a936cba1ad",
+            },
             "12a0f886-7146-4fe7-8366-460b5c5e5da1": {
-                name: "Poetry",
+                name: "Literature and Poetry",
                 _id: "12a0f886-7146-4fe7-8366-460b5c5e5da1",
             },
             "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5": {
@@ -1375,23 +1379,23 @@
         },
         books: {
             // Romance books
-            "b867ae43-c435-488b-89b0-5764ec6f65b9": {
-                title: "Throne of Glass",
-                author: "Sarah J. Maas",
-                price: 17.67,
-                description: "Enter the world of Throne of Glass with the first book in the #1 bestselling series by Sarah J. Maas.In a land without magic, an assassin is summoned to the castle. She has no love for the vicious king who rules from his throne of glass, but she has not come to kill him. She has come to win her freedom. If she defeats twenty-three murderers, thieves, and warriors in a competition, she will be released from prison to serve as the King's Champion.Her name is Celaena Sardothien.The Crown Prince will provoke her. The Captain of the Guard will protect her. And a princess from a faraway country will befriend her. But something rotten dwells in the castle, and it's there to kill. When her competitors start dying mysteriously, one by one, Celaena's fight for freedom becomes a fight for survival-and a desperate quest to root out the evil before it destroys her world.Thrilling and fierce, Throne of Glass is the first book in the #1 New York Times bestselling series that has captivated readers worldwide.",
-                publishDate: "February 14, 2023",
-                publisher: "Bloomsbury Publishing",
-                pages: 432,
-                dimensions: "14x24x6",
+            "8d1f9a76-8f76-4a71-9d23-6152fda8006c": {
+                title: "The Darcy Myth",
+                author: "Rachel Feder",
+                price: 19.55,
+                description: "Covering cultural touchstones ranging from Twilight to Taylor Swift and from Lord Byron to The Bachelor, The Darcy Myth is a book for anyone who loves thinking deeply about literature and culture-whether they love Jane Austen or not. You already know Mr. Darcy-at least you think you do! The brooding, rude, standoffish romantic hero of Pride and Prejudice, Darcy initially insults and ignores the witty heroine, but eventually succumbs to her charms. It's a classic enemies-to-lovers plot, and one that has profoundly influenced our cultural ideas about courtship. But what if this classic isn't just a grand romance, but a horror novel about how scary love and marriage can be for women? In The Darcy Myth, literature scholar Rachel Feder unpacks Austen's Gothic influences and how they've led us to a romantic ideal that's halfway to being a monster story. Why is our culture so obsessed with cruel, indifferent romantic heroes (and sometimes heroines)? How much of that is Darcy's fault? And, now that we know, what do we do about it?",
+                publishDate: "November 08, 2023",
+                publisher: "Quirk Books",
+                pages: 205,
+                dimensions: "13x20x2",
                 language: "English",
                 format: "Paperback",
                 quantity: 0,
                 rating: 0,
                 isBestseller: false,
-                imageUrl: "https://drive.google.com/uc?export=view&id=1C8F2cL20FLYULOnncesEQqpwDornJkHi",
-                _categoryId: "d9e9296e-c2ef-48df-b5b6-3df05e99ace0",
-                _id: "b867ae43-c435-488b-89b0-5764ec6f65b9"
+                imageUrl: "https://drive.google.com/uc?export=view&id=12jr4dylqMJgq7kXeL-U4m11vntVWwYxp",
+                _categoryId: "12a0f886-7146-4fe7-8366-460b5c5e5da1",
+                _id: "8d1f9a76-8f76-4a71-9d23-6152fda8006c"
             },
             "024d5155-2c67-4c10-b3a5-ae5969c466b3": {
                 title: "Baumgartner",
@@ -1684,6 +1688,24 @@
                 _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
                 _id: "2d54f0f0-d38d-407a-93a2-ba5b5873d422"
             },
+            "45b0a8c7-d03a-4f32-ae7d-b8dfcd11d922": {
+                title: "Colors of Film: The Story of Cinema in 50 Palettes",
+                author: "Charles Bramesco",
+                price: 26.00,
+                description: "The use of color is an essential part of film. It has the power to evoke powerful emotions, provide subtle psychological symbolism and act as a narrative device. Wes Anderson's pastels and muted tones are aesthetically pleasing, but his careful use of color also acts as a shorthand for interpreting emotion. Moonlight(2the use of colo016, dir. Barry Jenkins) cinematographer (James Laxton) and colorist (Alex Bickel) spent 100 hours fine-tuning the saturation and hues of the footage so that r evolved in line with the growth of the protagonist through the film. And let's not forget Schindler's List (1993, dir. Steven Spielberg), in which a bold flash of red against an otherwise black-and-white film is used as a powerful symbol of life, survival and death. In Colors of Film, film critic Charles Bramesco introduces an element of cinema that is often overlooked, yet has been used in extraordinary ways. Using infographic color palettes, and stills from the movies, this is a lively and fresh approach to film for cinema-goers and color lovers alike.",
+                publishDate: "March 14, 2023",
+                publisher: "Frances Lincoln",
+                pages: 208,
+                dimensions: "22.6x30x3.3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 5,
+                rating: 0,
+                isBestseller: true,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1jd5fVZ0Pn5gFwJnhbYsNGfIAsj44dBZc",
+                _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
+                _id: "45b0a8c7-d03a-4f32-ae7d-b8dfcd11d922"
+            },
             "669f2160-521f-4e80-8398-cdf32acd868a": {
                 title: "Architecture: A Very Short Introduction",
                 author: "Andrew Ballantyne",
@@ -1866,24 +1888,97 @@
                 _categoryId: "8d04c99d-a900-4440-8d67-64ead7e2298f",
                 _id: "b452b58a-c6a0-4b85-b52f-2d654a2ceb56"
             },
-            "b1d52fcd-e27c-40c8-8ed1-c80e2ec986b1": {
-                title: "Haruki Murakami Manga Stories 1: Super-Frog Saves Tokyo, the Seventh Man, Birthday Girl, Where I'm Likely to Find It",
-                author: "Haruki Murakami",
-                price: 19.99,
-                description: "Haruki Murakami's novels, essays and short stories have sold millions of copies worldwide and been translated into dozens of languages. Now for the first time, many of Murakami's best-loved short stories are available in graphic novel form in English. Haruki Murakami Manga Stories 1 is the first of three volumes, which will present a total of 9 short stories from Murakami's bestselling collections.",
-                publishDate: "October 24, 2023",
-                publisher: "Tuttle Publishing",
-                pages: 144,
-                dimensions: "15.5x20.5x2",
+            "4fa3da51-b60e-4241-a414-0edd3fd4ef4c": {
+                title: "Bright Young Women",
+                author: "Jessica Knoll",
+                price: 26.03,
+                description: "Masterfully blending elements of psychological suspense and true crime, Jessica Knoll--author of the bestselling novel Luckiest Girl Alive and the writer behind the Netflix adaption starring Mila Kunis--delivers a new and exhilarating thriller in Bright Young Women. The book opens on a Saturday night in 1978, hours before a soon-to-be-infamous murderer descends upon a Florida sorority house with deadly results. The lives of those who survive, including sorority president and key witness, Pamela Schumacher, are forever changed. Across the country, Tina Cannon is convinced her missing friend was targeted by the man papers refer to as the All-American Sex Killer--and that he's struck again. Determined to find justice, the two join forces as their search for answers leads to a final, shocking confrontation. Blisteringly paced, Bright Young Women is \Jessica Knoll at her best--an unflinching and evocative novel about the tabloid fascination with evil and the dynamic and brilliant women who have the real stories to tell\" (Laura Dave, New York Times bestselling author of The Last Thing He Told Me); and \"a compelling, almost hypnotic read and I loved it with a passion\" (Lisa Jewell, New York Times bestselling author of None of This Is True).",
+                publishDate: "September 19, 2023",
+                publisher: "S&s/ Marysue Rucci Books",
+                pages: 384,
+                dimensions: "15x25x2.5",
                 language: "English",
                 format: "Hardcover",
-                quantity: 16,
-                isBestseller: true,
+                quantity: 10,
                 rating: 0,
-                imageUrl: "https://drive.google.com/uc?export=view&id=1UPsknl4WlY3HglQT4Aw31tfUh7ixIlXh",
+                isBestseller: true,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1Da0f5jPAnzzI-dkS1AFZUy1KVN6FafFn",
                 _categoryId: "8d04c99d-a900-4440-8d67-64ead7e2298f",
-                _id: "b1d52fcd-e27c-40c8-8ed1-c80e2ec986b1"
+                _id: "4fa3da51-b60e-4241-a414-0edd3fd4ef4c"
             },
+            "a783d826-2e7b-483d-af92-e72bb2683541": {
+                title: "Tombs: Junji Ito Story Collection",
+                author: "Junji Ito",
+                price: 23.25,
+                description: "Three-time Eisner Award winner Junji Ito invites you to the horrific Tomb Town and beyond. Countless tombstones stand in rows throughout a small community, forming a bizarre tableau. What fate awaits a brother and sister after a traffic accident in this town of the dead? In another tale, a girl falls silent, her tongue transformed into a slug. Can a friend save her? Then, when a young man moves to a new town, he finds the house next door has only a single window. What does his grotesque neighbor want, calling out to him every evening from that lone window? Fresh nightmares brought to you by horror master Junji Ito.",
+                publishDate: "March 28, 2023",
+                publisher: "Viz Media",
+                pages: 344,
+                dimensions: "15x21x3",
+                language: "English",
+                format: "Hardcover",
+                quantity: 9,
+                rating: 0,
+                isBestseller: false,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1Y0ega9yMDW9XI-Nm0EMx8jXapZWETCUr",
+                _categoryId: "3ba68fc3-fc14-40c9-8de6-33a936cba1ad",
+                _id: "a783d826-2e7b-483d-af92-e72bb2683541"
+            },
+            "6abb875b-81ec-4220-a3e1-5d528f030360": {
+                title: "Venus in the Blind Spot",
+                author: "Junji Ito",
+                price: 21.38,
+                description: "This striking collection presents the most remarkable short works of Junji Ito's career, featuring an adaptation of Rampo Edogawa's classic horror story \"Human Chair\" and fan favorite \"The Enigma of Amigara Fault.\" With a deluxe presentation--including special color pages, and showcasing illustrations from his acclaimed long-form manga No Longer Human--each chilling tale invites readers to revel in a world of terror.",
+                publishDate: "August 18, 2020",
+                publisher: "Viz Media",
+                pages: 272,
+                dimensions: "15x22x2.5",
+                language: "English",
+                format: "Hardcover",
+                quantity: 10,
+                rating: 0,
+                isBestseller: false,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1BMl9I31xam-ZOZMkvw5Ktar6Cc_nCqs5",
+                _categoryId: "3ba68fc3-fc14-40c9-8de6-33a936cba1ad",
+                _id: "6abb875b-81ec-4220-a3e1-5d528f030360"
+            },
+            "80cc44dd-5955-4df9-8c45-43eadd6e8b5f": {
+                title: "Berserk, Volume 6",
+                author: "Kentaro Miura",
+                price: 14.99,
+                description: "Back in the day, Guts the Black Swordsman was a top slayer for The Band of the Hawk, an elite mercenary unit led by Griffith, whose calm demeanor and callow beauty belied his fighting prowess and steel will. While in a king's employ, the attraction between the king's daughter and Griffith and the growing favor of the king towards the Hawk leader raises the hackles of the king's jealous son, who plots to have Griffith summarily assassinated. But if the plot fails, the king's son will likely have to deal with Guts and his titanic broadsword, and the results of such confrontations are rarely pretty... or easy to clean up.",
+                publishDate: "February 01, 2005",
+                publisher: "Dark Horse Manga",
+                pages: 223,
+                dimensions: "13x18.4x1.9",
+                language: "English",
+                format: "Paperback",
+                quantity: 12,
+                rating: 0,
+                isBestseller: false,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1vVwCT9ddSR2aW9-VVUYrfPTkqDLVGZmZ",
+                _categoryId: "3ba68fc3-fc14-40c9-8de6-33a936cba1ad",
+                _id: "80cc44dd-5955-4df9-8c45-43eadd6e8b5f"
+            },
+            "cff21b2f-46c1-4a25-9806-b37eafbdc983": {
+                title: "1000 Chairs. Revised and Updated Edition",
+                author: "Taschen, Fiell",
+                price: 23.25,
+                description: "More than any other piece of furniture, the chair has been subjected to the wildest dreams of the designer. The particular curve of a backrest, or the twist of a leg, the angle of a seat or the color of the entire artifact; each element reflects the stylistic consciousness of an era. From Gerrit Rietveld and Alvar Aalto to Verner Panton and Eva Zeisel, from Art Nouveau to International Style, from Pop Art to Postmodernism, the history of the chair is so complex that it requires a comprehensive encyclopedic work to do it full justice. They are all here: Thonet's bentwood chairs and Hoffmann's sitting-machines, Marcel Breuer's Wassily chair and Ron Arad's avant-garde armchairs. Early designers and pioneers of the modern chair are presented alongside the most recent innovations in seating. This dedicated compendium displays each chair as pure form, along with biographical and historical information about the pieces and their designers. An illuminating tome for design aficionados and an essential reference for collectors!",
+                publishDate: "September 25, 2017",
+                publisher: "Taschen",
+                pages: 208,
+                dimensions: "15x20x5",
+                language: "English",
+                format: "Hardcover",
+                quantity: 14,
+                rating: 0,
+                isBestseller: false,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1vuRYfEPNi9nLGM9kvRc5pkee7yWYI6Zf",
+                _categoryId: "0491d909-5169-4ee6-abf5-5b0d57015d92",
+                _id: "cff21b2f-46c1-4a25-9806-b37eafbdc983"
+            },
+           
             // "": {
             //     title: "",
             //     author: "",
@@ -1897,22 +1992,13 @@
             //     format: "",
             //     quantity: ,
             //     rating: ,
+            //     isBestseller: false,
             //     imageUrl: "",
             //     _categoryId: "",
             //     _id: ""
             // },
-         },
-    	
-    	comments: {
-    		"0a272c58-b7ea-4e09-a000-7ec988248f66": {
-    			_ownerId: "35c62d76-8152-4626-8712-eeb96381bea8",
-    			content: "Great recipe!",
-    			recipeId: "8f414b4f-ab39-4d36-bedb-2ad69da9c830",
-    			_createdOn: 1614260681375,
-    			_id: "0a272c58-b7ea-4e09-a000-7ec988248f66"
-    		}
-    	},
-    	
+         
+        },
     };
     var rules$1 = {
     	users: {
