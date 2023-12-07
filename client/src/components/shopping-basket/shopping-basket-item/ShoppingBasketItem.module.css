@@ -1,0 +1,73 @@
+.basketItem {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(231, 219, 116, 0.35);
+    padding: 17px 15px;
+}
+
+.bookInfo {
+    display: flex;
+}
+
+.bookInfo img {
+    height: 65px;
+    margin-right: 8px;
+}
+
+.bookTitle {
+    color: #C80D44;
+    font-size: 13px;
+}
+
+.author {
+    font-size: 11px;
+}
+
+.availability {
+    font-size: 11px;
+    margin-top: 8px;
+}
+
+.availability.inStock {
+    color: #338525;
+}
+
+.availability.limited {
+    color: #C07A12;
+}
+
+.quantityControls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 75px;
+}
+
+.quantityControls button {
+    background: transparent;
+    border: none;
+    height: 14px;
+    cursor: pointer;
+}
+
+.qty {
+    font-size: 13px;
+}
+
+.remove {
+    background: transparent;
+    border: none;
+    height: 12px;
+    cursor: pointer;
+}
+
+.quantityControls button img,
+.remove img {
+    height: 100%;
+}
+
+.priceByQuantity {
+    font-weight: 500;
+    font-size: 13px;
+}

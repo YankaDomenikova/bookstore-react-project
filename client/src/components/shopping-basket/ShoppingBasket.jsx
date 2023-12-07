@@ -1,11 +1,9 @@
 import styles from './ShoppingBasket.module.css';
 
-import plusIcon from '../../assets/plus-circle-svgrepo-com.svg';
-import minIcon from '../../assets/minus-circle-svgrepo-com.svg';
-import removeIcon from '../../assets/remove-svgrepo-com.svg';
 import maestroIcon from '../../assets/maestro-svgrepo-com.svg';
 import masterIcon from '../../assets/mastercard-2-svgrepo-com.svg';
 import paypalIcon from '../../assets/paypal-svgrepo-com.svg';
+import ShoppingBasketItem from './shopping-basket-item/ShoppingBasketItem';
 
 export default function ShoppingBasket() {
     return (
@@ -14,35 +12,9 @@ export default function ShoppingBasket() {
             <div className={styles.warpper}>
                 <div className={styles.basketContent}>
                     {/* <h3 className="emptyBasketMessage">Your basket is empty</h3> */}
-                    <div className={styles.basketItems}>
-                        <div className={styles.basketItem}>
-                            <div className={styles.bookInfo}>
-                                <img src="" alt="" />
-                                <div className={styles.bookDetails}>
-                                    <p className={styles.bookTitle}>Lorem ipsum dolor</p>
-                                    <p className={styles.author}>Author name</p>
-                                    <p className={`${styles.availability} ${styles.inStock}`}>In stock</p>
-                                </div>
-                            </div>
-
-                            <div className={styles.quantityControls}>
-                                <button className={styles.min}>
-                                    <img src={minIcon} />
-                                </button>
-                                <p className={styles.qty}>1</p>
-                                <button className={styles.plus}>
-                                    <img src={plusIcon} alt="" />
-                                </button>
-                            </div>
-
-                            <div className={styles.priceByQuantity}>$ 41.95</div>
-
-                            <button className={styles.remove}>
-                                <img src={removeIcon} alt="" />
-                            </button>
-
-                        </div>
-                    </div>
+                    <ShoppingBasketItem />
+                    <ShoppingBasketItem />
+                    <ShoppingBasketItem />
                 </div>
                 <div className={styles.additionalInfo}>
                     <div className={styles.orderDetails}>
