@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 import * as bookService from '../../services/bookService';
+import * as categoryService from '../../services/categoryService';
 
 import BookCatalogItem from './book-catalog-item/BookCatalogItem';
 
@@ -17,9 +18,8 @@ export default function BookCatalog() {
         bookService.getAllBooks()
             .then(result => setBooks(result));
 
-        fetch("http://localhost:3030/data/categories")
-            .then(res => res.json())
-            .then(data => setCategories(data));
+        categoryService.getAllCategories()
+            .then(result => setCategories(result));
     }, []);
 
     const filteredBooks = categoryId
