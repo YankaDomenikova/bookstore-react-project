@@ -8,6 +8,7 @@ import BookCatalogItem from './book-catalog-item/BookCatalogItem';
 
 import styles from './BookCatalog.module.css'
 import filtersIcon from '../../assets/filter-options-preferences-settings-svgrepo-com.svg';
+import LoadingSpinner from '../loading-spinner/LoadingSpinner';
 
 export default function BookCatalog() {
     const [books, setBooks] = useState([]);
@@ -28,6 +29,7 @@ export default function BookCatalog() {
 
     return (
 
+
         <div className={styles.content}>
             <div className={styles.filtersContainer}>
                 <div className={styles.filterHeading}>
@@ -45,8 +47,9 @@ export default function BookCatalog() {
                     </ul>
                 </div>
             </div>
-
             <div className={styles.catalogContainer}>
+
+
                 <h2 className={styles.bookHeading}>
                     {categoryId ? categoryName : "All Books"}
                 </h2>
