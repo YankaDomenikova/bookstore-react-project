@@ -8,12 +8,11 @@ import BookCatalogItem from './book-catalog-item/BookCatalogItem';
 
 import styles from './BookCatalog.module.css'
 import filtersIcon from '../../assets/filter-options-preferences-settings-svgrepo-com.svg';
-import LoadingSpinner from '../loading-spinner/LoadingSpinner';
 
 export default function BookCatalog() {
     const [books, setBooks] = useState([]);
     const [categories, setCategories] = useState([]);
-    const { categoryName, categoryId, } = useParams();
+    const { categoryId, categoryName } = useParams();
 
     useEffect(() => {
         bookService.getAllBooks()
@@ -28,8 +27,6 @@ export default function BookCatalog() {
         : books;
 
     return (
-
-
         <div className={styles.content}>
             <div className={styles.filtersContainer}>
                 <div className={styles.filterHeading}>
@@ -42,7 +39,7 @@ export default function BookCatalog() {
                         <li><Link to={"/catalog"}>All Books</Link></li>
 
                         {categories.map(cat => <li key={cat._id}>
-                            <Link to={`/catalog/${cat.name}/${cat._id}`}>{cat.name}</Link>
+                            <Link to={`/catalog/${cat._id}/${cat.name}`}>{cat.name}</Link>
                         </li>)}
                     </ul>
                 </div>
