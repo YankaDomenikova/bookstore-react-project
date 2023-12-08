@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react"
 import { useParams } from "react-router-dom";
 
+import * as bookService from '../../services/bookService';
+
 import styles from './BookDetails.module.css';
 import openBookIcon from '../../assets/book-open-svgrepo-com.svg';
 import bookIcon from '../../assets/book-svgrepo-com.svg';
@@ -11,12 +13,11 @@ export default function BookDetails() {
     const { bookId } = useParams();
 
     useEffect(() => {
-        fetch(`http://localhost:3030/data/books/${bookId}`)
-            .then(res => res.json())
-            .then(data => setBook(data));
+        bookService.getBookById(bookId)
+            .then(result => setBook(result));
 
     }, [bookId])
-    console.log(book);
+
     return (
         <div className={styles.pageContent}>
             <div className={styles.detailsContainer}>
