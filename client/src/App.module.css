@@ -8,6 +8,11 @@
     font-family: 'Inter', sans-serif;
 }
 
+*::selection {
+    background: #191919;
+    color: #fcfcfc;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 8px;
