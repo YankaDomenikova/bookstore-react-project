@@ -36,7 +36,7 @@ export default function Register() {
         <div className={styles.contentContainer}>
             <button
                 className={`${styles.backBtn} ${styles.backBtnRegister}`}
-                onClick={() => navigate(-1)}
+                onClick={() => navigate(-2)}
             >
                 Go back
             </button>

@@ -46,7 +46,7 @@ export default function Header() {
                     {isAuthenticated && (
                         <>
                             <img className={styles.avatar} src={userIcon} />
-                            <Link to="/logout" className={styles.link}>Logout</Link>
+                            <Link to={Paths.Logout} className={styles.link}>Logout</Link>
                         </>
                     )}
 

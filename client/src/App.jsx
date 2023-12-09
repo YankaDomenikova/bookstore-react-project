@@ -6,32 +6,43 @@ import AuthContext from './contexts/AuthContext';
 import { Paths } from './paths/paths';
 
 import Home from "./components/home/Home";
-import Login from "./components/authentication/login/Login";
-import Register from "./components/authentication/register/Register";
 import BookCatalog from "./components/book-catalog/BookCatalog";
 import BookDetails from './components/book-details/BookDetails';
 import Bestsellers from './components/book-catalog/bestsellers/Bestsellers';
 import ShoppingBasket from './components/shopping-basket/ShoppingBasket';
+import Login from "./components/authentication/login/Login";
+import Register from "./components/authentication/register/Register";
+import Logout from './components/authentication/logout/Logout';
 import NotFound from "./components/not-found/NotFound";
 import MainLayout from './layouts/MainLayout';
 
 import "./App.module.css";
 
 function App() {
-    const [authData, setAuthData] = useState({});
+    const [authData, setAuthData] = useState(() => {
+        localStorage.removeItem('accessToken');
+        return {};
+    });
     const navigate = useNavigate();
 
     const loginSubmitHandler = async (values) => {
         const result = await authService.login(values.email, values.password);
         setAuthData(result);
+        localStorage.setItem('accessToken', result.accessToken);
         navigate(-1);
     };
 
     const registerSubmitHandler = async (values) => {
         const result = await authService.register(values.username, values.email, values.password);
         setAuthData(result);
+        localStorage.setItem('accessToken', result.accessToken);
         navigate(-2);
     };
+
+    const logoutHandler = () => {
+        setAuthData({});
+        localStorage.removeItem('accessToken');
+    }
 
     const values = {
         loginSubmitHandler,
@@ -39,6 +50,7 @@ function App() {
         email: authData.email,
         isAuthenticated: !!authData.accessToken,
         registerSubmitHandler,
+        logoutHandler
     }
 
 
@@ -57,6 +69,7 @@ function App() {
 
                 <Route path={Paths.Login} element={<Login />} />
                 <Route path={Paths.Register} element={<Register />} />
+                <Route path={Paths.Logout} element={<Logout />} />
                 <Route path={Paths.NotFound} element={<NotFound />} />
             </Routes>
         </AuthContext.Provider>
