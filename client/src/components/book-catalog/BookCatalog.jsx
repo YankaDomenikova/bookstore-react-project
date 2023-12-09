@@ -36,11 +36,15 @@ export default function BookCatalog() {
 
                 <div className={styles.categories}>
                     <ul>
-                        <li><Link to={"/catalog"}>All Books</Link></li>
+                        <li>
+                            <Link to={"/catalog"}>All Books</Link>
+                        </li>
 
-                        {categories.map(cat => <li key={cat._id}>
-                            <Link to={`/catalog/${cat._id}/${cat.name}`}>{cat.name}</Link>
-                        </li>)}
+                        {categories.map(cat =>
+                            <li key={cat._id}>
+                                <Link to={`/catalog/${cat._id}/${cat.name}`}>{cat.name}</Link>
+                            </li>
+                        )}
                     </ul>
                 </div>
             </div>
