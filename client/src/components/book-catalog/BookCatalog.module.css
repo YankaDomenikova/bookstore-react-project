@@ -2,8 +2,7 @@
     width: 80vw;
     min-height: 85vh;
     display: flex;
-    margin: auto;
-    margin-top: 25px;
+    margin: 80px auto;
     margin-bottom: 45px;
     font-family: 'Jost', sans-serif;
 }
@@ -12,7 +11,6 @@
 .catalogContainer {
     width: 70%;
     margin: 0 auto;
-    padding-top: 40px;
     position: relative;
 }
 
@@ -31,7 +29,6 @@
 
 .filtersContainer {
     width: 20%;
-    padding-top: 40px;
     padding-left: 30px;
 
 }
