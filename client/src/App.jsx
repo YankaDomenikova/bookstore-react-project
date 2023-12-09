@@ -9,8 +9,9 @@ import BookDetails from './components/book-details/BookDetails';
 import Bestsellers from './components/book-catalog/bestsellers/Bestsellers';
 import ShoppingBasket from './components/shopping-basket/ShoppingBasket';
 import NotFound from "./components/not-found/NotFound";
-import MainLayout from './layouts/MainLayout';
 
+import MainLayout from './layouts/MainLayout';
+import AuthContext from './contexts/AuthContext';
 import { Paths } from './paths/paths';
 
 import "./App.module.css";
@@ -22,8 +23,10 @@ function App() {
         console.log(values);
     };
 
+
     return (
-        <>
+
+        <AuthContext.Provider value={loginSubmitHandler}>
             <Routes>
                 <Route path={Paths.Home} element={<MainLayout />}>
                     <Route index element={<Home />} />
@@ -38,7 +41,8 @@ function App() {
                 <Route path={Paths.Register} element={<Register />} />
                 <Route path={Paths.NotFound} element={<NotFound />} />
             </Routes>
-        </>
+        </AuthContext.Provider>
+
 
     )
 }
