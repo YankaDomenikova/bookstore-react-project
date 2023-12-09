@@ -1,14 +1,31 @@
-import { useState } from 'react';
+import { useContext, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 
+import useForm from '../../../hooks/useForm';
+import AuthContext from '../../../contexts/AuthContext';
 import { Paths } from '../../../paths/paths';
 
 import styles from '../Auth.module.css';
 import eyeOpenIcon from '../../../assets/eye-open-solid-svgrepo-com.svg'
 import eyeClosedIcon from '../../../assets/eye-close-solid-svgrepo-com.svg'
 
+const formKeys = {
+    username: 'username',
+    email: 'email',
+    password: 'password'
+}
+
 export default function Register() {
+    const { registerSubmitHandler } = useContext(AuthContext);
+
+    const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+        [formKeys.username]: '',
+        [formKeys.email]: '',
+        [formKeys.password]: ''
+    });
+
     const [showPassword, setShowPassword] = useState(false);
+
     const navigate = useNavigate();
 
     const showPasswordHandler = () => {
@@ -28,17 +45,38 @@ export default function Register() {
                 <div className={styles.wrapper}>
                     <h1 className={styles.formHeading}>Register</h1>
 
-                    <form action="" className={styles.authForm}>
+                    <form className={styles.authForm} onSubmit={onSubmit}>
                         <div className={`${styles.inputWrapper} ${styles.usernameWrapper}`}>
-                            <input className={styles.formInput} type="text" name="username" placeholder="Username" />
+                            <input
+                                className={styles.formInput}
+                                type="text"
+                                onChange={onChange}
+                                name={formKeys.username}
+                                value={values[formKeys.username]}
+                                placeholder="Username"
+                            />
                             <label className={styles.formLabel} htmlFor="username">Username</label>
                         </div>
                         <div className={styles.inputWrapper}>
-                            <input className={styles.formInput} type="email" name="email" placeholder="Email" />
+                            <input
+                                className={styles.formInput}
+                                type="email"
+                                onChange={onChange}
+                                name={formKeys.email}
+                                value={values[formKeys.email]}
+                                placeholder="Email"
+                            />
                             <label className={styles.formLabel} htmlFor="email">Email</label>
                         </div>
                         <div className={`${styles.inputWrapper} ${styles.passwordWrapper}`}>
-                            <input className={styles.formInput} type={showPassword ? 'text' : 'password'} name="password" placeholder="Password" />
+                            <input
+                                className={styles.formInput}
+                                type={showPassword ? 'text' : 'password'}
+                                onChange={onChange}
+                                name={formKeys.password}
+                                value={values[formKeys.password]}
+                                placeholder="Password"
+                            />
                             <label className={styles.formLabel} htmlFor="password">Password</label>
                             <button type="button" className={styles.showPasswordBtn} onClick={showPasswordHandler}>
                                 <img

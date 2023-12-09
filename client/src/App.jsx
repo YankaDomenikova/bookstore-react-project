@@ -27,11 +27,16 @@ function App() {
         navigate(-1);
     };
 
+    const registerSubmitHandler = async (values) => {
+        console.log(values);
+    };
+
     const values = {
         loginSubmitHandler,
         username: authData.username,
         email: authData.email,
         isAuthenticated: !!authData.accessToken,
+        registerSubmitHandler,
     }
 
 
