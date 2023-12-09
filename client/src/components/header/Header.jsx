@@ -5,8 +5,12 @@ import { Paths } from '../../paths/paths';
 import styles from './Header.module.css';
 import logo from '../../assets/logo-dark.svg';
 import basketIcon from '../../assets/basket-svgrepo-com.svg';
+import userIcon from '../../assets/user-alt-svgrepo-com.svg';
+import { useContext } from 'react';
+import AuthContext from '../../contexts/AuthContext';
 
 export default function Header() {
+    const { isAuthenticated, username } = useContext(AuthContext);
     return (
         <header>
             <Link to={Paths.Home} className={styles.logo}>
@@ -37,9 +41,16 @@ export default function Header() {
                     <img src={basketIcon} alt="" />
                     <span className={styles.quantity}>3</span>
                 </Link>
+
                 <div className={styles.auth}>
-                    <Link to={Paths.Login} className={styles.link}>Login</Link>
-                    {/* <img className="avatar" src="svg/user-alt-svgrepo-com.svg" alt=""> */}
+                    {isAuthenticated && (
+                        <>
+                            <img className={styles.avatar} src={userIcon} />
+                            <Link to="/logout" className={styles.link}>Logout</Link>
+                        </>
+                    )}
+
+                    {!isAuthenticated && <Link to={Paths.Login} className={styles.link}>Login</Link>}
                 </div>
             </div>
         </header>
