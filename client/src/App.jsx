@@ -1,5 +1,9 @@
 import { useState } from 'react';
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route, useNavigate } from 'react-router-dom';
+
+import * as authService from './services/authService';
+import AuthContext from './contexts/AuthContext';
+import { Paths } from './paths/paths';
 
 import Home from "./components/home/Home";
 import Login from "./components/authentication/login/Login";
@@ -9,24 +13,24 @@ import BookDetails from './components/book-details/BookDetails';
 import Bestsellers from './components/book-catalog/bestsellers/Bestsellers';
 import ShoppingBasket from './components/shopping-basket/ShoppingBasket';
 import NotFound from "./components/not-found/NotFound";
-
 import MainLayout from './layouts/MainLayout';
-import AuthContext from './contexts/AuthContext';
-import { Paths } from './paths/paths';
 
 import "./App.module.css";
 
 function App() {
     const [authData, setAuthData] = useState({});
+    const navigate = useNavigate();
 
-    const loginSubmitHandler = (values) => {
-        console.log(values);
+    const loginSubmitHandler = async (values) => {
+        const result = await authService.login(values.email, values.password);
+        setAuthData(result);
+        navigate(-1);
     };
 
 
     return (
 
-        <AuthContext.Provider value={loginSubmitHandler}>
+        <AuthContext.Provider value={{ loginSubmitHandler }}>
             <Routes>
                 <Route path={Paths.Home} element={<MainLayout />}>
                     <Route index element={<Home />} />
@@ -37,7 +41,7 @@ function App() {
                     <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
                 </Route>
 
-                <Route path={Paths.Login} element={<Login loginSubmitHandler={loginSubmitHandler} />} />
+                <Route path={Paths.Login} element={<Login />} />
                 <Route path={Paths.Register} element={<Register />} />
                 <Route path={Paths.NotFound} element={<NotFound />} />
             </Routes>
