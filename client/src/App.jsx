@@ -27,10 +27,17 @@ function App() {
         navigate(-1);
     };
 
+    const values = {
+        loginSubmitHandler,
+        username: authData.username,
+        email: authData.email,
+        isAuthenticated: !!authData.accessToken,
+    }
+
 
     return (
 
-        <AuthContext.Provider value={{ loginSubmitHandler }}>
+        <AuthContext.Provider value={values}>
             <Routes>
                 <Route path={Paths.Home} element={<MainLayout />}>
                     <Route index element={<Home />} />
