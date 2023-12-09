@@ -98,10 +98,13 @@
 
  .auth {
      display: flex;
+     align-items: center;
+     justify-content: center;
  }
 
  .avatar {
      height: 30px;
+     margin-right: 20px;
  }
 
  /*
