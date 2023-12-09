@@ -8,12 +8,20 @@ import styles from '../Auth.module.css';
 import eyeOpenIcon from '../../../assets/eye-open-solid-svgrepo-com.svg'
 import eyeClosedIcon from '../../../assets/eye-close-solid-svgrepo-com.svg'
 
-export default function Login() {
-    const { values, onChange, onSubmit } = useForm({
-        email: '',
-        password: ''
+
+const formKeys = {
+    email: 'email',
+    password: 'password'
+}
+
+export default function Login({ loginSubmitHandler }) {
+    const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
+        [formKeys.email]: '',
+        [formKeys.password]: ''
     });
+
     const [showPassword, setShowPassword] = useState(false);
+
     const navigate = useNavigate();
 
     const showPasswordHandler = () => {
@@ -41,11 +49,11 @@ export default function Login() {
                         <input
                             className={styles.formInput}
                             type="email"
-                            name="email"
+                            name={formKeys.email}
                             placeholder="Email"
                             id='email'
                             onChange={onChange}
-                            value={values.email}
+                            value={values[formKeys.email]}
                         />
                         <label className={styles.formLabel} htmlFor="email">Email</label>
                     </div>
@@ -54,11 +62,11 @@ export default function Login() {
                         <input
                             className={styles.formInput}
                             type={showPassword ? 'text' : 'password'}
-                            name="password"
+                            name={formKeys.password}
                             placeholder="Password"
                             id='password'
                             onChange={onChange}
-                            value={values.password}
+                            value={values[formKeys.password]}
                         />
                         <label className={styles.formLabel} htmlFor="password">Password</label>
                         <button type="button" className={styles.showPasswordBtn} onClick={showPasswordHandler}>
