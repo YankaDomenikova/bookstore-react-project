@@ -46,6 +46,7 @@ function App() {
 
     const values = {
         loginSubmitHandler,
+        userId: authData._id,
         username: authData.username,
         email: authData.email,
         isAuthenticated: !!authData.accessToken,

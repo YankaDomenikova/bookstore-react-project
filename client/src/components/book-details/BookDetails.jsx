@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react"
-import { useParams } from "react-router-dom";
+import { useContext, useEffect, useState } from "react"
+import { useNavigate, useParams } from "react-router-dom";
 
 import * as bookService from '../../services/bookService';
 import * as reviewService from '../../services/reviewService';
 import useForm from "../../hooks/useForm";
+import AuthContext from "../../contexts/AuthContext";
+import { Paths } from "../../paths/paths";
+import { convert } from "../../utils/dateConverter";
 
 import styles from './BookDetails.module.css';
 import openBookIcon from '../../assets/book-open-svgrepo-com.svg';
@@ -21,8 +24,9 @@ export default function BookDetails() {
     const [book, setBook] = useState({});
     const [reviews, setReviews] = useState([]);
     const [hover, setHover] = useState(null);
-
+    const { userId, username, isAuthenticated } = useContext(AuthContext);
     const { bookId } = useParams();
+    const navigate = useNavigate();
 
     useEffect(() => {
         bookService.getBookById(bookId)
@@ -34,8 +38,17 @@ export default function BookDetails() {
     }, [bookId]);
 
     const createReviewHandler = async (data) => {
-        const result = await reviewService.create(data.text, data.rating, bookId);
-        setReviews(state => ([...state, result]));
+        if (isAuthenticated) {
+
+            const review = await reviewService.create(data.text, data.rating, bookId);
+            review.author = {
+                username: username
+            }
+            setReviews(state => ([...state, review]));
+        } else {
+            navigate(Paths.Login);
+        }
+
     }
 
     const { values, onChange, onSubmit } = useForm(createReviewHandler, {
@@ -151,7 +164,7 @@ export default function BookDetails() {
                         >
                         </textarea>
 
-                        <button className={styles.sendReview}>Send revirew</button>
+                        <input type="submit" className={styles.sendReview} value="Send revirew" />
                     </div>
                 </form>
 
@@ -160,12 +173,15 @@ export default function BookDetails() {
 
                     {reviews.map(review => (
                         <div className={styles.review} key={review._id}>
-                            <h4 className={styles.username}>Username (me)</h4>
+                            <h4 className={styles.username}>
+                                {review.author.username}
+                                {review._ownerId === userId && " (me)"}
+
+                            </h4>
                             <p className={styles.reviewText}>{review.text}</p>
 
                             <div className={styles.reviewInfo}>
                                 <div className={styles.starRating}>
-
                                     {[...Array(5)].map((star, index) => (
                                         <span
                                             key={index}
@@ -174,17 +190,18 @@ export default function BookDetails() {
                                             &#9733;
                                         </span>
                                     ))}
-
                                 </div>
-                                <div className={styles.reviewDate}>{review._createdOn}</div>
-                                <div className={styles.reviewControlls}>
-                                    <button>
-                                        <img src={editIcon} alt="" />
-                                    </button>
-                                    <button>
-                                        <img src={deleteIcon} alt="" />
-                                    </button>
-                                </div>
+                                <div className={styles.reviewDate}>{convert(review._createdOn)}</div>
+                                {review._ownerId === userId && (
+                                    <div className={styles.reviewControlls}>
+                                        <button>
+                                            <img src={editIcon} alt="" />
+                                        </button>
+                                        <button>
+                                            <img src={deleteIcon} alt="" />
+                                        </button>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
