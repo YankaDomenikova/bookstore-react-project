@@ -1,5 +1,5 @@
 .pageContent {
-    width: 65%;
+    width: 62%;
     margin: auto;
     margin-top: 80px;
     color: #191919;
@@ -156,4 +156,100 @@
     margin-bottom: 15px;
     text-align: justify;
     font-size: 14px;
+}
+
+
+/* ---------- Reviews ---------- */
+.reviewsContainer h2 {
+    color: #C80D44;
+    font-weight: 500;
+    font-size: 20px;
+    margin-bottom: 25px;
+}
+
+.writeReview {
+    margin-bottom: 40px;
+}
+
+
+.inputs {
+    margin: auto;
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+}
+
+textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(231, 219, 116, 0.9);
+    border-radius: 3px;
+    padding: 20px;
+    height: 120px;
+    background: transparent;
+}
+
+.stars {
+    font-size: 20px;
+    color: hsl(0, 0%, 89%);
+    margin-bottom: 5px;
+}
+
+.sendReview {
+    background: #191919;
+    width: 180px;
+    height: 40px;
+    align-self: flex-end;
+    color: #fcfcfc;
+    font-weight: 400;
+    border-radius: 3px;
+    margin-top: 10px;
+}
+
+
+.review {
+    margin-bottom: 50px;
+}
+
+.username {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.reviewText {
+    font-style: italic;
+    font-size: 14px;
+    text-align: justify;
+
+}
+
+.review .reviewInfo {
+    display: flex;
+    height: 25px;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.reviewDate {
+    margin: 0 15px;
+    font-weight: 500;
+    font-size: 14px;
+    height: 100%;
+    line-height: 30px;
+}
+
+.reviewControlls {
+    display: flex;
+}
+
+.reviewControlls button {
+    height: 18px;
+    margin-right: 5px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+}
+
+.reviewControlls button img {
+    height: 100%;
 }

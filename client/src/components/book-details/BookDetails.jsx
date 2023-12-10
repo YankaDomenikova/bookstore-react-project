@@ -7,6 +7,9 @@ import styles from './BookDetails.module.css';
 import openBookIcon from '../../assets/book-open-svgrepo-com.svg';
 import bookIcon from '../../assets/book-svgrepo-com.svg';
 import truck from '../../assets/delivery-truck-with-packages-behind-svgrepo-com.svg';
+import editIcon from '../../assets/edit-svgrepo-com.svg';
+import deleteIcon from '../../assets/trash-1-svgrepo-com.svg';
+
 
 export default function BookDetails() {
     const [book, setBook] = useState({});
@@ -87,6 +90,49 @@ export default function BookDetails() {
                     <p>{book.description}</p>
                 </div>
             </div>
+            <div class={styles.reviewsContainer}>
+                <form class={styles.writeReview}>
+                    <h2>Write a review</h2>
+
+                    <div class={styles.inputs}>
+
+                        <div class={styles.stars}>★★★★★</div>
+
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Share your thoughts..."></textarea>
+
+                        <button class={styles.sendReview}>Send revirew</button>
+                    </div>
+                </form>
+
+                <div class={styles.reviewList}>
+                    <h2>Reviews</h2>
+
+                    <div class={styles.review}>
+                        <h4 class={styles.username}>Username {/*(me)*/}</h4>
+                        <p class={styles.reviewText}>
+                            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quidem ipsa, odio iure hic repellendus laudantium impedit perferendis magnam sequi assumenda dignissimos unde voluptatibus fugit aut pariatur animi eligendi deleniti expedita.
+                            Totam, praesentium? Voluptatibus accusamus qui aliquid iendis.
+                        </p>
+
+                        <div className={styles.reviewInfo}>
+                            <div class={styles.starRating}>
+                                <div >★★★★★</div>
+                                <div class={styles.rating}>★★</div>
+                            </div>
+                            <div class={styles.reviewDate}>28 June 2022</div>
+                            {/* <div className={styles.reviewControlls}>
+                                <button>
+                                    <img src={editIcon} alt="" />
+                                </button>
+                                <button>
+                                    <img src={deleteIcon} alt="" />
+                                </button>
+                            </div> */}
+                        </div>
+                    </div>
+                </div>
+            </div>
+
         </div>
     );
 }
