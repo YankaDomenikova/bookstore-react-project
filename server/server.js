@@ -1999,6 +1999,7 @@
             // },
          
         },
+        reviews:{}
     };
     var rules$1 = {
     	users: {
