@@ -1,18 +1,31 @@
-.container {
-    background: #e0e0e0;
+.banner {
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.banner img {
+    height: 20px;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.bannerText {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 300px;
+    text-transform: uppercase;
 }
 
-.container button {
-    background-color: #C80D44;
-    border: none;
-    color: #fcfcfc;
-    height: 50px;
-    width: 175px;
-    margin-top: 20px;
-    border-radius: 3px;
+.bannerText h1 {
+    font-weight: 400;
+    font-size: 26px;
+}
+
+.bannerText a {
+    color: #C80D44;
+    font-size: 18px;
+    text-decoration: none;
+    margin-top: 15px;
 }
