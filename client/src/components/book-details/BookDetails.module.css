@@ -67,14 +67,6 @@
 .starRating {
     position: relative;
     font-size: 20px;
-    color: hsl(0, 0%, 89%);
-}
-
-.starRating .rating {
-    color: #C80D44;
-    position: absolute;
-    top: 0;
-    left: 0;
 }
 
 .totalRating {
@@ -189,10 +181,14 @@ textarea {
     background: transparent;
 }
 
-.stars {
-    font-size: 20px;
-    color: hsl(0, 0%, 89%);
-    margin-bottom: 5px;
+.star {
+    font-size: 35px;
+    color: hsl(0, 0%, 86%);
+    margin: 0 3px 5px 0;
+}
+
+input[type="radio"] {
+    display: none;
 }
 
 .sendReview {

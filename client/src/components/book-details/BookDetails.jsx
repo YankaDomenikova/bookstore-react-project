@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 
 import * as bookService from '../../services/bookService';
 import * as reviewService from '../../services/reviewService';
+import useForm from "../../hooks/useForm";
 
 import styles from './BookDetails.module.css';
 import openBookIcon from '../../assets/book-open-svgrepo-com.svg';
@@ -10,15 +11,17 @@ import bookIcon from '../../assets/book-svgrepo-com.svg';
 import truck from '../../assets/delivery-truck-with-packages-behind-svgrepo-com.svg';
 import editIcon from '../../assets/edit-svgrepo-com.svg';
 import deleteIcon from '../../assets/trash-1-svgrepo-com.svg';
-import useForm from "../../hooks/useForm";
 
 const formKeys = {
-    reviewText: 'reviewText'
+    text: 'text',
+    rating: 'rating'
 }
 
 export default function BookDetails() {
     const [book, setBook] = useState({});
     const [reviews, setReviews] = useState([]);
+    const [hover, setHover] = useState(null);
+
     const { bookId } = useParams();
 
     useEffect(() => {
@@ -28,21 +31,16 @@ export default function BookDetails() {
         reviewService.getAllReviews(bookId)
             .then(result => setReviews(result))
             .catch((err) => console.error(err));
-
-
     }, [bookId]);
 
     const createReviewHandler = async (data) => {
-        const result = await reviewService.create(data.reviewText, bookId);
-        setReviews(state => ([
-            ...state,
-            result
-        ]));
-        console.log(result);
+        const result = await reviewService.create(data.text, data.rating, bookId);
+        setReviews(state => ([...state, result]));
     }
 
     const { values, onChange, onSubmit } = useForm(createReviewHandler, {
-        [formKeys.reviewText]: ''
+        [formKeys.text]: '',
+        [formKeys.rating]: 0
     });
 
     return (
@@ -54,7 +52,6 @@ export default function BookDetails() {
                 <div className={styles.details}>
                     <div>
                         <h1 className={styles.bookTitle}>{book.title}</h1>
-
                         <p className={styles.bookAuthor}><span>by</span> {book.author}</p>
                     </div>
 
@@ -79,7 +76,6 @@ export default function BookDetails() {
                     </div>
 
                     <h2 className={styles.bookPrice}>$ {book.price}</h2>
-
                     <button className={styles.addToBasket}>Add to basket</button>
                 </div>
 
@@ -114,23 +110,46 @@ export default function BookDetails() {
                     <p>{book.description}</p>
                 </div>
             </div>
+
             <div className={styles.reviewsContainer}>
                 <form className={styles.writeReview} onSubmit={onSubmit}>
                     <h2>Write a review</h2>
-
                     <div className={styles.inputs}>
-
-                        <div className={styles.stars}>★★★★★</div>
+                        <div>
+                            {[...Array(5)].map((star, index) => {
+                                const currentRating = index + 1;
+                                return (
+                                    <label key={index}>
+                                        <input
+                                            type="radio"
+                                            name={formKeys.rating}
+                                            value={currentRating}
+                                            onChange={onChange}
+                                            checked={values[formKeys.rating] === currentRating}
+                                        />
+                                        <span
+                                            className={styles.star}
+                                            style={{ color: currentRating <= (hover || values[formKeys.rating]) ? "#C80D44" : "#e4e5e9" }}
+                                            onMouseEnter={() => setHover(currentRating)}
+                                            onMouseLeave={() => setHover(null)}
+                                        >
+                                            &#9733;
+                                        </span>
+                                    </label>
+                                );
+                            })}
+                        </div>
 
                         <textarea
-                            name={formKeys.reviewText}
+                            name={formKeys.text}
                             id=""
                             cols="30"
                             rows="10"
                             placeholder="Share your thoughts..."
-                            value={values[formKeys.reviewText]}
+                            value={values[formKeys.text]}
                             onChange={onChange}
-                        ></textarea>
+                        >
+                        </textarea>
 
                         <button className={styles.sendReview}>Send revirew</button>
                     </div>
@@ -142,12 +161,20 @@ export default function BookDetails() {
                     {reviews.map(review => (
                         <div className={styles.review} key={review._id}>
                             <h4 className={styles.username}>Username (me)</h4>
-                            <p className={styles.reviewText}>{review.reviewText}</p>
+                            <p className={styles.reviewText}>{review.text}</p>
 
                             <div className={styles.reviewInfo}>
                                 <div className={styles.starRating}>
-                                    <div >★★★★★</div>
-                                    <div className={styles.rating}>★★</div>
+
+                                    {[...Array(5)].map((star, index) => (
+                                        <span
+                                            key={index}
+                                            style={{ color: index < (review.rating) ? "#C80D44" : "#e4e5e9" }}
+                                        >
+                                            &#9733;
+                                        </span>
+                                    ))}
+
                                 </div>
                                 <div className={styles.reviewDate}>{review._createdOn}</div>
                                 <div className={styles.reviewControlls}>

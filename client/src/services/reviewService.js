@@ -12,7 +12,7 @@ export const getAllReviews = async (bookId) =>{
     return result;
 };
 
-export const create = async (reviewText, bookId) => {
-    const result =  await request('POST', baseUrl, {reviewText, bookId});
+export const create = async (text, rating, bookId) => {
+    const result =  await request('POST', baseUrl, {text, rating, bookId});
     return result;
 }
