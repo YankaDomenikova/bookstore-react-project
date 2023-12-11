@@ -45,7 +45,10 @@ export default function Header() {
                 <div className={styles.auth}>
                     {isAuthenticated && (
                         <>
-                            <img className={styles.avatar} src={userIcon} />
+                            {/* <img className={styles.avatar} src={userIcon} /> */}
+                            <div className={styles.avatar}>
+                                <span>{username.charAt(0).toUpperCase()}</span>
+                            </div>
                             <Link to={Paths.Logout} className={styles.link}>Logout</Link>
                         </>
                     )}
