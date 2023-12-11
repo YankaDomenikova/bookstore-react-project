@@ -5,6 +5,10 @@ export const calculate = (ratings) => {
     let totalCount = ratings.length;
     let sum  = 0;
 
+    if(totalCount === 0){
+        return 0;
+    }
+
     ratings.forEach(function (rating) {     
         switch (rating) {
             case 1:
