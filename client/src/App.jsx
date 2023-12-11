@@ -1,8 +1,6 @@
-import { useState } from 'react';
-import { Routes, Route, useNavigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
-import * as authService from './services/authService';
-import AuthContext from './contexts/AuthContext';
+import { AuthProvider } from './contexts/AuthContext';
 import { Paths } from './paths/paths';
 
 import Home from "./components/home/Home";
@@ -19,45 +17,8 @@ import MainLayout from './layouts/MainLayout';
 import "./App.module.css";
 
 function App() {
-    const [authData, setAuthData] = useState(() => {
-        localStorage.removeItem('accessToken');
-        return {};
-    });
-    const navigate = useNavigate();
-
-    const loginSubmitHandler = async (values) => {
-        const result = await authService.login(values.email, values.password);
-        setAuthData(result);
-        localStorage.setItem('accessToken', result.accessToken);
-        navigate(-1);
-    };
-
-    const registerSubmitHandler = async (values) => {
-        const result = await authService.register(values.username, values.email, values.password);
-        setAuthData(result);
-        localStorage.setItem('accessToken', result.accessToken);
-        navigate(-2);
-    };
-
-    const logoutHandler = () => {
-        setAuthData({});
-        localStorage.removeItem('accessToken');
-    }
-
-    const values = {
-        loginSubmitHandler,
-        userId: authData._id,
-        username: authData.username,
-        email: authData.email,
-        isAuthenticated: !!authData.accessToken,
-        registerSubmitHandler,
-        logoutHandler
-    }
-
-
     return (
-
-        <AuthContext.Provider value={values}>
+        <AuthProvider>
             <Routes>
                 <Route path={Paths.Home} element={<MainLayout />}>
                     <Route index element={<Home />} />
@@ -73,9 +34,7 @@ function App() {
                 <Route path={Paths.Logout} element={<Logout />} />
                 <Route path={Paths.NotFound} element={<NotFound />} />
             </Routes>
-        </AuthContext.Provider>
-
-
+        </AuthProvider>
     )
 }
 

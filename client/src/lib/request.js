@@ -8,7 +8,8 @@ const buildOptions = (data) => {
         options.body = JSON.stringify(data);
     }
 
-    const accessToken = localStorage.getItem('accessToken');
+    const authentication = JSON.parse(localStorage.getItem('authentication'));
+    const accessToken = authentication.accessToken;
 
     if(accessToken){
         options.headers = {
