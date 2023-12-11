@@ -112,8 +112,17 @@
      justify-content: center;
  }
 
- .avatar span {
+ .avatar a {
      color: #fcfcfc;
      font-size: 14px;
      font-weight: 300;
+     text-decoration: none
+ }
+
+ .avatar:hover {
+     border-color: #C80D44;
+ }
+
+ .avatar:hover a {
+     color: #C80D44;
  }

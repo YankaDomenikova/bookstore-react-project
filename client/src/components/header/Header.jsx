@@ -47,7 +47,7 @@ export default function Header() {
                         <>
                             {/* <img className={styles.avatar} src={userIcon} /> */}
                             <div className={styles.avatar}>
-                                <span>{username.charAt(0).toUpperCase()}</span>
+                                <Link to="/profile">{username.charAt(0).toUpperCase()}</Link>
                             </div>
                             <Link to={Paths.Logout} className={styles.link}>Logout</Link>
                         </>
