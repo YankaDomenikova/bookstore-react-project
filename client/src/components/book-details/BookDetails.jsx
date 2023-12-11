@@ -43,7 +43,6 @@ export default function BookDetails() {
             });
     }, [bookId]);
 
-
     const createReviewHandler = async (data) => {
         if (isAuthenticated) {
             const review = await reviewService.create(data.text, data.rating, bookId);
@@ -55,16 +54,18 @@ export default function BookDetails() {
         }
     }
 
+
+    const { values, onChange, onSubmit } = useForm(createReviewHandler, {
+        [formKeys.text]: '',
+        [formKeys.rating]: 0
+    });
+
     const updateBookRating = (reviews) => {
         const ratings = reviews.map(r => Number(r.rating));
         let newRating = calculate(ratings);
         setRating(newRating);
     }
 
-    const { values, onChange, onSubmit } = useForm(createReviewHandler, {
-        [formKeys.text]: '',
-        [formKeys.rating]: 0
-    });
 
     const deleteReviewHandler = async (id) => {
         await reviewService.deleteReview(id);
@@ -90,8 +91,6 @@ export default function BookDetails() {
                             </div>
                         </div>
                     </div>
-
-
 
                     <div className={styles.infoOverview}>
                         <img src={openBookIcon} alt="" />
