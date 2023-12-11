@@ -9,7 +9,7 @@ import { Paths } from "../../paths/paths";
 import { convert } from "../../utils/dateConverter";
 import { calculate } from "../../utils/ratingCalculator";
 
-import BookStarRating from "./BookStarRating/BookStarRating";
+import BookStarRating from "./book-star-rating/BookStarRating";
 
 import styles from './BookDetails.module.css';
 import openBookIcon from '../../assets/book-open-svgrepo-com.svg';
@@ -28,7 +28,6 @@ export default function BookDetails() {
     const [reviews, setReviews] = useState([]);
     const [hover, setHover] = useState(0);
     const [rating, setRating] = useState(0);
-
     const { userId, username, isAuthenticated } = useContext(AuthContext);
     const { bookId } = useParams();
     const navigate = useNavigate();
@@ -66,6 +65,11 @@ export default function BookDetails() {
         [formKeys.text]: '',
         [formKeys.rating]: 0
     });
+
+    const deleteReviewHandler = async (id) => {
+        await reviewService.deleteReview(id);
+        setReviews(state => state.filter(r => r._id !== id));
+    };
 
 
     return (
@@ -220,7 +224,7 @@ export default function BookDetails() {
                                         <button>
                                             <img src={editIcon} alt="" />
                                         </button>
-                                        <button>
+                                        <button onClick={() => deleteReviewHandler(review._id)}>
                                             <img src={deleteIcon} alt="" />
                                         </button>
                                     </div>

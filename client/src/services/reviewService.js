@@ -16,3 +16,7 @@ export const create = async (text, rating, bookId) => {
     const result =  await request('POST', baseUrl, {text, rating, bookId});
     return result;
 }
+
+export const deleteReview = async (reviewId) => {
+    request('DELETE', `${baseUrl}/${reviewId}`);
+}
