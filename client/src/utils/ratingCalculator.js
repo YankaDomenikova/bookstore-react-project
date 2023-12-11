@@ -32,6 +32,6 @@ export const calculate = (ratings) => {
     });
 
     sum = 1 * oneStars + 2 * twoStars + 3 * threeStars + 4 * fourStars + 5 * fiveStars;
-    return sum / totalCount;
+    return  Math.round((sum / totalCount) * 10) / 10;
  
 }
