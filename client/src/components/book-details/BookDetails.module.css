@@ -60,18 +60,16 @@
 
 .ratingOverview {
     display: flex;
-    align-items: baseline;
-    font-size: 15px;
+    align-items: center;
+    margin-top: 3px;
+    /* font-size: 15px; */
 }
 
-.starRating {
-    position: relative;
-    font-size: 20px;
-}
 
 .totalRating {
-    font-size: 15px;
-    margin-left: 5px;
+    font-size: 14px;
+    margin-left: 6px;
+    margin-top: 6px;
 }
 
 .infoOverview {

@@ -7,6 +7,9 @@ import useForm from "../../hooks/useForm";
 import AuthContext from "../../contexts/AuthContext";
 import { Paths } from "../../paths/paths";
 import { convert } from "../../utils/dateConverter";
+import { calculate } from "../../utils/ratingCalculator";
+
+import BookStarRating from "./BookStarRating/BookStarRating";
 
 import styles from './BookDetails.module.css';
 import openBookIcon from '../../assets/book-open-svgrepo-com.svg';
@@ -23,7 +26,9 @@ const formKeys = {
 export default function BookDetails() {
     const [book, setBook] = useState({});
     const [reviews, setReviews] = useState([]);
-    const [hover, setHover] = useState(null);
+    const [hover, setHover] = useState(0);
+    const [rating, setRating] = useState(0);
+
     const { userId, username, isAuthenticated } = useContext(AuthContext);
     const { bookId } = useParams();
     const navigate = useNavigate();
@@ -33,28 +38,35 @@ export default function BookDetails() {
             .then(result => setBook(result));
 
         reviewService.getAllReviews(bookId)
-            .then(result => setReviews(result))
-            .catch((err) => console.error(err));
+            .then(result => {
+                setReviews(result);
+                updateBookRating(result);
+            });
     }, [bookId]);
+
 
     const createReviewHandler = async (data) => {
         if (isAuthenticated) {
-
             const review = await reviewService.create(data.text, data.rating, bookId);
-            review.author = {
-                username: username
-            }
+            review.author = { username: username };
             setReviews(state => ([...state, review]));
+            updateBookRating(reviews);
         } else {
             navigate(Paths.Login);
         }
+    }
 
+    const updateBookRating = (reviews) => {
+        const ratings = reviews.map(r => Number(r.rating));
+        let newRating = calculate(ratings);
+        setRating(newRating);
     }
 
     const { values, onChange, onSubmit } = useForm(createReviewHandler, {
         [formKeys.text]: '',
         [formKeys.rating]: 0
     });
+
 
     return (
         <div className={styles.pageContent}>
@@ -66,7 +78,16 @@ export default function BookDetails() {
                     <div>
                         <h1 className={styles.bookTitle}>{book.title}</h1>
                         <p className={styles.bookAuthor}><span>by</span> {book.author}</p>
+
+                        <div className={styles.ratingOverview}>
+                            <BookStarRating value={rating} />
+                            <div className={styles.totalRating}>
+                                <p>{rating}<span className={styles.ratingsCount}> ({reviews.length})</span></p>
+                            </div>
+                        </div>
                     </div>
+
+
 
                     <div className={styles.infoOverview}>
                         <img src={openBookIcon} alt="" />
@@ -191,7 +212,9 @@ export default function BookDetails() {
                                         </span>
                                     ))}
                                 </div>
+
                                 <div className={styles.reviewDate}>{convert(review._createdOn)}</div>
+
                                 {review._ownerId === userId && (
                                     <div className={styles.reviewControlls}>
                                         <button>

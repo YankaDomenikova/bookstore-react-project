@@ -1,0 +1,27 @@
+.container {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+}
+
+.star {
+    font-size: 25px;
+    margin-right: 2px;
+    display: flex;
+    color: #C80D44;
+}
+
+.overlay {
+    background-color: #e4e5e9;
+    opacity: 0.9;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1;
+
+    @supports (mix-blend-mode: lighten) {
+        mix-blend-mode: lighten;
+        opacity: unset;
+    }
+}
