@@ -1,5 +1,5 @@
 import { useContext, useEffect, useState } from "react"
-import { useNavigate, useParams } from "react-router-dom";
+import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 
 import * as bookService from '../../services/bookService';
 import * as reviewService from '../../services/reviewService';
@@ -17,6 +17,7 @@ import bookIcon from '../../assets/book-svgrepo-com.svg';
 import truck from '../../assets/delivery-truck-with-packages-behind-svgrepo-com.svg';
 import editIcon from '../../assets/edit-svgrepo-com.svg';
 import deleteIcon from '../../assets/trash-1-svgrepo-com.svg';
+import StarRatingInput from "../star-rating-input/StarRatingInput";
 
 const formKeys = {
     text: 'text',
@@ -26,11 +27,12 @@ const formKeys = {
 export default function BookDetails() {
     const [book, setBook] = useState({});
     const [reviews, setReviews] = useState([]);
-    const [hover, setHover] = useState(0);
     const [rating, setRating] = useState(0);
     const { userId, username, isAuthenticated } = useContext(AuthContext);
     const { bookId } = useParams();
     const navigate = useNavigate();
+    const location = useLocation();
+
 
     useEffect(() => {
         bookService.getBookById(bookId)
@@ -153,31 +155,7 @@ export default function BookDetails() {
                 <form className={styles.writeReview} onSubmit={onSubmit}>
                     <h2>Write a review</h2>
                     <div className={styles.inputs}>
-                        <div>
-                            {[...Array(5)].map((star, index) => {
-                                const currentRating = index + 1;
-                                return (
-                                    <label key={index}>
-                                        <input
-                                            type="radio"
-                                            name={formKeys.rating}
-                                            value={currentRating}
-                                            onChange={onChange}
-                                            checked={values[formKeys.rating] === currentRating}
-                                        />
-                                        <span
-                                            className={styles.star}
-                                            style={{ color: currentRating <= (hover || values[formKeys.rating]) ? "#C80D44" : "#e4e5e9" }}
-                                            onMouseEnter={() => setHover(currentRating)}
-                                            onMouseLeave={() => setHover(null)}
-                                        >
-                                            &#9733;
-                                        </span>
-                                    </label>
-                                );
-                            })}
-                        </div>
-
+                        <StarRatingInput name={formKeys.rating} value={values[formKeys.rating]} onChange={onChange} />
                         <textarea
                             name={formKeys.text}
                             id=""
@@ -215,7 +193,9 @@ export default function BookDetails() {
                                 {review._ownerId === userId && (
                                     <div className={styles.reviewControlls}>
                                         <button>
-                                            <img src={editIcon} alt="" />
+                                            <Link to={`/review/${review._id}`} state={{ background: location }}>
+                                                <img src={editIcon} alt="" />
+                                            </Link>
                                         </button>
                                         <button onClick={() => deleteReviewHandler(review._id)}>
                                             <img src={deleteIcon} alt="" />
@@ -229,8 +209,6 @@ export default function BookDetails() {
                     {reviews.length === 0 && <p>No reviews yet</p>}
                 </div>
             </div>
-
-
         </div>
     );
 }
