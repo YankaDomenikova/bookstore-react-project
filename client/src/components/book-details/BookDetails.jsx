@@ -44,14 +44,14 @@ export default function BookDetails() {
     }, [bookId]);
 
     const createReviewHandler = async (data) => {
-        if (isAuthenticated) {
-            const review = await reviewService.create(data.text, data.rating, bookId);
-            review.author = { username: username };
-            setReviews(state => ([...state, review]));
-            updateBookRating(reviews);
-        } else {
-            navigate(Paths.Login);
-        }
+        // if (isAuthenticated) {
+        const review = await reviewService.create(data.text, data.rating, bookId);
+        review.author = { username: username };
+        setReviews(state => ([...state, review]));
+        updateBookRating(reviews);
+        //} else {
+        //   navigate(Paths.Login);
+        //}
     }
 
 
@@ -85,7 +85,8 @@ export default function BookDetails() {
                         <p className={styles.bookAuthor}><span>by</span> {book.author}</p>
 
                         <div className={styles.ratingOverview}>
-                            <BookStarRating value={rating} />
+                            <BookStarRating value={rating} size="25" />
+
                             <div className={styles.totalRating}>
                                 <p>{rating}<span className={styles.ratingsCount}> ({reviews.length})</span></p>
                             </div>
@@ -206,14 +207,7 @@ export default function BookDetails() {
 
                             <div className={styles.reviewInfo}>
                                 <div className={styles.starRating}>
-                                    {[...Array(5)].map((star, index) => (
-                                        <span
-                                            key={index}
-                                            style={{ color: index < (review.rating) ? "#C80D44" : "#e4e5e9" }}
-                                        >
-                                            &#9733;
-                                        </span>
-                                    ))}
+                                    <BookStarRating value={review.rating} size="16" />
                                 </div>
 
                                 <div className={styles.reviewDate}>{convert(review._createdOn)}</div>
