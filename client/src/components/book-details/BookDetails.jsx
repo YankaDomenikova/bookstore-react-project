@@ -9,7 +9,7 @@ import { Paths } from "../../paths/paths";
 import { convert } from "../../utils/dateConverter";
 import { calculate } from "../../utils/ratingCalculator";
 
-import BookStarRating from "./book-star-rating/BookStarRating";
+import StarRatingDisplay from '../star-rating-display/StarRatingDisplay';
 
 import styles from './BookDetails.module.css';
 import openBookIcon from '../../assets/book-open-svgrepo-com.svg';
@@ -85,7 +85,7 @@ export default function BookDetails() {
                         <p className={styles.bookAuthor}><span>by</span> {book.author}</p>
 
                         <div className={styles.ratingOverview}>
-                            <BookStarRating value={rating} size="25" />
+                            <StarRatingDisplay value={rating} size="25" />
 
                             <div className={styles.totalRating}>
                                 <p>{rating}<span className={styles.ratingsCount}> ({reviews.length})</span></p>
@@ -207,7 +207,7 @@ export default function BookDetails() {
 
                             <div className={styles.reviewInfo}>
                                 <div className={styles.starRating}>
-                                    <BookStarRating value={review.rating} size="16" />
+                                    <StarRatingDisplay value={review.rating} size="16" />
                                 </div>
 
                                 <div className={styles.reviewDate}>{convert(review._createdOn)}</div>
@@ -229,6 +229,7 @@ export default function BookDetails() {
                     {reviews.length === 0 && <p>No reviews yet</p>}
                 </div>
             </div>
+
 
         </div>
     );
