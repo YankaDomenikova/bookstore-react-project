@@ -1,0 +1,89 @@
+.overlay {
+    background: rgba(0, 0, 0, 0.55);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+}
+
+.modal {
+    background: #fcfcfc;
+    width: 660px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 4px;
+    padding: 60px 65px;
+}
+
+
+.modalContent button {
+    border: none;
+}
+
+.closeBtn {
+    height: 20px;
+    width: 20px;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: transparent;
+}
+
+.closeBtn img {
+    height: 100%;
+}
+
+.modalContent h3 {
+    color: #C80D44;
+    font-weight: 500;
+}
+
+.modalContent form {
+    margin-top: 30px;
+}
+
+.modalContent form .stars {
+    font-size: 30px;
+    color: #C80D44;
+}
+
+.grey {
+    color: #dbdbdb;
+}
+
+.modalContent form textarea {
+    width: 100%;
+    outline: none;
+    border: 1px solid rgba(231, 219, 116, 0.9);
+    border-radius: 3px;
+    padding: 20px;
+    height: 120px;
+    background: transparent;
+    margin-top: 12px;
+}
+
+.buttons {
+    float: right;
+    margin-top: 18px;
+}
+
+.buttons button {
+
+    border-radius: 2px;
+    color: #fcfcfc;
+}
+
+.cancelBtn {
+    padding: 13px 15px;
+    background: #C80D44;
+}
+
+.saveBtn {
+    background-color: #191919;
+    padding: 13px 30px;
+    margin-left: 8px
+}
