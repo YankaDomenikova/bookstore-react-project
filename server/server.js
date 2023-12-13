@@ -1999,7 +1999,8 @@
             // },
          
         },
-        reviews:{}
+        reviews:{},
+        orders: {}
     };
     var rules$1 = {
     	users: {
