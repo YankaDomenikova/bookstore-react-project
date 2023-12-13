@@ -1,20 +1,26 @@
-import styles from './ShoppingBasket.module.css';
+import { useContext } from 'react';
 
+import ShoppingContext from '../../contexts/ShoppingContext';
+
+import ShoppingBasketItem from './shopping-basket-item/ShoppingBasketItem';
+
+import styles from './ShoppingBasket.module.css';
 import maestroIcon from '../../assets/maestro-svgrepo-com.svg';
 import masterIcon from '../../assets/mastercard-2-svgrepo-com.svg';
 import paypalIcon from '../../assets/paypal-svgrepo-com.svg';
-import ShoppingBasketItem from './shopping-basket-item/ShoppingBasketItem';
 
 export default function ShoppingBasket() {
+    const { basketItems, totalPrice, totalQuantity } = useContext(ShoppingContext);
+    console.log(basketItems.length)
     return (
         <div className={styles.pageContent}>
             <h2>Shopping Basket</h2>
             <div className={styles.warpper}>
                 <div className={styles.basketContent}>
                     {/* <h3 className="emptyBasketMessage">Your basket is empty</h3> */}
-                    <ShoppingBasketItem />
-                    <ShoppingBasketItem />
-                    <ShoppingBasketItem />
+                    {basketItems.map(item => <ShoppingBasketItem key={item._id} {...item} />)}
+
+                    {basketItems.length === 0 && <h3 className="emptyBasketMessage">Your basket is empty</h3>}
                 </div>
                 <div className={styles.additionalInfo}>
                     <div className={styles.orderDetails}>
@@ -24,7 +30,7 @@ export default function ShoppingBasket() {
                             <p className={styles.row}>Shipping<span>-</span></p>
                             <p className={styles.row}>Discount <span>-</span></p>
                         </div>
-                        <h4 className={`${styles.row} ${styles.total}`}>Estimated total <span>$ 61.95</span></h4>
+                        <h4 className={`${styles.row} ${styles.total}`}>Estimated total <span>$ {totalPrice}</span></h4>
                     </div>
                     <button className={styles.checkoutBtn}>
                         <a href="">Ckeckout</a>
