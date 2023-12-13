@@ -5,6 +5,7 @@
     left: 0;
     height: 100%;
     width: 100%;
+    z-index: 2;
 }
 
 .modal {
@@ -70,21 +71,23 @@
     margin-top: 18px;
 }
 
-.buttons button {
+.buttons button,
+.buttons input {
     height: 40px;
     color: #fcfcfc;
-    border-radius: 2px;
 }
 
 .buttons .cancelBtn {
     background: #C80D44;
     width: 70px;
+    border-radius: 2px;
 }
 
 .buttons .saveBtn {
     background: #191919;
     width: 90px;
     margin-left: 8px;
+    border-radius: 4px;
 }
 
 .deleteText {

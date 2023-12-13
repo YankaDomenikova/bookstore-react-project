@@ -8,6 +8,7 @@
 
 .bookInfo {
     display: flex;
+    width: 150px;
 }
 
 .bookInfo img {
@@ -17,16 +18,16 @@
 
 .bookTitle {
     color: #C80D44;
-    font-size: 13px;
+    font-size: 12px;
 }
 
 .author {
-    font-size: 11px;
+    font-size: 10px;
 }
 
 .availability {
-    font-size: 11px;
-    margin-top: 8px;
+    font-size: 10px;
+    margin-top: 6px;
 }
 
 .availability.inStock {
