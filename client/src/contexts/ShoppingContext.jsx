@@ -1,14 +1,14 @@
 import { createContext, useState } from "react";
 import { toast } from 'react-hot-toast';
+import usePersistedState from "../hooks/usePersistedState";
 
 const ShoppingContext = createContext();
 ShoppingContext.displayName = "ShoppingContext";
 
 export const ShoppingProvider = ({ children }) => {
-    const [basketItems, setBasketItems] = useState([]);
-    const [totalPrice, setTotalPrice] = useState(0);
-    const [totalQuantity, setTotalQuantity] = useState(0);
-    const [itemQuantity, setItemQuantity] = useState(1);
+    const [basketItems, setBasketItems] = usePersistedState("basketItems", []);
+    const [totalPrice, setTotalPrice] = usePersistedState("totalPrice", 0);
+    const [totalQuantity, setTotalQuantity] = usePersistedState("totalQuantity", 0);
 
     // Add to basket
     const addToBasketHandler = (product) => {
@@ -73,15 +73,22 @@ export const ShoppingProvider = ({ children }) => {
         setItemQuantity(quantity => quantity - targetItem.quantity);
     };
 
+    // Reset basket
+    const resetBasket = () => {
+        setBasketItems([]);
+        setTotalPrice(0)
+        setTotalQuantity(0);
+    }
+
     const values = {
         basketItems,
         totalPrice,
         totalQuantity,
-        itemQuantity,
         addToBasketHandler,
         incrementItemQuantity,
         decrementItemQuantity,
-        removeItem
+        removeItem,
+        resetBasket
     }
 
     return (

@@ -32,7 +32,7 @@ export default function ShoppingBasket() {
                         </div>
                         <h4 className={`${styles.row} ${styles.total}`}>Estimated total <span>$ {totalPrice}</span></h4>
                     </div>
-                    <button className={styles.checkoutBtn}>
+                    <button className={styles.checkoutBtn} >
                         <a href="">Ckeckout</a>
                     </button>
 
