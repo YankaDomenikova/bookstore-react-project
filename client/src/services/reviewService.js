@@ -17,6 +17,11 @@ export const create = async (text, rating, bookId) => {
     return result;
 }
 
+export const edit = async (reviewId, text, rating, bookId) => {
+    const result = await request('PUT', `${baseUrl}/${reviewId}`, {text, rating, bookId});
+    return result;
+}
+
 export const deleteReview = async (reviewId) => {
     request('DELETE', `${baseUrl}/${reviewId}`);
 }

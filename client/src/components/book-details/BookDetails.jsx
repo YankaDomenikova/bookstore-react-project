@@ -4,6 +4,7 @@ import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
 import * as bookService from '../../services/bookService';
 import * as reviewService from '../../services/reviewService';
 import useForm from "../../hooks/useForm";
+import useModal from "../../hooks/useModal";
 import AuthContext from "../../contexts/AuthContext";
 import { Paths } from "../../paths/paths";
 import { convert } from "../../utils/dateConverter";
@@ -18,6 +19,7 @@ import truck from '../../assets/delivery-truck-with-packages-behind-svgrepo-com.
 import editIcon from '../../assets/edit-svgrepo-com.svg';
 import deleteIcon from '../../assets/trash-1-svgrepo-com.svg';
 import StarRatingInput from "../star-rating-input/StarRatingInput";
+import EditReviewModal from "../modals/EditReviewModal";
 
 const formKeys = {
     text: 'text',
@@ -28,11 +30,9 @@ export default function BookDetails() {
     const [book, setBook] = useState({});
     const [reviews, setReviews] = useState([]);
     const [rating, setRating] = useState(0);
+    const { show, toggleShow } = useModal();
     const { userId, username, isAuthenticated } = useContext(AuthContext);
     const { bookId } = useParams();
-    const navigate = useNavigate();
-    const location = useLocation();
-
 
     useEffect(() => {
         bookService.getBookById(bookId)
@@ -46,14 +46,10 @@ export default function BookDetails() {
     }, [bookId]);
 
     const createReviewHandler = async (data) => {
-        // if (isAuthenticated) {
         const review = await reviewService.create(data.text, data.rating, bookId);
         review.author = { username: username };
         setReviews(state => ([...state, review]));
-        updateBookRating(reviews);
-        //} else {
-        //   navigate(Paths.Login);
-        //}
+        //updateBookRating(reviews);
     }
 
 
@@ -69,11 +65,11 @@ export default function BookDetails() {
     }
 
 
+
     const deleteReviewHandler = async (id) => {
         await reviewService.deleteReview(id);
         setReviews(state => state.filter(r => r._id !== id));
     };
-
 
     return (
         <div className={styles.pageContent}>
@@ -192,11 +188,11 @@ export default function BookDetails() {
 
                                 {review._ownerId === userId && (
                                     <div className={styles.reviewControlls}>
-                                        <button>
-                                            <Link to={`/review/${review._id}`} state={{ background: location }}>
-                                                <img src={editIcon} alt="" />
-                                            </Link>
+                                        <button onClick={toggleShow}>
+                                            <img src={editIcon} alt="" />
                                         </button>
+                                        <EditReviewModal show={show} toggleShow={toggleShow} {...review} />
+
                                         <button onClick={() => deleteReviewHandler(review._id)}>
                                             <img src={deleteIcon} alt="" />
                                         </button>
