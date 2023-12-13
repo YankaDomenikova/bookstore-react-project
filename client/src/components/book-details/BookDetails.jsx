@@ -20,6 +20,7 @@ import editIcon from '../../assets/edit-svgrepo-com.svg';
 import deleteIcon from '../../assets/trash-1-svgrepo-com.svg';
 import StarRatingInput from "../star-rating-input/StarRatingInput";
 import EditReviewModal from "../modals/EditReviewModal";
+import ShoppingContext from "../../contexts/ShoppingContext";
 
 const formKeys = {
     text: 'text',
@@ -33,6 +34,7 @@ export default function BookDetails() {
     const { show, toggleShow } = useModal();
     const { userId, username, isAuthenticated } = useContext(AuthContext);
     const { bookId } = useParams();
+    const { addToBasketHandler } = useContext(ShoppingContext);
 
     useEffect(() => {
         bookService.getBookById(bookId)
@@ -112,7 +114,7 @@ export default function BookDetails() {
                     </div>
 
                     <h2 className={styles.bookPrice}>$ {book.price}</h2>
-                    <button className={styles.addToBasket}>Add to basket</button>
+                    <button className={styles.addToBasket} onClick={() => addToBasketHandler({ ...book })}>Add to basket</button>
                 </div>
 
                 <div className={styles.information}>

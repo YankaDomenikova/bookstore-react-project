@@ -1,5 +1,7 @@
 import { Link } from 'react-router-dom';
 import styles from './BookCatalogItem.module.css';
+import { useContext } from 'react';
+import ShoppingContext from '../../../contexts/ShoppingContext';
 
 export default function BookCatalogItem({
     _id,
@@ -8,6 +10,8 @@ export default function BookCatalogItem({
     price,
     imageUrl,
 }) {
+
+    const { addToBasketHandler } = useContext(ShoppingContext);
     return (
         <div className={styles.catalogItem}>
             <div className={styles.imageWrapper}>
@@ -20,7 +24,13 @@ export default function BookCatalogItem({
                 <p className={styles.authorName}>by {author}</p>
                 <p className={styles.bookPrice}>$ {price}</p>
             </div>
-            <button className={styles.addToBasketBtn}>Add to basket</button>
+            <button className={styles.addToBasketBtn} onClick={() => addToBasketHandler({
+                _id,
+                title,
+                author,
+                price,
+                imageUrl,
+            })}>Add to basket</button>
         </div>
     );
 }
