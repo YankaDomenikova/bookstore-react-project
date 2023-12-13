@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 
 import { AuthProvider } from './contexts/AuthContext';
 import { ShoppingProvider } from './contexts/ShoppingContext';
@@ -36,6 +37,14 @@ function App() {
                     <Route path={Paths.Logout} element={<Logout />} />
                     <Route path={Paths.NotFound} element={<NotFound />} />
                 </Routes>
+                <Toaster
+                    toastOptions={{
+                        success: {
+                            iconTheme: {
+                                primary: '#C80D44',
+                            }
+                        },
+                    }} />
             </AuthProvider>
         </ShoppingProvider>
     )
