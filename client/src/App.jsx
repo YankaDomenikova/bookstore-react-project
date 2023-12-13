@@ -1,6 +1,7 @@
-import { Routes, Route, useLocation } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 
 import { AuthProvider } from './contexts/AuthContext';
+import { ShoppingProvider } from './contexts/ShoppingContext';
 import { Paths } from './paths/paths';
 
 import Home from "./components/home/Home";
@@ -18,23 +19,25 @@ import "./App.module.css";
 
 function App() {
     return (
-        <AuthProvider>
-            <Routes>
-                <Route path={Paths.Home} element={<MainLayout />}>
-                    <Route index element={<Home />} />
-                    <Route path={Paths.Catalog} element={<BookCatalog />} />
-                    <Route path={Paths.BooksByCategory} element={<BookCatalog />} />
-                    <Route path={Paths.Bestsellers} element={<Bestsellers />} />
-                    <Route path={Paths.BookDetails} element={<BookDetails />} />
-                    <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
-                </Route>
+        <ShoppingProvider>
+            <AuthProvider>
+                <Routes>
+                    <Route path={Paths.Home} element={<MainLayout />}>
+                        <Route index element={<Home />} />
+                        <Route path={Paths.Catalog} element={<BookCatalog />} />
+                        <Route path={Paths.BooksByCategory} element={<BookCatalog />} />
+                        <Route path={Paths.Bestsellers} element={<Bestsellers />} />
+                        <Route path={Paths.BookDetails} element={<BookDetails />} />
+                        <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
+                    </Route>
 
-                <Route path={Paths.Login} element={<Login />} />
-                <Route path={Paths.Register} element={<Register />} />
-                <Route path={Paths.Logout} element={<Logout />} />
-                <Route path={Paths.NotFound} element={<NotFound />} />
-            </Routes>
-        </AuthProvider>
+                    <Route path={Paths.Login} element={<Login />} />
+                    <Route path={Paths.Register} element={<Register />} />
+                    <Route path={Paths.Logout} element={<Logout />} />
+                    <Route path={Paths.NotFound} element={<NotFound />} />
+                </Routes>
+            </AuthProvider>
+        </ShoppingProvider>
     )
 }
 

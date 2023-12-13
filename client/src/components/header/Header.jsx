@@ -1,16 +1,17 @@
+import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 
+import AuthContext from '../../contexts/AuthContext';
+import ShoppingContext from '../../contexts/ShoppingContext';
 import { Paths } from '../../paths/paths';
 
 import styles from './Header.module.css';
 import logo from '../../assets/logo-dark.svg';
 import basketIcon from '../../assets/basket-svgrepo-com.svg';
-import userIcon from '../../assets/user-alt-svgrepo-com.svg';
-import { useContext } from 'react';
-import AuthContext from '../../contexts/AuthContext';
 
 export default function Header() {
     const { isAuthenticated, username } = useContext(AuthContext);
+    const { totalQuantity } = useContext(ShoppingContext);
     return (
         <header>
             <Link to={Paths.Home} className={styles.logo}>
@@ -39,7 +40,9 @@ export default function Header() {
             <div className={styles.shopping}>
                 <Link className={styles.basket} to={Paths.ShoppingBasket}>
                     <img src={basketIcon} alt="" />
-                    <span className={styles.quantity}>3</span>
+                    <span className={styles.quantity}>
+                        {totalQuantity > 9 ? "9+" : totalQuantity}
+                    </span>
                 </Link>
 
                 <div className={styles.auth}>

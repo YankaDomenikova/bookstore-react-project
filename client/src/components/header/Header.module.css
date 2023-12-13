@@ -78,20 +78,20 @@
  }
 
  .basket img {
-     height: 20px;
+     height: 21px;
  }
 
  .quantity {
      position: absolute;
      top: 13px;
-     right: -8px;
-     height: 16px;
-     width: 16px;
+     right: -9px;
+     height: 18px;
+     width: 18px;
      border-radius: 50%;
      background: #C80D44;
      text-align: center;
      font-size: 10px;
-     line-height: 16px;
+     line-height: 19px;
      color: #fcfcfc;
  }
 
