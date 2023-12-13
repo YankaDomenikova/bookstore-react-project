@@ -5,7 +5,7 @@ import removeIcon from '../../../assets/remove-svgrepo-com.svg';
 import { useContext } from 'react';
 import ShoppingContext from '../../../contexts/ShoppingContext';
 export default function ShoppingBasketItem({ _id, title, author, imageUrl, price, basketQuantity }) {
-    const { incrementItemQuantity, decrementItemQuantity, } = useContext(ShoppingContext);
+    const { incrementItemQuantity, decrementItemQuantity, removeItem } = useContext(ShoppingContext);
     return (
         <div className={styles.basketItems}>
             <div className={styles.basketItem}>
@@ -30,7 +30,7 @@ export default function ShoppingBasketItem({ _id, title, author, imageUrl, price
 
                 <div className={styles.priceByQuantity}>$ {price * basketQuantity}</div>
 
-                <button className={styles.remove}>
+                <button className={styles.remove} onClick={() => removeItem({ _id, title, author, imageUrl, price, basketQuantity })}>
                     <img src={removeIcon} alt="" />
                 </button>
 
