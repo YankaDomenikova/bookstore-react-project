@@ -31,9 +31,33 @@ export const ShoppingProvider = ({ children }) => {
         toast.success("Book added to basket");
     };
 
+    let targetItem;
+
     // Increment quantity
+    const incrementItemQuantity = (id) => {
+        targetItem = basketItems.find((item) => item._id === id);
+        const newBasketItems = basketItems.filter((item) => item._id !== id);
+        setBasketItems([
+            ...newBasketItems,
+            { ...targetItem, basketQuantity: targetItem.basketQuantity + 1 }
+        ]);
+        setTotalPrice(price => price + targetItem.price);
+        setTotalQuantity(quantity => quantity + 1);
+    };
 
     // Decrement quantity
+    const decrementItemQuantity = (id) => {
+        targetItem = basketItems.find((item) => item._id === id);
+        const newBasketItems = basketItems.filter((item) => item._id !== id);
+        if (targetItem.basketQuantity > 1) {
+            setBasketItems([
+                ...newBasketItems,
+                { ...targetItem, basketQuantity: targetItem.basketQuantity - 1 }
+            ]);
+            setTotalPrice(price => price - targetItem.price);
+            setTotalQuantity(quantity => quantity - 1);
+        }
+    };
 
     // Remove from basket
 
@@ -43,6 +67,8 @@ export const ShoppingProvider = ({ children }) => {
         totalQuantity,
         itemQuantity,
         addToBasketHandler,
+        incrementItemQuantity,
+        decrementItemQuantity,
     }
 
     return (
