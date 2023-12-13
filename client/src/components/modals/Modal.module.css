@@ -3,7 +3,6 @@
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 1;
     height: 100%;
     width: 100%;
 }
@@ -66,24 +65,28 @@
     margin-top: 12px;
 }
 
-.buttons {
+.modalContent .buttons {
     float: right;
     margin-top: 18px;
 }
 
 .buttons button {
-
-    border-radius: 2px;
+    height: 40px;
     color: #fcfcfc;
+    border-radius: 2px;
 }
 
-.cancelBtn {
-    padding: 13px 15px;
+.buttons .cancelBtn {
     background: #C80D44;
+    width: 70px;
 }
 
-.saveBtn {
-    background-color: #191919;
-    padding: 13px 30px;
-    margin-left: 8px
+.buttons .saveBtn {
+    background: #191919;
+    width: 90px;
+    margin-left: 8px;
+}
+
+.deleteText {
+    margin: 20px 0;
 }

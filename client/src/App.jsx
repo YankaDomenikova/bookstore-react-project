@@ -13,17 +13,13 @@ import Register from "./components/authentication/register/Register";
 import Logout from './components/authentication/logout/Logout';
 import NotFound from "./components/not-found/NotFound";
 import MainLayout from './layouts/MainLayout';
-import EditReviewModal from './components/edit-review-modal/EditReviewModal';
 
 import "./App.module.css";
 
 function App() {
-    const location = useLocation();
-    const background = location.state && location.state.background;
-
     return (
         <AuthProvider>
-            <Routes location={background || location}>
+            <Routes>
                 <Route path={Paths.Home} element={<MainLayout />}>
                     <Route index element={<Home />} />
                     <Route path={Paths.Catalog} element={<BookCatalog />} />
@@ -38,12 +34,6 @@ function App() {
                 <Route path={Paths.Logout} element={<Logout />} />
                 <Route path={Paths.NotFound} element={<NotFound />} />
             </Routes>
-
-            {background && (
-                <Routes>
-                    <Route path="/review/:reviewId" element={<EditReviewModal />} />
-                </Routes>
-            )}
         </AuthProvider>
     )
 }
