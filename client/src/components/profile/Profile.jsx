@@ -1,8 +1,9 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-import * as ordeerService from '../../services/orderService';
+import * as orderService from '../../services/orderService';
 import { convert } from '../../utils/dateConverter';
+
 
 import styles from './Profile.module.css'
 import arrowRight from '../../assets/arrow-right-svgrepo-com.svg';
@@ -13,12 +14,18 @@ export default function Profile() {
     const { userId, username, email } = useContext(AuthContext);
 
     useEffect(() => {
-        ordeerService.getAll(userId)
-            .then(result => setOrders(result));
+        orderService.getAll(userId)
+            .then(result => {
+                const descending = [...result];
+                descending.reverse();
+                setOrders(descending);
+            });
     }, []);
 
 
+
     return (
+
         <div className={styles.pageContent}>
             <div className={styles.authinfo}>
                 <h3>{username}</h3>
@@ -41,7 +48,7 @@ export default function Profile() {
                                 <p>{convert(order._createdOn)}</p>
                             </div>
                         </div>
-                        <Link className={styles.arrow}>
+                        <Link className={styles.arrow} to={`/order/${order._id}/details`}>
                             <img src={arrowRight} alt="" />
                         </Link>
                     </div>
