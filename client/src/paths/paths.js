@@ -7,6 +7,7 @@ export const Paths = {
     ShoppingBasket: '/shopping-basket',
     Checkout: '/checkout',
     OrderSuccess: '/order-success/:orderNumber',
+    OrderDetails: '/order/:orderId/details',
     Login: '/login',
     Register: '/register',
     Logout: '/logout',

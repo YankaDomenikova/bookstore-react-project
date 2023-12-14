@@ -1,0 +1,172 @@
+.pageContent {
+    width: 50%;
+    margin: auto;
+    margin-top: 90px;
+    margin-bottom: 70px;
+    font-family: 'Inter', sans-serif;
+}
+
+.mainHeading {
+    color: #C80D44;
+    margin-bottom: 30px;
+    font-weight: 500;
+}
+
+.container {
+    display: flex;
+    align-items: self-start;
+    justify-content: space-between;
+}
+
+.orderDate {
+    text-align: right;
+}
+
+.orderNumber h4,
+.orderDate h4 {
+    font-weight: 500;
+}
+
+.orderNumber p,
+.orderDate p {
+    font-size: 15px;
+}
+
+.detailsContainer {
+    background: hsl(0, 0%, 98%);
+    padding: 60px 80px;
+    border-radius: 3px;
+    margin-top: 20px;
+}
+
+.wrapper {
+    margin-bottom: 32px;
+    color: #C80D44;
+}
+
+.wrapper,
+.status {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.progress {
+    border: 1px solid #C80D44;
+    height: 22px;
+    width: 22px;
+    border-radius: 50%;
+    margin-right: 12px;
+    position: relative;
+}
+
+.wrapper:not(:last-child) .status .progress::after {
+    position: absolute;
+    content: ' ';
+    top: 26px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #C80D44;
+    height: 22px;
+    width: 1px;
+}
+
+.progress.done {
+    background: #C80D44;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.progress img {
+    height: 85%;
+}
+
+.statusDate {
+    font-size: 13px;
+}
+
+.orderItems {
+    margin-top: 80px;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin-bottom: 30px;
+}
+
+.imageWrapper {
+    height: 140px;
+    width: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 3px;
+}
+
+.itemImage {
+    height: 100%;
+}
+
+.itemDetails {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+    height: 140px;
+}
+
+.title,
+.itemPrice {
+    font-size: 14px;
+}
+
+.author {
+    font-size: 13px;
+}
+
+.row {
+    width: 155px;
+    font-size: 12px;
+    margin-top: 2px;
+}
+
+.row span {
+    text-align: right;
+    float: right;
+}
+
+.orderInfo h4 {
+    color: #C80D44;
+    font-weight: 500;
+}
+
+.orderInfo p {
+    font-size: 14px;
+    margin-bottom: 2px;
+}
+
+.total {
+    text-align: right;
+}
+
+.total p {
+    text-align: right;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.declineOrder {
+    margin-top: 40px;
+    color: #fcfcfc;
+    background: #191919;
+    border: none;
+    border-radius: 3px;
+    height: 50px;
+    width: 235px;
+    font-size: 15px;
+    font-weight: 300;
+}
