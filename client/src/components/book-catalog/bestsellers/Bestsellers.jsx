@@ -1,14 +1,17 @@
 import { useEffect, useState } from 'react';
-import styles from '../BookCatalog.module.css';
+
+import * as bookService from '../../../services/bookService';
+
 import BookCatalogItem from '../book-catalog-item/BookCatalogItem';
+
+import styles from '../BookCatalog.module.css';
 
 export default function Bestsellers() {
     const [bestsellers, setBestsellers] = useState([]);
 
     useEffect(() => {
-        fetch("http://localhost:3030/data/books?select=_id,title,author,price,imageUrl&where=isBestseller%3Dtrue")
-            .then(res => res.json())
-            .then(data => setBestsellers(data));
+        bookService.getBestsellers()
+            .then(result => setBestsellers(result));
     }, []);
 
     return (
