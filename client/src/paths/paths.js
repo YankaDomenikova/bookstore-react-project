@@ -6,7 +6,6 @@ export const Paths = {
     BookDetails: 'catalog/book/:bookId/details',
     ShoppingBasket: '/shopping-basket',
     Checkout: '/checkout',
-    Contacts: 'contacts',
     Login: '/login',
     Register: '/register',
     Logout: '/logout',

@@ -8,7 +8,7 @@
 
 .bookInfo {
     display: flex;
-    width: 150px;
+    width: 200px;
 }
 
 .bookInfo img {
@@ -71,4 +71,7 @@
 .priceByQuantity {
     font-weight: 500;
     font-size: 13px;
+    width: 100px;
+    text-align: center;
+
 }

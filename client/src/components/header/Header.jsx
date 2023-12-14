@@ -30,9 +30,6 @@ export default function Header() {
                     <li>
                         <Link to={Paths.Bestsellers} className={styles.link}>Bestsellers</Link>
                     </li>
-                    <li>
-                        <Link to={Paths.Contacts} className={styles.link}>Contacts</Link>
-                    </li>
                 </ul>
             </nav>
 

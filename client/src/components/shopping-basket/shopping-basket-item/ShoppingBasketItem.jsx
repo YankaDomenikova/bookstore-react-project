@@ -1,9 +1,13 @@
+import { useContext } from 'react';
+
+import ShoppingContext from '../../../contexts/ShoppingContext';
+import { round } from '../../../utils/numberRounder';
+
 import styles from './ShoppingBasketItem.module.css';
 import plusIcon from '../../../assets/plus-circle-svgrepo-com.svg';
 import minIcon from '../../../assets/minus-circle-svgrepo-com.svg';
 import removeIcon from '../../../assets/remove-svgrepo-com.svg';
-import { useContext } from 'react';
-import ShoppingContext from '../../../contexts/ShoppingContext';
+
 export default function ShoppingBasketItem({ _id, title, author, imageUrl, price, basketQuantity }) {
     const { incrementItemQuantity, decrementItemQuantity, removeItem } = useContext(ShoppingContext);
     return (
@@ -28,7 +32,7 @@ export default function ShoppingBasketItem({ _id, title, author, imageUrl, price
                     </button>
                 </div>
 
-                <div className={styles.priceByQuantity}>$ {price * basketQuantity}</div>
+                <div className={styles.priceByQuantity}>$ {round(price * basketQuantity)}</div>
 
                 <button className={styles.remove} onClick={() => removeItem({ _id, title, author, imageUrl, price, basketQuantity })}>
                     <img src={removeIcon} alt="" />

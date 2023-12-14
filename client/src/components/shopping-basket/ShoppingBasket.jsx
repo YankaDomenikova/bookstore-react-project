@@ -1,7 +1,8 @@
 import { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import ShoppingContext from '../../contexts/ShoppingContext';
+import AuthContext from '../../contexts/AuthContext';
 import ShoppingBasketItem from './shopping-basket-item/ShoppingBasketItem';
 import { Paths } from '../../paths/paths';
 
@@ -12,6 +13,16 @@ import paypalIcon from '../../assets/paypal-svgrepo-com.svg';
 
 export default function ShoppingBasket() {
     const { basketItems, totalPrice, totalQuantity } = useContext(ShoppingContext);
+    const { isAuthenticated } = useContext(AuthContext);
+    const navigate = useNavigate();
+
+    const redirect = () => {
+        if (isAuthenticated) {
+            navigate(Paths.Checkout);
+        } else {
+            navigate(Paths.Login);
+        }
+    }
     return (
         <div className={styles.pageContent}>
             <h2>Shopping Basket</h2>
@@ -31,7 +42,7 @@ export default function ShoppingBasket() {
                         </div>
                         <h4 className={`${styles.row} ${styles.total}`}>Estimated total <span>$ {totalPrice}</span></h4>
                     </div>
-                    <button className={styles.checkoutBtn} >
+                    <button className={styles.checkoutBtn} onClick={redirect}>
                         <Link to={Paths.Checkout}>Ckeckout</Link>
                     </button>
 
