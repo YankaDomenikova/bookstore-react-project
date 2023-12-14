@@ -8,10 +8,12 @@ export default function BookCatalogItem({
     title,
     author,
     price,
+    format,
     imageUrl,
 }) {
 
     const { addToBasketHandler } = useContext(ShoppingContext);
+
     return (
         <div className={styles.catalogItem}>
             <div className={styles.imageWrapper}>
@@ -29,6 +31,7 @@ export default function BookCatalogItem({
                 title,
                 author,
                 price,
+                format,
                 imageUrl,
             })}>Add to basket</button>
         </div>

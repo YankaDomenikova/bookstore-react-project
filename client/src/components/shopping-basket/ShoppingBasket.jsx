@@ -23,6 +23,7 @@ export default function ShoppingBasket() {
             navigate(Paths.Login);
         }
     }
+
     return (
         <div className={styles.pageContent}>
             <h2>Shopping Basket</h2>

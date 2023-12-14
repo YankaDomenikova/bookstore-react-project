@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Paths } from '../../paths/paths';
 import styles from './Footer.module.css';
 
+import logo from '../../assets/logo-dark.svg';
 import maestroIcon from '../../assets/maestro-(2)-svgrepo-com.svg';
 import masterardIcon from '../../assets/maestro-2-svgrepo-com.svg';
 import paypalIcon from '../../assets/paypal-2-svgrepo-com.svg/';
@@ -31,7 +32,7 @@ export default function Footer() {
                 </div>
 
                 <div className={`${styles.container} ${styles.main}`}>
-                    <img src="logo-dark.png" alt="" />
+                    <img src={logo} alt="" />
                     <div className={styles.siteLinks}>
                         <h4>Bookstore</h4>
                         <Link to={Paths.Home}>Home</Link>

@@ -8,7 +8,7 @@ export default function OrderSuccess() {
 
 
     return (
-        <div class={styles.pageContent}>
+        <div className={styles.pageContent}>
             <img src={checkIcon} alt="" className={styles.checkIcon} />
             <h1 className={styles.mainHeading}>Thank you for your purchase</h1>
             <h3 className={styles.orderNumber}>Your order number is <Link to={Paths.Profile}>{orderNumber}</Link></h3>
