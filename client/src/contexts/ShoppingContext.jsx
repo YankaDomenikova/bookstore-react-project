@@ -1,6 +1,8 @@
 import { createContext, useState } from "react";
-import usePersistedState from "../hooks/usePersistedState";
 import { toast } from 'react-hot-toast';
+
+import usePersistedState from "../hooks/usePersistedState";
+import { round } from '../utils/numberRounder';
 
 const ShoppingContext = createContext();
 ShoppingContext.displayName = "ShoppingContext";
@@ -13,7 +15,7 @@ export const ShoppingProvider = ({ children }) => {
     // Add to basket
     const addToBasketHandler = (product) => {
         const isInBasket = basketItems.find((item) => item._id === product._id);
-        setTotalPrice(price => price + product.price);
+        setTotalPrice(price => round(price + product.price));
         setTotalQuantity(quantity => quantity + 1);
 
         if (isInBasket) {
@@ -44,7 +46,7 @@ export const ShoppingProvider = ({ children }) => {
             { ...targetItem, basketQuantity: targetItem.basketQuantity + 1 },
             ...newBasketItems.slice(itemIndex)
         ]);
-        setTotalPrice(price => price + targetItem.price);
+        setTotalPrice(price => round(price + targetItem.price));
         setTotalQuantity(quantity => quantity + 1);
     };
 
@@ -59,7 +61,7 @@ export const ShoppingProvider = ({ children }) => {
                 { ...targetItem, basketQuantity: targetItem.basketQuantity - 1 },
                 ...newBasketItems.slice(itemIndex)
             ]);
-            setTotalPrice(price => price - targetItem.price);
+            setTotalPrice(price => round(price - targetItem.price));
             setTotalQuantity(quantity => quantity - 1);
         }
     };
@@ -69,7 +71,7 @@ export const ShoppingProvider = ({ children }) => {
         targetItem = basketItems.find((item) => item._id === product._id);
         const newBasketItems = basketItems.filter((item) => item._id !== product._id);
         setBasketItems(newBasketItems);
-        setTotalPrice(price => price - targetItem.price * targetItem.basketQuantity)
+        setTotalPrice(price => round(price - targetItem.price * targetItem.basketQuantity))
         setTotalQuantity(quantity => quantity - targetItem.basketQuantity);
         toast.success("Book removed from basket");
     };
