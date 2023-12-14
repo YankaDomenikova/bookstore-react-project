@@ -21,6 +21,7 @@ import deleteIcon from '../../assets/trash-1-svgrepo-com.svg';
 import StarRatingInput from "../star-rating-input/StarRatingInput";
 import EditReviewModal from "../modals/EditReviewModal";
 import ShoppingContext from "../../contexts/ShoppingContext";
+import QuantityText from "../quantity-text/QuantityText";
 
 const formKeys = {
     text: 'text',
@@ -101,11 +102,9 @@ export default function BookDetails() {
                     </div>
 
                     <div>
-                        <p className={styles.quantity}>
-                            {book.quantity === 0 ? "Out of stock"
-                                : book.quantity < 6 ? "Limited quantity"
-                                    : "In stock"}
-                        </p>
+                        <div className={styles.quantity}>
+                            <QuantityText quantity={book.quantity} />
+                        </div>
 
                         <div className={styles.delivery}>
                             <img src={truck} alt="" />
@@ -114,7 +113,13 @@ export default function BookDetails() {
                     </div>
 
                     <h2 className={styles.bookPrice}>$ {book.price}</h2>
-                    <button className={styles.addToBasket} onClick={() => addToBasketHandler({ ...book })}>Add to basket</button>
+                    <button
+                        className={book.quantity === 0 ? styles.disabled : styles.addToBasket}
+                        onClick={() => addToBasketHandler({ ...book })}
+                        disabled={book.quantity === 0}
+                    >
+                        Add to basket
+                    </button>
                 </div>
 
                 <div className={styles.information}>

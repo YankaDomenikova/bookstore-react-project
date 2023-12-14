@@ -123,6 +123,17 @@
     border: none;
 }
 
+.disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    width: 200px;
+    height: 45px;
+    color: #fcfcfc;
+    border-radius: 3px;
+    border: none;
+
+}
+
 .information h2,
 .description h2 {
     color: #C80D44;
