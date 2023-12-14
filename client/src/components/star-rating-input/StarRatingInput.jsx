@@ -13,6 +13,7 @@ export default function StarRatingInput({ name, value, onChange }) {
                         <input
                             type="radio"
                             name={name}
+                            className={styles.starInput}
                             value={currentRating}
                             onChange={onChange}
                             checked={value === currentRating}
