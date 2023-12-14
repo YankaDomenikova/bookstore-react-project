@@ -11,7 +11,7 @@ export default function OrderSuccess() {
         <div class={styles.pageContent}>
             <img src={checkIcon} alt="" className={styles.checkIcon} />
             <h1 className={styles.mainHeading}>Thank you for your purchase</h1>
-            <h3 className={styles.orderNumber}>Your order number is <span>{orderNumber}</span></h3>
+            <h3 className={styles.orderNumber}>Your order number is <Link to={Paths.Profile}>{orderNumber}</Link></h3>
             <button className={styles.continueShopping}>
                 <Link to={Paths.Catalog}>
                     Continue shopping

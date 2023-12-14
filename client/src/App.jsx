@@ -19,6 +19,7 @@ import MainLayout from './layouts/MainLayout';
 
 import "./App.module.css";
 import OrderSuccess from './components/order-success/OrderSuccess';
+import Profile from './components/profile/Profile';
 
 function App() {
     return (
@@ -34,6 +35,7 @@ function App() {
                         <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
                         <Route path={Paths.Checkout} element={<Checkout />} />
                         <Route path={Paths.OrderSuccess} element={<OrderSuccess />} />
+                        <Route path={Paths.Profile} element={<Profile />} />
                     </Route>
 
                     <Route path={Paths.Login} element={<Login />} />

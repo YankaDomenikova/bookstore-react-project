@@ -10,5 +10,6 @@ export const Paths = {
     Login: '/login',
     Register: '/register',
     Logout: '/logout',
+    Profile: '/profile',
     NotFound: '*',
 }
