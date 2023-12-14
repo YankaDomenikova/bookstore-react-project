@@ -1,11 +1,130 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700;800;900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 footer {
     background: #191919;
+    margin-top: 20px;
+    width: 100%;
+    color: #fcfcfc;
+    padding: 20px 50px 2px 50px;
+    font-family: 'Inter', sans-serif;
+
+}
+
+.copiright {
+    text-align: center;
+    font-size: 9px;
+    font-weight: 200;
+    margin-top: 10px;
+}
+
+.footerContent {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footerContent .container {
+    width: 210px;
+}
+
+.about p {
+    font-weight: 200;
+    font-size: 8px;
+    text-align: justify;
+}
+
+.about p span {
+    color: #C80D44;
+    font-size: 11px;
+    font-weight: 200;
+}
+
+.cards {
+    margin-top: 6px;
+}
+
+.cards img {
+    height: 26px;
+    margin-right: 8px;
+}
+
+.securePayment {
+    display: flex;
+    align-items: center;
+    margin-top: -2px;
+}
+
+.securePayment p {
+    font-size: 8px;
+}
+
+.securePayment img {
+    height: 9px;
+    margin-right: 3px;
+}
+
+
+.main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    padding: 10px 0;
+}
+
+.main img {
+    height: 70px;
+    margin-right: 5px;
+}
+
+.siteLinks {
+    height: 70px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.siteLinks h4 {
+    font-weight: 200;
+}
+
+.siteLinks a {
     color: #fcfcfc;
+    text-decoration: none;
+    font-weight: 100;
+    font-size: 11px;
+    display: block;
+    text-transform: uppercase;
+    margin-top: 3px;
+}
+
+.siteLinks a:hover {
+    color: #C80D44;
+}
+
+.contacts h4 {
+    color: #C80D44;
+    font-weight: 200;
+    font-size: 12px;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+}
+
+.contacts div {
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.contacts div img {
+    height: 11px;
+    margin-right: 4px;
+}
+
+.contacts div p {
     font-size: 10px;
-    margin-top: 45px;
+    font-weight: 200;
 }
