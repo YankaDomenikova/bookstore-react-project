@@ -10,6 +10,7 @@ import BookCatalog from "./components/book-catalog/BookCatalog";
 import BookDetails from './components/book-details/BookDetails';
 import Bestsellers from './components/book-catalog/bestsellers/Bestsellers';
 import ShoppingBasket from './components/shopping-basket/ShoppingBasket';
+import Checkout from './components/checkout/Checkout';
 import Login from "./components/authentication/login/Login";
 import Register from "./components/authentication/register/Register";
 import Logout from './components/authentication/logout/Logout';
@@ -30,6 +31,7 @@ function App() {
                         <Route path={Paths.Bestsellers} element={<Bestsellers />} />
                         <Route path={Paths.BookDetails} element={<BookDetails />} />
                         <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
+                        <Route path={Paths.Checkout} element={<Checkout />} />
                     </Route>
 
                     <Route path={Paths.Login} element={<Login />} />

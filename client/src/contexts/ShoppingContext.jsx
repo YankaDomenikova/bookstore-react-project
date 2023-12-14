@@ -1,6 +1,6 @@
 import { createContext, useState } from "react";
-import { toast } from 'react-hot-toast';
 import usePersistedState from "../hooks/usePersistedState";
+import { toast } from 'react-hot-toast';
 
 const ShoppingContext = createContext();
 ShoppingContext.displayName = "ShoppingContext";
@@ -70,7 +70,8 @@ export const ShoppingProvider = ({ children }) => {
         const newBasketItems = basketItems.filter((item) => item._id !== product._id);
         setBasketItems(newBasketItems);
         setTotalPrice(price => price - targetItem.price * targetItem.basketQuantity)
-        setItemQuantity(quantity => quantity - targetItem.quantity);
+        setTotalQuantity(quantity => quantity - targetItem.basketQuantity);
+        toast.success("Book removed from basket");
     };
 
     // Reset basket

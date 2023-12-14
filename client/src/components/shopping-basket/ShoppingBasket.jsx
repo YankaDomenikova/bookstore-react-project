@@ -1,8 +1,9 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import ShoppingContext from '../../contexts/ShoppingContext';
-
 import ShoppingBasketItem from './shopping-basket-item/ShoppingBasketItem';
+import { Paths } from '../../paths/paths';
 
 import styles from './ShoppingBasket.module.css';
 import maestroIcon from '../../assets/maestro-svgrepo-com.svg';
@@ -11,13 +12,11 @@ import paypalIcon from '../../assets/paypal-svgrepo-com.svg';
 
 export default function ShoppingBasket() {
     const { basketItems, totalPrice, totalQuantity } = useContext(ShoppingContext);
-    console.log(basketItems.length)
     return (
         <div className={styles.pageContent}>
             <h2>Shopping Basket</h2>
             <div className={styles.warpper}>
                 <div className={styles.basketContent}>
-                    {/* <h3 className="emptyBasketMessage">Your basket is empty</h3> */}
                     {basketItems.map(item => <ShoppingBasketItem key={item._id} {...item} />)}
 
                     {basketItems.length === 0 && <h3 className="emptyBasketMessage">Your basket is empty</h3>}
@@ -26,14 +25,14 @@ export default function ShoppingBasket() {
                     <div className={styles.orderDetails}>
                         <h4>Order details</h4>
                         <div>
-                            <p className={styles.row}>Subtotal <span>$ 61.95</span></p>
+                            <p className={styles.row}>Subtotal <span>$ {totalPrice}</span></p>
                             <p className={styles.row}>Shipping<span>-</span></p>
                             <p className={styles.row}>Discount <span>-</span></p>
                         </div>
                         <h4 className={`${styles.row} ${styles.total}`}>Estimated total <span>$ {totalPrice}</span></h4>
                     </div>
                     <button className={styles.checkoutBtn} >
-                        <a href="">Ckeckout</a>
+                        <Link to={Paths.Checkout}>Ckeckout</Link>
                     </button>
 
 
