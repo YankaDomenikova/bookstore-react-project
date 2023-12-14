@@ -1,0 +1,47 @@
+ .pageContent {
+     margin: auto;
+     width: 70%;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     flex-direction: column;
+     height: 68vh;
+ }
+
+ .checkIcon {
+     height: 71px;
+ }
+
+ .mainHeading {
+     color: #C80D44;
+     text-transform: uppercase;
+     font-weight: 400;
+     font-size: 26px;
+     margin-top: 23px;
+ }
+
+ .orderNumber {
+     font-weight: 500;
+     font-size: 17px;
+     margin-top: 8px;
+ }
+
+ .orderNumber span {
+     color: #E7DB75;
+ }
+
+ .continueShopping {
+     background: #191919;
+     height: 42px;
+     width: 210px;
+     border-radius: 4px;
+     border: none;
+     margin-top: 35px;
+ }
+
+ .continueShopping a {
+     color: #fcfcfc;
+     text-decoration: none;
+     font-size: 13ppx;
+     font-weight: 400;
+ }

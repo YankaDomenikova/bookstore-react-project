@@ -24,6 +24,7 @@ export default function Checkout({ }) {
     const navigate = useNavigate();
 
     const createOrderHandler = async (values) => {
+        let orderNumber = new Date().valueOf();
         try {
             const result = await orderService.create(
                 values.email,
@@ -32,12 +33,13 @@ export default function Checkout({ }) {
                 values.address,
                 values.city,
                 values.postalCode,
+                orderNumber,
                 basketItems,
                 totalPrice,
                 totalQuantity
             );
             resetBasket();
-            navigate('/');
+            navigate(`/order-success/${orderNumber}`);
         } catch (err) {
             console.log(err);
         }

@@ -18,6 +18,7 @@ import NotFound from "./components/not-found/NotFound";
 import MainLayout from './layouts/MainLayout';
 
 import "./App.module.css";
+import OrderSuccess from './components/order-success/OrderSuccess';
 
 function App() {
     return (
@@ -32,6 +33,7 @@ function App() {
                         <Route path={Paths.BookDetails} element={<BookDetails />} />
                         <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
                         <Route path={Paths.Checkout} element={<Checkout />} />
+                        <Route path={Paths.OrderSuccess} element={<OrderSuccess />} />
                     </Route>
 
                     <Route path={Paths.Login} element={<Login />} />
