@@ -4,15 +4,21 @@ const baseUrl = "http://localhost:3030/data/orders";
 
 export const getAll = async (userId) => {
     const query = new URLSearchParams({
-        where: `_ownerId="${userId}"`,
+        where: `_ownerId="${userId}"`
     });
 
     const result =  await request('GET', `${baseUrl}?${query}`);
     return result;
 };
 
+export const getOrderById = (orderId) => {
+    const result = request('GET', `${baseUrl}/${orderId}`);
+    return result;
+}
 
-export const create = async (email,
+
+export const create = async (
+    email,
     fullname,
     phoneNumber,
     address,
@@ -24,6 +30,7 @@ export const create = async (email,
     totalQuantity
     ) => {
     const result = await request('POST', baseUrl, {
+        email,
         fullname,
         phoneNumber,
         address,
@@ -34,4 +41,10 @@ export const create = async (email,
         totalPrice, 
         totalQuantity
     } );
+}
+
+
+export const remove = async (orderId) => {
+    const result = await request('DELETE', `${baseUrl}/${orderId}`);
+    return result;
 }
