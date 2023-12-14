@@ -1,0 +1,150 @@
+.pageContent {
+    width: 62%;
+    margin: auto;
+    margin-top: 60px;
+    margin-bottom: 70px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+.mainHeading {
+    color: #C80D44;
+    font-weight: 500;
+    margin-bottom: 40px;
+}
+
+
+.heading {
+    color: #C80D44;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.finalizationForm {
+    display: flex;
+    align-self: flex-start;
+    justify-content: space-between;
+    margin-top: 35px;
+}
+
+.shippingAddress {
+    width: 485px;
+}
+
+.row {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 18px;
+}
+
+.inputWrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.email,
+.address {
+    width: 100%;
+}
+
+.fullName {
+    width: 50%;
+}
+
+.phonenumber {
+    width: 45%;
+}
+
+.city {
+    width: 65%;
+}
+
+.postalCode {
+    width: 30%;
+}
+
+.inputWrapper input {
+    height: 42px;
+    outline: none;
+    border: 1px solid #E7DB75;
+    border-radius: 3px;
+    padding: 0 12px;
+    color: #191919;
+    background: transparent;
+}
+
+.inputWrapper label {
+    color: #191919;
+    font-size: 13px;
+    margin-bottom: 2px;
+}
+
+
+.shippingType,
+.paymentMethod,
+.basketItems {
+    margin-top: 70px;
+}
+
+.options {
+    display: flex;
+    margin-top: 15px;
+}
+
+.radioInputWrapper {
+    font-size: 13px;
+    margin-right: 55px;
+    display: flex;
+    align-items: center;
+}
+
+.radioInputWrapper input {
+    accent-color: #C80D44;
+    margin-right: 4px;
+}
+
+.basketItems {
+    width: 485px;
+}
+
+.basketItems .images img {
+    height: 175px;
+    margin: 0 3px 3px 0;
+}
+
+.finalization {
+    width: 350px;
+}
+
+.details {
+    border: 1px solid #E7DB75;
+    border-radius: 5px;
+    padding: 25px;
+}
+
+.details div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.details div.estimatedTotal {
+    margin-top: 50px;
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.finalizeOrder {
+    width: 100%;
+    color: #fcfcfc;
+    background: #191919;
+    height: 50px;
+    border-radius: 4px;
+    margin-top: 12px;
+    font-size: 15px;
+    font-weight: 300;
+    font-family: 'Inter';
+}

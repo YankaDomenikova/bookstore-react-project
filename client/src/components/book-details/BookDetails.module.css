@@ -185,9 +185,6 @@ textarea {
     margin: 0 3px 5px 0;
 }
 
-input[type="radio"] {
-    display: none;
-}
 
 .sendReview {
     background: #191919;
