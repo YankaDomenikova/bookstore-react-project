@@ -30,8 +30,6 @@ export default function Login() {
         setShowPassword(!showPassword);
     }
 
-    console.log(errors);
-
     return (
         <div className={styles.contentContainer}>
             <button className={`${styles.backBtn} ${styles.backBtnLogin}`} onClick={() => navigate(-1)}>

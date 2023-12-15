@@ -18,7 +18,7 @@ const formKeys = {
 export default function Register() {
     const { registerSubmitHandler } = useContext(AuthContext);
 
-    const { values, onChange, onSubmit } = useForm(registerSubmitHandler, {
+    const { values, onChange, onSubmit, onBlur, errors } = useForm(registerSubmitHandler, {
         [formKeys.username]: '',
         [formKeys.email]: '',
         [formKeys.password]: ''
@@ -48,31 +48,39 @@ export default function Register() {
                     <form className={styles.authForm} onSubmit={onSubmit}>
                         <div className={`${styles.inputWrapper} ${styles.usernameWrapper}`}>
                             <input
-                                className={styles.formInput}
+                                className={`${styles.formInput} ${errors.username && styles.error}`}
                                 type="text"
                                 onChange={onChange}
+                                onBlur={() => onBlur(formKeys.username)}
                                 name={formKeys.username}
                                 value={values[formKeys.username]}
                                 placeholder="Username"
                             />
                             <label className={styles.formLabel} htmlFor="username">Username</label>
                         </div>
-                        <div className={styles.inputWrapper}>
+                        {errors.username && <p className={styles.errorMessage}>{errors.username}</p>}
+
+                        <div className={`${styles.inputWrapper} ${styles.emailRegister}`}>
                             <input
-                                className={styles.formInput}
+                                className={`${styles.formInput} ${errors.username && styles.error}`}
                                 type="email"
                                 onChange={onChange}
+                                onBlur={() => onBlur(formKeys.email)}
                                 name={formKeys.email}
                                 value={values[formKeys.email]}
                                 placeholder="Email"
                             />
                             <label className={styles.formLabel} htmlFor="email">Email</label>
                         </div>
+                        {errors.email && <p className={styles.errorMessage}>{errors.email}</p>}
+
+
                         <div className={`${styles.inputWrapper} ${styles.passwordWrapper}`}>
                             <input
-                                className={styles.formInput}
+                                className={`${styles.formInput} ${errors.password && styles.error}`}
                                 type={showPassword ? 'text' : 'password'}
                                 onChange={onChange}
+                                onBlur={() => onBlur(formKeys.password)}
                                 name={formKeys.password}
                                 value={values[formKeys.password]}
                                 placeholder="Password"
@@ -86,8 +94,14 @@ export default function Register() {
 
                             </button>
                         </div>
+                        {errors.password && <p className={styles.errorMessage}>{errors.password}</p>}
 
-                        <input className={styles.loginBtn} type="submit" value="Create account" />
+                        <input
+                            className={styles.loginBtn}
+                            type="submit"
+                            value="Create account"
+                            disabled={Object.values(errors).some(x => x !== null)}
+                        />
                     </form>
 
                     <div className={styles.linkAuth}>
