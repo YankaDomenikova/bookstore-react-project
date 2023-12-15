@@ -62,7 +62,7 @@ export default function Register() {
 
                         <div className={`${styles.inputWrapper} ${styles.emailRegister}`}>
                             <input
-                                className={`${styles.formInput} ${errors.username && styles.error}`}
+                                className={`${styles.formInput} ${errors.email && styles.error}`}
                                 type="email"
                                 onChange={onChange}
                                 onBlur={() => onBlur(formKeys.email)}

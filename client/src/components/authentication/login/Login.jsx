@@ -61,21 +61,21 @@ export default function Login() {
 
                     <div className={`${styles.inputWrapper} ${styles.passwordWrapper}`}>
                         <input
-                            className={`${styles.formInput} ${errors.password && styles.error}`}
+                            className={styles.formInput}
                             type={showPassword ? 'text' : 'password'}
                             name={formKeys.password}
                             placeholder="Password"
                             id='password'
                             onChange={onChange}
                             value={values[formKeys.password]}
-                            onBlur={() => onBlur(formKeys.password)}
+                        // onBlur={() => onBlur(formKeys.password)}
                         />
                         <label className={styles.formLabel} htmlFor="password">Password</label>
                         <button type="button" className={styles.showPasswordBtn} onClick={showPasswordHandler}>
                             <img src={showPassword ? eyeClosedIcon : eyeOpenIcon} />
                         </button>
                     </div>
-                    {errors.password && <p className={styles.errorMessage}>{errors.password}</p>}
+                    {/* {errors.password && <p className={styles.errorMessage}>{errors.password}</p>} */}
 
                     <div className={styles.details}>
                         <div className={styles.rememberMe}>
