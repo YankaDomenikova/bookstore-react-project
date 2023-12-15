@@ -10,6 +10,7 @@
     color: #C80D44;
     margin-bottom: 30px;
     font-weight: 500;
+    font-size: 20px;
 }
 
 .container {
@@ -25,11 +26,12 @@
 .orderNumber h4,
 .orderDate h4 {
     font-weight: 500;
+    font-size: 15px;
 }
 
 .orderNumber p,
 .orderDate p {
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .detailsContainer {
@@ -40,7 +42,7 @@
 }
 
 .wrapper {
-    margin-bottom: 32px;
+    margin-bottom: 28px;
     color: #C80D44;
 }
 
@@ -53,8 +55,8 @@
 
 .progress {
     border: 1px solid #C80D44;
-    height: 22px;
-    width: 22px;
+    height: 16px;
+    width: 16px;
     border-radius: 50%;
     margin-right: 12px;
     position: relative;
@@ -63,11 +65,11 @@
 .wrapper:not(:last-child) .status .progress::after {
     position: absolute;
     content: ' ';
-    top: 26px;
+    top: 20px;
     left: 50%;
     transform: translateX(-50%);
     background: #C80D44;
-    height: 22px;
+    height: 20px;
     width: 1px;
 }
 
@@ -79,7 +81,11 @@
 }
 
 .progress img {
-    height: 85%;
+    height: 100%;
+}
+
+.status p {
+    font-size: 14px;
 }
 
 .statusDate {
@@ -142,10 +148,11 @@
 .orderInfo h4 {
     color: #C80D44;
     font-weight: 500;
+    font-size: 15px;
 }
 
 .orderInfo p {
-    font-size: 14px;
+    font-size: 12px;
     margin-bottom: 2px;
 }
 
@@ -156,17 +163,17 @@
 .total p {
     text-align: right;
     font-weight: 500;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .declineOrder {
-    margin-top: 40px;
+    margin-top: 55px;
     color: #fcfcfc;
     background: #191919;
     border: none;
     border-radius: 3px;
-    height: 50px;
-    width: 235px;
-    font-size: 15px;
+    height: 42px;
+    width: 215px;
+    font-size: 14px;
     font-weight: 300;
 }

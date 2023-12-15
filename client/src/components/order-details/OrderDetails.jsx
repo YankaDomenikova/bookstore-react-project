@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import { toast } from 'react-hot-toast';
 
 import * as orderService from '../../services/orderService';
 import { convert } from "../../utils/dateConverter";
+import { Paths } from "../../paths/paths";
 
 import styles from './OrderDetails.module.css';
 import checkmark from '../../assets/checkmark-small-svgrepo-com.svg';
-import { Paths } from "../../paths/paths";
 
 export default function OrderDetails() {
     const [order, setOrder] = useState({});
@@ -26,7 +27,7 @@ export default function OrderDetails() {
         } catch (err) {
             console.log(err)
         };
-
+        toast.success("Order declined");
     }
 
 
@@ -92,7 +93,7 @@ export default function OrderDetails() {
                                     <div className={styles.author}>by Book author</div>
                                 </div>
 
-                                <p className={styles.itemPrice}>$ 33.58</p>
+                                <p className={styles.itemPrice}>$ {item.price}</p>
 
                                 <div className={styles.otherItemInfo}>
                                     <p className={styles.row}>Format: <span>{item.format}</span></p>
