@@ -47,10 +47,13 @@ function App() {
                 </Routes>
                 <Toaster
                     toastOptions={{
+                        style: {
+                            padding: '16px',
+                        },
                         success: {
                             iconTheme: {
                                 primary: '#C80D44',
-                            }
+                            },
                         },
                     }} />
             </AuthProvider>
