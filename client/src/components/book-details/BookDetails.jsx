@@ -50,19 +50,13 @@ export default function BookDetails() {
     }, [bookId]);
 
     const createReviewHandler = async (data) => {
-        if (isAuthenticated) {
-            const review = await reviewService.create(data.text, data.rating, bookId);
-            review.author = { username: username };
-            setReviews(state => ([...state, review]));
-        }
-        else {
-            toast.error("Log in to your accout to write a review.")
-
-        }
+        const review = await reviewService.create(data.text, data.rating, bookId);
+        review.author = { username: username };
+        setReviews(state => ([...state, review]));
     }
 
 
-    const { values, onChange, onSubmit } = useForm(createReviewHandler, {
+    const { values, onChange, onSubmit, onBlur, errors } = useForm(createReviewHandler, {
         [formKeys.text]: '',
         [formKeys.rating]: 0
     });
@@ -164,8 +158,17 @@ export default function BookDetails() {
                 <form className={styles.writeReview} onSubmit={onSubmit}>
                     <h2>Write a review</h2>
                     <div className={styles.inputs}>
-                        <StarRatingInput name={formKeys.rating} value={values[formKeys.rating]} onChange={onChange} />
+                        <div className={styles.starRating}>
+                            <StarRatingInput name={formKeys.rating} value={values[formKeys.rating]} onChange={onChange} onBlur={onBlur} />
+
+                            {!isAuthenticated && <p className={styles.loginMessage}>Only logged users can write a review. <Link to={Paths.Login}>Log in</Link> to your account.</p>}
+                            {/* {errors.required && <p className={styles.errorMessage}>{errors.required}</p>} */}
+                        </div>
+
+                        {errors.rating && <p className={styles.errorMessage}>{errors.rating}</p>}
+
                         <textarea
+                            className={(errors.text || errors.required) && styles.error}
                             name={formKeys.text}
                             id=""
                             cols="30"
@@ -173,10 +176,13 @@ export default function BookDetails() {
                             placeholder="Share your thoughts..."
                             value={values[formKeys.text]}
                             onChange={onChange}
+                            onBlur={() => onBlur(formKeys.text)}
                         >
                         </textarea>
+                        {errors.text && <p className={styles.errorMessage}>{errors.text}</p>}
 
-                        <input type="submit" className={styles.sendReview} value="Send revirew" />
+
+                        <input type="submit" className={styles.sendReview} value="Send revirew" disabled={Object.values(errors).some(x => x !== null)} />
                     </div>
                 </form>
 

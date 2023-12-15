@@ -11,12 +11,19 @@ export default function useForm(submitHandler,initialValues){
             ...state,
             [e.target.name] : e.target.value
         }));
+        setErrors(state => ({...state, required: null}))
     };
 
     const onSubmit = (e) => {
         e.preventDefault();
-        submitHandler(values);
-        setValues(initialValues);
+        
+        if(Object.values(values).some(x => x.length === 0 || x === 0)){
+             setErrors(state => ({...state, required: "The fields are required"}))
+        }else{
+            submitHandler(values);
+            setValues(initialValues);
+        }
+      
     };
 
     const onBlur = (key) =>{

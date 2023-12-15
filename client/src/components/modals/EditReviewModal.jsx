@@ -24,8 +24,6 @@ export default function EditReviewModal({ show, toggleShow, _id, text, rating, b
         [formKeys.rating]: rating,
     });
 
-
-    console.log(bookId);
     return (
         <div className={styles.overlay} style={{ display: show ? "block" : "none" }}>
             <div className={styles.modal}>

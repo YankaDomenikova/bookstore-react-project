@@ -17,6 +17,7 @@ export default function StarRatingInput({ name, value, onChange }) {
                             value={currentRating}
                             onChange={onChange}
                             checked={value === currentRating}
+                            onBlur={() => onBlur(name)}
                         />
                         <span
                             className={styles.star}

@@ -2,6 +2,7 @@ const emailPattern = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
 const passwordPattern = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,20}$/;
 const usernamePattern = /^[a-zA-Z_.]{3,40}$/;
 const postalcodePattern = /^\d{4}$/;
+const fullnamePattern = /^[a-zA-Z\s]+$/;
 
 export const validate = (key, value) => {
     let error = null;
@@ -11,7 +12,6 @@ export const validate = (key, value) => {
             if(!emailPattern.test(value)) 
                 error = "Invalid email"
             break;
-    
         case 'password':
             if(!passwordPattern.test(value)) 
                 error = "Passwords must be over 8 characters, at least one uppercase and lowercase letter, number and special character";
@@ -23,6 +23,18 @@ export const validate = (key, value) => {
         case 'postalCode':
             if(!postalcodePattern.test(value)) 
                 error = "Invalid postal code"
+            break;
+        case 'fullName':
+            if(!fullnamePattern.test(value))
+                error = "Invalid name";
+            break;
+        case 'rating':
+            if (value === 0)
+                error = "You must give your rating";
+            break;
+        case 'text':
+            if (value.length === 0)
+                error = "Review is required";
             break;
         default:
             break;
