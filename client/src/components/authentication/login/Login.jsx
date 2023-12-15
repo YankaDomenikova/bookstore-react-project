@@ -9,15 +9,15 @@ import styles from '../Auth.module.css';
 import eyeOpenIcon from '../../../assets/eye-open-solid-svgrepo-com.svg'
 import eyeClosedIcon from '../../../assets/eye-close-solid-svgrepo-com.svg'
 
-
 const formKeys = {
     email: 'email',
     password: 'password'
 }
 
 export default function Login() {
+
     const { loginSubmitHandler } = useContext(AuthContext);
-    const { values, onChange, onSubmit } = useForm(loginSubmitHandler, {
+    const { values, onChange, onSubmit, onBlur, errors } = useForm(loginSubmitHandler, {
         [formKeys.email]: '',
         [formKeys.password]: ''
     });
@@ -29,6 +29,8 @@ export default function Login() {
     const showPasswordHandler = () => {
         setShowPassword(!showPassword);
     }
+
+    console.log(errors);
 
     return (
         <div className={styles.contentContainer}>
@@ -46,7 +48,7 @@ export default function Login() {
             <section className={styles.authSection}>
                 <h1 className={styles.formHeading}>Login</h1>
 
-                <form className={styles.authForm} onSubmit={onSubmit}>
+                <form className={styles.authForm} onSubmit={onSubmit} noValidate>
                     <div className={styles.inputWrapper}>
                         <input
                             className={styles.formInput}
@@ -56,8 +58,10 @@ export default function Login() {
                             id='email'
                             onChange={onChange}
                             value={values[formKeys.email]}
+                            onBlur={() => onBlur(formKeys.email)}
                         />
                         <label className={styles.formLabel} htmlFor="email">Email</label>
+                        {errors.email && <p>{errors.email}</p>}
                     </div>
 
                     <div className={`${styles.inputWrapper} ${styles.passwordWrapper}`}>
@@ -69,8 +73,11 @@ export default function Login() {
                             id='password'
                             onChange={onChange}
                             value={values[formKeys.password]}
+                            onBlur={() => onBlur(formKeys.password)}
                         />
                         <label className={styles.formLabel} htmlFor="password">Password</label>
+                        {errors.password && <p>{errors.password}</p>}
+
                         <button type="button" className={styles.showPasswordBtn} onClick={showPasswordHandler}>
                             <img src={showPassword ? eyeClosedIcon : eyeOpenIcon} />
                         </button>
@@ -84,7 +91,7 @@ export default function Login() {
                         <Link className={styles.forgotPassword}>Forgot Password?</Link>
                     </div>
 
-                    <input className={styles.loginBtn} type="submit" value="Login" />
+                    <input className={styles.loginBtn} type="submit" value="Login" disabled={Object.values(errors).some(x => x !== null)} />
                 </form>
 
                 <div className={styles.linkAuth}>
