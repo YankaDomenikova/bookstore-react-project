@@ -34,10 +34,7 @@ export default function Login() {
 
     return (
         <div className={styles.contentContainer}>
-            <button
-                className={`${styles.backBtn} ${styles.backBtnLogin}`}
-                onClick={() => navigate(-1)}
-            >
+            <button className={`${styles.backBtn} ${styles.backBtnLogin}`} onClick={() => navigate(-1)}>
                 Go back
             </button>
 
@@ -51,7 +48,7 @@ export default function Login() {
                 <form className={styles.authForm} onSubmit={onSubmit} noValidate>
                     <div className={styles.inputWrapper}>
                         <input
-                            className={styles.formInput}
+                            className={`${styles.formInput} ${errors.email && styles.error}`}
                             type="email"
                             name={formKeys.email}
                             placeholder="Email"
@@ -61,12 +58,12 @@ export default function Login() {
                             onBlur={() => onBlur(formKeys.email)}
                         />
                         <label className={styles.formLabel} htmlFor="email">Email</label>
-                        {errors.email && <p>{errors.email}</p>}
                     </div>
+                    {errors.email && <p className={styles.errorMessage}>{errors.email}</p>}
 
                     <div className={`${styles.inputWrapper} ${styles.passwordWrapper}`}>
                         <input
-                            className={styles.formInput}
+                            className={`${styles.formInput} ${errors.password && styles.error}`}
                             type={showPassword ? 'text' : 'password'}
                             name={formKeys.password}
                             placeholder="Password"
@@ -76,12 +73,11 @@ export default function Login() {
                             onBlur={() => onBlur(formKeys.password)}
                         />
                         <label className={styles.formLabel} htmlFor="password">Password</label>
-                        {errors.password && <p>{errors.password}</p>}
-
                         <button type="button" className={styles.showPasswordBtn} onClick={showPasswordHandler}>
                             <img src={showPassword ? eyeClosedIcon : eyeOpenIcon} />
                         </button>
                     </div>
+                    {errors.password && <p className={styles.errorMessage}>{errors.password}</p>}
 
                     <div className={styles.details}>
                         <div className={styles.rememberMe}>

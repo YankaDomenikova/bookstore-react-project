@@ -58,6 +58,7 @@
 }
 
 .formInput {
+    position: relative;
     width: 100%;
     height: 48px;
     background: transparent;
@@ -192,4 +193,15 @@
 
 .backBtnRegister {
     left: 15px;
+}
+
+.errorMessage {
+    font-size: 10px;
+    color: #D40101;
+    margin-top: 3px;
+}
+
+.error {
+    border-color: #D40101;
+
 }

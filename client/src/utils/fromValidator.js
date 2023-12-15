@@ -14,7 +14,7 @@ export const validate = (key, value) => {
     
         case 'password':
             if(!passwordPattern.test(value)) 
-                error = "Passwords must be over 8 characters and contain at least one uppercase, lowercase letter, number and special character";
+                error = "Passwords must be over 8 characters, at least one uppercase and lowercase letter, number and special character";
             break;
         case 'username':
             if(!usernamePattern.test(value)) 
