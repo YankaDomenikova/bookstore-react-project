@@ -36,7 +36,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 18px;
+    margin-top: 18px;
 }
 
 .inputWrapper {
@@ -65,7 +65,7 @@
     width: 30%;
 }
 
-.inputWrapper input {
+.formInput {
     height: 42px;
     outline: none;
     border: 1px solid #E7DB75;
@@ -73,7 +73,19 @@
     padding: 0 12px;
     color: #191919;
     background: transparent;
+    outline: none;
 }
+
+/* .inputWrapper input {
+    height: 42px;
+    outline: none;
+    border: 1px solid #E7DB75;
+    border-radius: 3px;
+    padding: 0 12px;
+    color: #191919;
+    background: transparent;
+    outline: none;
+} */
 
 .inputWrapper label {
     color: #191919;
@@ -147,4 +159,14 @@
     font-size: 15px;
     font-weight: 300;
     font-family: 'Inter';
+}
+
+.errorMessage {
+    font-size: 10px;
+    color: #D40101;
+    margin-top: 3px;
+}
+
+.error {
+    border-color: #D40101;
 }

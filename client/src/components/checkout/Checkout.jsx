@@ -46,7 +46,7 @@ export default function Checkout({ }) {
 
     }
 
-    const { values, onChange, onSubmit } = useForm(createOrderHandler, {
+    const { values, onChange, onSubmit, onBlur, errors } = useForm(createOrderHandler, {
         [formKeys.email]: email,
         [formKeys.fullName]: '',
         [formKeys.phoneNumber]: '',
@@ -66,33 +66,93 @@ export default function Checkout({ }) {
                         <div className={styles.row}>
                             <div className={`${styles.inputWrapper} ${styles.email}`}>
                                 <label htmlFor="email">Email</label>
-                                <input type="email" name={formKeys.email} id="email" value={values[formKeys.email]} onChange={onChange} />
+                                <input
+                                    className={`${styles.formInput} ${(errors.email || errors.required) && styles.error}`}
+                                    type="email"
+                                    name={formKeys.email}
+                                    id="email"
+                                    value={values[formKeys.email]}
+                                    onChange={onChange}
+                                    onBlur={() => onBlur(formKeys.email)}
+                                />
+                                {errors.email && <p className={styles.errorMessage}>{errors.email}</p>}
                             </div>
                         </div>
+
                         <div className={styles.row}>
                             <div className={`${styles.inputWrapper} ${styles.fullName}`}>
                                 <label htmlFor="fullName">Full name</label>
-                                <input type="text" name={formKeys.fullName} id="fullName" value={values[formKeys.fullName]} onChange={onChange} />
+                                <input
+                                    className={`${styles.formInput} ${(errors.fullName || errors.required) && styles.error}`}
+                                    type="text"
+                                    name={formKeys.fullName}
+                                    id="fullName"
+                                    value={values[formKeys.fullName]}
+                                    onChange={onChange}
+                                    onBlur={() => onBlur(formKeys.fullName)}
+                                />
+                                {errors.fullName && <p className={styles.errorMessage}>{errors.fullName}</p>}
                             </div>
+
+
                             <div className={`${styles.inputWrapper} ${styles.phonenumber}`}>
                                 <label htmlFor="phoneNumber">Phone number</label>
-                                <input type="tel" name={formKeys.phoneNumber} id="phoneNum" value={values[formKeys.phoneNumber]} onChange={onChange} />
+                                <input
+                                    className={`${styles.formInput} ${(errors.phoneNumber || errors.required) && styles.error}`}
+                                    type="tel"
+                                    name={formKeys.phoneNumber}
+                                    id="phoneNum"
+                                    value={values[formKeys.phoneNumber]}
+                                    onChange={onChange}
+                                    onBlur={() => onBlur(formKeys.phoneNumber)}
+                                />
+                                {errors.phoneNumber && <p className={styles.errorMessage}>{errors.phoneNumber}</p>}
                             </div>
                         </div>
+
                         <div className={styles.row}>
                             <div className={`${styles.inputWrapper} ${styles.address}`}>
                                 <label htmlFor="address">Address</label>
-                                <input type="text" name={formKeys.address} id="address" value={values[formKeys.address]} onChange={onChange} />
+                                <input
+                                    className={`${styles.formInput} ${(errors.address || errors.required) && styles.error}`}
+                                    type="text"
+                                    name={formKeys.address}
+                                    id="address"
+                                    value={values[formKeys.address]}
+                                    onChange={onChange}
+                                    onBlur={() => onBlur(formKeys.address)}
+                                />
                             </div>
                         </div>
+                        {errors.address && <p className={styles.errorMessage}>{errors.address}</p>}
+
                         <div className={styles.row}>
                             <div className={`${styles.inputWrapper} ${styles.city}`}>
                                 <label htmlFor="city">City</label>
-                                <input type="text" name={formKeys.city} id="city" value={values[formKeys.city]} onChange={onChange} />
+                                <input
+                                    className={`${styles.formInput} ${(errors.city || errors.required) && styles.error}`}
+                                    type="text"
+                                    name={formKeys.city}
+                                    id="city"
+                                    value={values[formKeys.city]}
+                                    onChange={onChange}
+                                    onBlur={() => onBlur(formKeys.city)}
+                                />
+                                {errors.city && <p className={styles.errorMessage}>{errors.city}</p>}
                             </div>
+
                             <div className={`${styles.inputWrapper} ${styles.postalCode}`}>
                                 <label htmlFor="postalCode">Postal code</label>
-                                <input type="tel" name={formKeys.postalCode} id="postalCode" maxLength="4" value={values[formKeys.postalCode]} onChange={onChange} />
+                                <input
+                                    className={`${styles.formInput} ${(errors.postalCode || errors.required) && styles.error}`}
+                                    type="text"
+                                    name={formKeys.postalCode}
+                                    id="postalCode"
+                                    value={values[formKeys.postalCode]}
+                                    onChange={onChange}
+                                    onBlur={() => onBlur(formKeys.postalCode)}
+                                />
+                                {errors.postalCode && <p className={styles.errorMessage}>{errors.postalCode}</p>}
                             </div>
                         </div>
                     </div>
@@ -100,7 +160,7 @@ export default function Checkout({ }) {
                         <h4 className={styles.heading}>Shipping</h4>
                         <div className={styles.options}>
                             <div className={styles.radioInputWrapper}>
-                                <input type="radio" name="shippingType" id="standart" />
+                                <input type="radio" name="shippingType" id="standart" checked="true" />
                                 <label htmlFor="standart">Standart - FREE</label>
                             </div>
                             <div className={styles.radioInputWrapper}>
@@ -113,7 +173,7 @@ export default function Checkout({ }) {
                         <h4 className={styles.heading}>Payment method</h4>
                         <div className={styles.options}>
                             <div className={styles.radioInputWrapper}>
-                                <input type="radio" name="paymentMethod" id="cash" />
+                                <input type="radio" name="paymentMethod" id="cash" checked="true" />
                                 <label htmlFor="cash">Cash (On delivery)</label>
                             </div>
                             <div className={styles.radioInputWrapper}>
@@ -158,7 +218,7 @@ export default function Checkout({ }) {
                             <p>$ {totalPrice}</p>
                         </div>
                     </div>
-                    <button type="submit" className={styles.finalizeOrder}>Finalize order</button>
+                    <button type="submit" className={styles.finalizeOrder} disabled={Object.values(errors).some(x => x !== null)}>Finalize order</button>
                 </div>
             </form>
         </div>
