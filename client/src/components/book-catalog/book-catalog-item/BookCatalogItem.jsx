@@ -26,23 +26,27 @@ export default function BookCatalogItem({
             <div className={styles.bookDetails}>
                 <p className={styles.bookTitle}>{title}</p>
                 <p className={styles.authorName}>by {author}</p>
-                <div className={styles.bookQuantity}>
-                    <QuantityText quantity={quantity} />
-                </div>
-                <p className={styles.bookPrice}>$ {price}</p>
+
             </div>
-            <button
-                className={quantity === 0 ? styles.disabled : styles.addToBasketBtn}
-                disabled={quantity === 0}
-                onClick={() => addToBasketHandler({
-                    _id,
-                    title,
-                    author,
-                    quantity,
-                    price,
-                    format,
-                    imageUrl,
-                })}>Add to basket</button>
+            <div className={styles.bookQuantity}>
+                <QuantityText quantity={quantity} />
+            </div>
+            <div>
+
+                <p className={styles.bookPrice}>$ {price}</p>
+                <button
+                    className={quantity === 0 ? styles.disabled : styles.addToBasketBtn}
+                    disabled={quantity === 0}
+                    onClick={() => addToBasketHandler({
+                        _id,
+                        title,
+                        author,
+                        quantity,
+                        price,
+                        format,
+                        imageUrl,
+                    })}>Add to basket</button>
+            </div>
         </div>
     );
 }

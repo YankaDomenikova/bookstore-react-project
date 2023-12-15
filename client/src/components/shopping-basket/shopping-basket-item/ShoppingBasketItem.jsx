@@ -7,6 +7,7 @@ import styles from './ShoppingBasketItem.module.css';
 import plusIcon from '../../../assets/plus-circle-svgrepo-com.svg';
 import minIcon from '../../../assets/minus-circle-svgrepo-com.svg';
 import removeIcon from '../../../assets/remove-svgrepo-com.svg';
+import { Link } from 'react-router-dom';
 
 export default function ShoppingBasketItem({ _id, title, author, imageUrl, price, basketQuantity }) {
     const { incrementItemQuantity, decrementItemQuantity, removeItem } = useContext(ShoppingContext);
@@ -14,7 +15,9 @@ export default function ShoppingBasketItem({ _id, title, author, imageUrl, price
         <div className={styles.basketItems}>
             <div className={styles.basketItem}>
                 <div className={styles.bookInfo}>
-                    <img src={imageUrl} alt="" />
+                    <Link to={`/catalog/book/${_id}/details`}>
+                        <img src={imageUrl} alt="" />
+                    </Link>
                     <div className={styles.bookDetails}>
                         <p className={styles.bookTitle}>{title}</p>
                         <p className={styles.author}>{author}</p>

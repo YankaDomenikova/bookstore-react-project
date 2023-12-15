@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from "react"
 import { Link, useNavigate, useParams, useLocation } from "react-router-dom";
+import { toast } from 'react-hot-toast';
 
 import * as bookService from '../../services/bookService';
 import * as reviewService from '../../services/reviewService';
@@ -49,10 +50,15 @@ export default function BookDetails() {
     }, [bookId]);
 
     const createReviewHandler = async (data) => {
-        const review = await reviewService.create(data.text, data.rating, bookId);
-        review.author = { username: username };
-        setReviews(state => ([...state, review]));
-        //updateBookRating(reviews);
+        if (isAuthenticated) {
+            const review = await reviewService.create(data.text, data.rating, bookId);
+            review.author = { username: username };
+            setReviews(state => ([...state, review]));
+        }
+        else {
+            toast.error("Log in to your accout to write a review.")
+
+        }
     }
 
 
