@@ -16,7 +16,10 @@ export default function Logout() {
                 logoutHandler();
                 navigate(Paths.Home);;
             })
-            .catch((err) => console.error(err));
+            .catch(() => {
+                logoutHandler();
+                navigate(Paths.Login);;
+            });
     }, [])
 
     return null;
