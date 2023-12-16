@@ -3,7 +3,7 @@ export const Paths = {
     Catalog: '/catalog',
     BooksByCategory: '/catalog/:categoryId/:categoryName',
     Bestsellers: '/bestsellers',
-    BookDetails: 'catalog/book/:bookId/details',
+    BookDetails: '/catalog/book/:bookId/details',
     ShoppingBasket: '/shopping-basket',
     Checkout: '/checkout',
     OrderSuccess: '/order-success/:orderNumber',

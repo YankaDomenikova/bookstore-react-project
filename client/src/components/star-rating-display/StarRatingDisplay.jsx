@@ -1,6 +1,6 @@
 import styles from './StarRatingDisplay.module.css'
 
-export default function BookStarRating({ value, size }) {
+export default function StarRatingDisplay({ value, size }) {
     const percentage = Math.round((value / 5) * 100);
 
     return (
