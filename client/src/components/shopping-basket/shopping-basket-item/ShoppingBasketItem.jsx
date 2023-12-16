@@ -1,4 +1,5 @@
 import { useContext } from 'react';
+import { Link } from 'react-router-dom';
 
 import ShoppingContext from '../../../contexts/ShoppingContext';
 import { round } from '../../../utils/numberRounder';
@@ -7,7 +8,6 @@ import styles from './ShoppingBasketItem.module.css';
 import plusIcon from '../../../assets/plus-circle-svgrepo-com.svg';
 import minIcon from '../../../assets/minus-circle-svgrepo-com.svg';
 import removeIcon from '../../../assets/remove-svgrepo-com.svg';
-import { Link } from 'react-router-dom';
 
 export default function ShoppingBasketItem({ _id, title, author, imageUrl, price, basketQuantity }) {
     const { updateItemQuantity, removeItem } = useContext(ShoppingContext);

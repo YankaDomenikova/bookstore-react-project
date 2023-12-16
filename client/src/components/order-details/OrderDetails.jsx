@@ -15,18 +15,18 @@ export default function OrderDetails() {
     const navigate = useNavigate();
 
     useEffect(() => {
-        orderService.getOrderById(orderId)
-            .then(result => setOrder(result));
+        try {
+            orderService.getOrderById(orderId)
+                .then(result => setOrder(result));
+        } catch (error) {
+            toast.error(error);
+        }
 
     }, []);
 
     const deleteOrderhandler = async () => {
-        try {
-            await orderService.remove(orderId);
-            navigate(Paths.Profile);
-        } catch (err) {
-            console.log(err)
-        };
+        await orderService.remove(orderId);
+        navigate(Paths.Profile);
         toast.success("Order declined");
     }
 

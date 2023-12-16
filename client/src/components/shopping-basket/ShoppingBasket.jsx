@@ -43,7 +43,7 @@ export default function ShoppingBasket() {
                         </div>
                         <h4 className={`${styles.row} ${styles.total}`}>Estimated total <span>$ {totalPrice}</span></h4>
                     </div>
-                    <button className={styles.checkoutBtn} onClick={redirect} disabled={basketItems.length === 0}>
+                    <button className={styles.checkoutBtn} onClick={() => navigate(Paths.Checkout)} disabled={basketItems.length === 0}>
                         Ckeckout
                     </button>
 

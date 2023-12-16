@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 import * as bookService from '../../services/bookService';
 import * as categoryService from '../../services/categoryService';
@@ -15,11 +16,16 @@ export default function BookCatalog() {
     const { categoryId, categoryName } = useParams();
 
     useEffect(() => {
-        bookService.getAllBooks()
-            .then(result => setBooks(result));
+        try {
+            bookService.getAllBooks()
+                .then(result => setBooks(result));
 
-        categoryService.getAllCategories()
-            .then(result => setCategories(result));
+            categoryService.getAllCategories()
+                .then(result => setCategories(result));
+
+        } catch (error) {
+            toast.error(error);
+        }
     }, []);
 
     const filteredBooks = categoryId

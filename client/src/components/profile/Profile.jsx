@@ -1,29 +1,27 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import toast from 'react-hot-toast';
 
+import AuthContext from '../../contexts/AuthContext';
 import * as orderService from '../../services/orderService';
 import { convert } from '../../utils/dateConverter';
 
-
 import styles from './Profile.module.css'
 import arrowRight from '../../assets/arrow-right-svgrepo-com.svg';
-import AuthContext from '../../contexts/AuthContext';
 
 export default function Profile() {
     const [orders, setOrders] = useState([]);
     const { userId, username, email } = useContext(AuthContext);
 
     useEffect(() => {
-        orderService.getAll(userId)
-            .then(result => setOrders(result));
-        // .then(result => {
-        //     const descending = [...result];
-        //     descending.reverse();
-        //     setOrders(descending);
-        // });
+        try {
+            orderService.getAll(userId)
+                .then(result => setOrders(result));
+
+        } catch (error) {
+            toast.error(error);
+        }
     }, []);
-
-
 
     return (
 

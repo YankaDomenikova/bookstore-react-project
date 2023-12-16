@@ -1,5 +1,6 @@
 import { useContext, useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import { toast } from 'react-hot-toast';
 
 import { Paths } from '../../paths/paths';
 import * as bookService from '../../services/bookService';
@@ -21,8 +22,8 @@ export default function Home() {
 
             bookService.getBookOfTheMonth()
                 .then(result => setBookOfTheMonth(result[0]));
-        } catch (err) {
-            console.error(err);
+        } catch (error) {
+            toast.error(err);
         }
     }, []);
 

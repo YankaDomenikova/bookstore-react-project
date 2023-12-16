@@ -40,14 +40,19 @@ export default function BookDetails() {
     const { addToBasketHandler } = useContext(ShoppingContext);
 
     useEffect(() => {
-        bookService.getBookById(bookId)
-            .then(result => setBook(result));
+        try {
+            bookService.getBookById(bookId)
+                .then(result => setBook(result));
 
-        reviewService.getAllReviews(bookId)
-            .then(result => {
-                setReviews(result);
-                updateBookRating(result);
-            });
+            reviewService.getAllReviews(bookId)
+                .then(result => {
+                    setReviews(result);
+                    updateBookRating(result);
+                });
+        } catch (error) {
+            toast.error(error);
+        }
+
     }, [bookId]);
 
     const createReviewHandler = async (data) => {

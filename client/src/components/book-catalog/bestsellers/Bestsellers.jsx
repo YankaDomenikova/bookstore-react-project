@@ -1,4 +1,6 @@
 import { useEffect, useState } from 'react';
+import { toast } from 'react-hot-toast';
+
 
 import * as bookService from '../../../services/bookService';
 
@@ -10,8 +12,12 @@ export default function Bestsellers() {
     const [bestsellers, setBestsellers] = useState([]);
 
     useEffect(() => {
-        bookService.getBestsellers()
-            .then(result => setBestsellers(result));
+        try {
+            bookService.getBestsellers()
+                .then(result => setBestsellers(result));
+        } catch (error) {
+            toast.error(error);
+        }
     }, []);
 
     return (
