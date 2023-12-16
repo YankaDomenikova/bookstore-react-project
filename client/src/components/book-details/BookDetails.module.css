@@ -71,6 +71,20 @@
     margin-top: 6px;
 }
 
+.bestseller {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.bestseller img {
+    height: 18px;
+}
+
+.bestseller p {
+    font-size: 12px;
+}
+
 .infoOverview {
     display: flex;
     align-items: center;

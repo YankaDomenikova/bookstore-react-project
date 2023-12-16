@@ -29,3 +29,96 @@
     text-decoration: none;
     margin-top: 15px;
 }
+
+
+
+.pageContent {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding: 40px 0;
+    margin: 70px 0;
+}
+
+section.container {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    width: 50%;
+}
+
+.marginTop {
+    margin-top: 150px;
+}
+
+.heading {
+    color: #C80D44;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.latestBooks {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.imageWrapper {
+    height: 195px;
+}
+
+.bookImage,
+bookImage {
+    height: 100%;
+}
+
+.bookOfTheMonth {
+    background: hsl(0, 0%, 97%);
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 420px;
+
+}
+
+.bookOfTheMonth .image {
+    height: 330px;
+    margin-right: 40px;
+}
+
+.bookDetails {
+    display: flex;
+    height: 275px;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.author {
+    font-size: 13px;
+}
+
+.price {
+    color: #C80D44;
+    font-size: 22px;
+    font-weight: 400;
+}
+
+.addTobasket {
+    color: #fcfcfc;
+    background: #191919;
+    height: 45px;
+    border-radius: 3px;
+    font-weight: 300;
+    width: 200px;
+}
