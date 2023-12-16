@@ -14,50 +14,53 @@ import Checkout from './components/checkout/Checkout';
 import Login from "./components/authentication/login/Login";
 import Register from "./components/authentication/register/Register";
 import Logout from './components/authentication/logout/Logout';
-import NotFound from "./components/not-found/NotFound";
-import MainLayout from './layouts/MainLayout';
-
-import "./App.module.css";
 import OrderSuccess from './components/order-success/OrderSuccess';
 import Profile from './components/profile/Profile';
 import OrderDetails from './components/order-details/OrderDetails';
+import NotFound from "./components/not-found/NotFound";
+import MainLayout from './layouts/MainLayout';
+import ErrorBoundary from './error-boundaries/ErrorBoundary';
+
+import "./App.module.css";
 
 function App() {
     return (
-        <ShoppingProvider>
-            <AuthProvider>
-                <Routes>
-                    <Route path={Paths.Home} element={<MainLayout />}>
-                        <Route index element={<Home />} />
-                        <Route path={Paths.Catalog} element={<BookCatalog />} />
-                        <Route path={Paths.BooksByCategory} element={<BookCatalog />} />
-                        <Route path={Paths.Bestsellers} element={<Bestsellers />} />
-                        <Route path={Paths.BookDetails} element={<BookDetails />} />
-                        <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
-                        <Route path={Paths.Checkout} element={<Checkout />} />
-                        <Route path={Paths.OrderSuccess} element={<OrderSuccess />} />
-                        <Route path={Paths.Profile} element={<Profile />} />
-                        <Route path={Paths.OrderDetails} element={<OrderDetails />} />
-                    </Route>
+        <ErrorBoundary>
+            <ShoppingProvider>
+                <AuthProvider>
+                    <Routes>
+                        <Route path={Paths.Home} element={<MainLayout />}>
+                            <Route index element={<Home />} />
+                            <Route path={Paths.Catalog} element={<BookCatalog />} />
+                            <Route path={Paths.BooksByCategory} element={<BookCatalog />} />
+                            <Route path={Paths.Bestsellers} element={<Bestsellers />} />
+                            <Route path={Paths.BookDetails} element={<BookDetails />} />
+                            <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
+                            <Route path={Paths.Checkout} element={<Checkout />} />
+                            <Route path={Paths.OrderSuccess} element={<OrderSuccess />} />
+                            <Route path={Paths.Profile} element={<Profile />} />
+                            <Route path={Paths.OrderDetails} element={<OrderDetails />} />
+                        </Route>
 
-                    <Route path={Paths.Login} element={<Login />} />
-                    <Route path={Paths.Register} element={<Register />} />
-                    <Route path={Paths.Logout} element={<Logout />} />
-                    <Route path={Paths.NotFound} element={<NotFound />} />
-                </Routes>
-                <Toaster
-                    toastOptions={{
-                        style: {
-                            padding: '16px',
-                        },
-                        success: {
-                            iconTheme: {
-                                primary: '#C80D44',
+                        <Route path={Paths.Login} element={<Login />} />
+                        <Route path={Paths.Register} element={<Register />} />
+                        <Route path={Paths.Logout} element={<Logout />} />
+                        <Route path={Paths.NotFound} element={<NotFound />} />
+                    </Routes>
+                    <Toaster
+                        toastOptions={{
+                            style: {
+                                padding: '16px',
                             },
-                        },
-                    }} />
-            </AuthProvider>
-        </ShoppingProvider>
+                            success: {
+                                iconTheme: {
+                                    primary: '#C80D44',
+                                },
+                            },
+                        }} />
+                </AuthProvider>
+            </ShoppingProvider>
+        </ErrorBoundary >
     )
 }
 
