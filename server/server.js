@@ -1979,6 +1979,25 @@
                 _id: "cff21b2f-46c1-4a25-9806-b37eafbdc983"
             },
            
+            "28532dbe-40a1-4429-add3-a5fda835bbae": {
+                title: "The Ballad of Songbirds and Snakes",
+                author: "Suzanne Collins ",
+                price: 26.03,
+                description: "It is the morning of the reaping that will kick off the tenth annual Hunger Games. In the Capitol, eighteen-year-old Coriolanus Snow is preparing for his one shot at glory as a mentor in the Games. The once-mighty house of Snow has fallen on hard times, its fate hanging on the slender chance that Coriolanus will be able to outcharm, outwit, and outmaneuver his fellow students to mentor the winning tribute. The odds are against him. He's been given the humiliating assignment of mentoring the female tribute from District 12, the lowest of the low. Their fates are now completely intertwined -- every choice Coriolanus makes could lead to favor or failure, triumph or ruin. Inside the arena, it will be a fight to the death. Outside the arena, Coriolanus starts to feel for his doomed tribute... and must weigh his need to follow the rules against his desire to survive no matter what it takes.",
+                publishDate: 1690837200000,
+                publisher: "Scholastic Press",
+                pages: 582,
+                dimensions: "13x17x2.7",
+                language: "English",
+                format: "Hardcover",
+                quantity: 10,
+                rating: 4.5,
+                isBestseller: true,
+                isBookOfTheMonth: true,
+                imageUrl: "https://drive.google.com/uc?export=view&id=1S6dKVJifudaw2v9KSgLJ3G4MhcubaFEv",
+                _categoryId: "42ca7b92-0a19-41e4-9f37-75fc74e6cbd5",
+                _id: "28532dbe-40a1-4429-add3-a5fda835bbae"
+            },
             // "": {
             //     title: "",
             //     author: "",
@@ -1999,7 +2018,25 @@
             // },
          
         },
-        reviews:{},
+        reviews:{
+                
+        "ff354507-ed0f-4326-9ec1-eb24cade476a":{
+            "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+            "text": "This is a very nice and entertaining book.",
+            "rating": "4",
+            "bookId": "28532dbe-40a1-4429-add3-a5fda835bbae",
+            "_createdOn": 1702732493503,
+            "_id": "ff354507-ed0f-4326-9ec1-eb24cade476a"
+        },
+        "fc8c168c-e64f-40b4-b41c-2dcd1feeaf05":{
+            "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+            "text": "Great book.",
+            "rating": "5",
+            "bookId": "28532dbe-40a1-4429-add3-a5fda835bbae",
+            "_createdOn": 1702732499687,
+            "_id": "fc8c168c-e64f-40b4-b41c-2dcd1feeaf05"
+        },
+        },
         orders: {}
     };
     var rules$1 = {
