@@ -22,6 +22,8 @@ import MainLayout from './layouts/MainLayout';
 import ErrorBoundary from './error-boundaries/ErrorBoundary';
 
 import "./App.module.css";
+import GuestGuard from './route-guards/GuestGuard';
+import AuthGuard from './route-guards/AuthGuard';
 
 function App() {
     return (
@@ -36,15 +38,21 @@ function App() {
                             <Route path={Paths.Bestsellers} element={<Bestsellers />} />
                             <Route path={Paths.BookDetails} element={<BookDetails />} />
                             <Route path={Paths.ShoppingBasket} element={<ShoppingBasket />} />
-                            <Route path={Paths.Checkout} element={<Checkout />} />
-                            <Route path={Paths.OrderSuccess} element={<OrderSuccess />} />
-                            <Route path={Paths.Profile} element={<Profile />} />
-                            <Route path={Paths.OrderDetails} element={<OrderDetails />} />
+
+                            <Route element={<GuestGuard />}>
+                                <Route path={Paths.Checkout} element={<Checkout />} />
+                                <Route path={Paths.OrderSuccess} element={<OrderSuccess />} />
+                                <Route path={Paths.Profile} element={<Profile />} />
+                                <Route path={Paths.OrderDetails} element={<OrderDetails />} />
+                                <Route path={Paths.Logout} element={<Logout />} />
+                            </Route >
                         </Route>
 
-                        <Route path={Paths.Login} element={<Login />} />
-                        <Route path={Paths.Register} element={<Register />} />
-                        <Route path={Paths.Logout} element={<Logout />} />
+                        <Route element={<AuthGuard />}>
+                            <Route path={Paths.Login} element={<Login />} />
+                            <Route path={Paths.Register} element={<Register />} />
+                        </Route>
+
                         <Route path={Paths.NotFound} element={<NotFound />} />
                     </Routes>
                     <Toaster
