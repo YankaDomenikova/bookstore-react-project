@@ -12,7 +12,6 @@ export const ShoppingProvider = ({ children }) => {
     const [totalPrice, setTotalPrice] = usePersistedState("totalPrice", 0);
     const [totalQuantity, setTotalQuantity] = usePersistedState("totalQuantity", 0);
 
-    // Add to basket
     const addToBasketHandler = (product) => {
         const isInBasket = basketItems.find((item) => item._id === product._id);
         setTotalPrice(price => round(price + product.price));
@@ -24,7 +23,7 @@ export const ShoppingProvider = ({ children }) => {
                     return { ...item, basketQuantity: item.basketQuantity + 1 };
                 }
             });
-            setBasketItems(updatedBasketItems);
+            setBasketItems([...basketItems, updatedBasketItems]);
         }
         else {
             product.basketQuantity = 1;
@@ -64,7 +63,6 @@ export const ShoppingProvider = ({ children }) => {
     }
 
 
-    // Remove from basket
     const removeItem = (product) => {
         targetItem = basketItems.find((item) => item._id === product._id);
         const newBasketItems = basketItems.filter((item) => item._id !== product._id);
@@ -74,7 +72,6 @@ export const ShoppingProvider = ({ children }) => {
         toast.success("Book removed from basket");
     };
 
-    // Reset basket
     const resetBasket = () => {
         setBasketItems([]);
         setTotalPrice(0)
