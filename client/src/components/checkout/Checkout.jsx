@@ -28,7 +28,7 @@ export default function Checkout({ }) {
         try {
             const result = await orderService.create(
                 values.email,
-                values.fullname,
+                values.fullName,
                 values.phoneNumber,
                 values.address,
                 values.city,

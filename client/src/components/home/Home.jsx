@@ -26,7 +26,6 @@ export default function Home() {
         }
     }, []);
 
-    console.log(bookOfTheMonth);
     return (
         <>
             <div className={styles.banner}>

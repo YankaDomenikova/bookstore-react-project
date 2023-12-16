@@ -115,7 +115,7 @@
      justify-content: center;
  }
 
- .avatar a {
+ .avatar span {
      color: #fcfcfc;
      font-size: 14px;
      font-weight: 300;
@@ -126,6 +126,6 @@
      border-color: #C80D44;
  }
 
- .avatar:hover a {
+ .avatar:hover span {
      color: #C80D44;
  }
