@@ -6,7 +6,6 @@ export default function useModal(){
 
     const toggleShow = () => {
         setShow(!show);
-        console.log("close")
     }
 
     return {

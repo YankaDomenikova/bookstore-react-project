@@ -34,11 +34,8 @@ export default function Register() {
 
     return (
         <div className={styles.contentContainer}>
-            <button
-                className={`${styles.backBtn} ${styles.backBtnRegister}`}
-                onClick={() => navigate(-2)}
-            >
-                Go back
+            <button className={`${styles.backBtn} ${styles.backBtnRegister}`} onClick={() => navigate(Paths.Home)}>
+                Home
             </button>
 
             <section className={`${styles.authSection} ${styles.registerSection}`}>

@@ -32,8 +32,8 @@ export default function Login() {
 
     return (
         <div className={styles.contentContainer}>
-            <button className={`${styles.backBtn} ${styles.backBtnLogin}`} onClick={() => navigate(-1)}>
-                Go back
+            <button className={`${styles.backBtn} ${styles.backBtnLogin}`} onClick={() => navigate(Paths.Home)}>
+                Home
             </button>
 
             <section className={styles.sideDesign}>
