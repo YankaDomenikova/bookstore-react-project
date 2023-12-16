@@ -36,35 +36,33 @@ export const ShoppingProvider = ({ children }) => {
     let targetItem;
     let itemIndex;
 
-    // Increment quantity
-    const incrementItemQuantity = (id) => {
+    const updateItemQuantity = (action, id) => {
         targetItem = basketItems.find((item) => item._id === id);
         itemIndex = basketItems.findIndex((item) => item._id === id);
         const newBasketItems = basketItems.filter((item) => item._id !== id);
-        setBasketItems([
-            ...newBasketItems.slice(0, itemIndex),
-            { ...targetItem, basketQuantity: targetItem.basketQuantity + 1 },
-            ...newBasketItems.slice(itemIndex)
-        ]);
-        setTotalPrice(price => round(price + targetItem.price));
-        setTotalQuantity(quantity => quantity + 1);
-    };
 
-    // Decrement quantity
-    const decrementItemQuantity = (id) => {
-        targetItem = basketItems.find((item) => item._id === id);
-        itemIndex = basketItems.findIndex((item) => item._id === id);
-        const newBasketItems = basketItems.filter((item) => item._id !== id);
-        if (targetItem.basketQuantity > 1) {
+        if (action === "increment") {
             setBasketItems([
                 ...newBasketItems.slice(0, itemIndex),
-                { ...targetItem, basketQuantity: targetItem.basketQuantity - 1 },
+                { ...targetItem, basketQuantity: targetItem.basketQuantity + 1 },
                 ...newBasketItems.slice(itemIndex)
             ]);
-            setTotalPrice(price => round(price - targetItem.price));
-            setTotalQuantity(quantity => quantity - 1);
+            setTotalPrice(price => round(price + targetItem.price));
+            setTotalQuantity(quantity => quantity + 1);
         }
-    };
+        else if (action === "decrement") {
+            if (targetItem.basketQuantity > 1) {
+                setBasketItems([
+                    ...newBasketItems.slice(0, itemIndex),
+                    { ...targetItem, basketQuantity: targetItem.basketQuantity - 1 },
+                    ...newBasketItems.slice(itemIndex)
+                ]);
+                setTotalPrice(price => round(price - targetItem.price));
+                setTotalQuantity(quantity => quantity - 1);
+            }
+        }
+    }
+
 
     // Remove from basket
     const removeItem = (product) => {
@@ -88,8 +86,7 @@ export const ShoppingProvider = ({ children }) => {
         totalPrice,
         totalQuantity,
         addToBasketHandler,
-        incrementItemQuantity,
-        decrementItemQuantity,
+        updateItemQuantity,
         removeItem,
         resetBasket
     }

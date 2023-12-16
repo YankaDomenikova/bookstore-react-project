@@ -10,7 +10,7 @@ import removeIcon from '../../../assets/remove-svgrepo-com.svg';
 import { Link } from 'react-router-dom';
 
 export default function ShoppingBasketItem({ _id, title, author, imageUrl, price, basketQuantity }) {
-    const { incrementItemQuantity, decrementItemQuantity, removeItem } = useContext(ShoppingContext);
+    const { updateItemQuantity, removeItem } = useContext(ShoppingContext);
     return (
         <div className={styles.basketItems}>
             <div className={styles.basketItem}>
@@ -26,11 +26,11 @@ export default function ShoppingBasketItem({ _id, title, author, imageUrl, price
                 </div>
 
                 <div className={styles.quantityControls}>
-                    <button className={styles.min} onClick={() => decrementItemQuantity(_id)}>
+                    <button className={styles.min} onClick={() => updateItemQuantity("decrement", _id)}>
                         <img src={minIcon} />
                     </button>
                     <p className={styles.qty}>{basketQuantity}</p>
-                    <button className={styles.plus} onClick={() => incrementItemQuantity(_id)}>
+                    <button className={styles.plus} onClick={() => updateItemQuantity("increment", _id)}>
                         <img src={plusIcon} alt="" />
                     </button>
                 </div>
