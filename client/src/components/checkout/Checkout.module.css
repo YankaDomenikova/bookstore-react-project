@@ -161,10 +161,14 @@
     font-family: 'Inter';
 }
 
+.errorContainer {
+    height: 15px;
+    padding-top: 2px;
+}
+
 .errorMessage {
     font-size: 10px;
     color: #D40101;
-    margin-top: 3px;
 }
 
 .error {

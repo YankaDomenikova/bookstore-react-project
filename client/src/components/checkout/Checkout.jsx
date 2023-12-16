@@ -63,6 +63,7 @@ export default function Checkout({ }) {
                 <div className={styles.shippingDetails}>
                     <div className={styles.shippingAddress}>
                         <h4 className={styles.heading}>Shipping address</h4>
+                        {errors.required && <p className={styles.errorMessage}>{errors.required}</p>}
                         <div className={styles.row}>
                             <div className={`${styles.inputWrapper} ${styles.email}`}>
                                 <label htmlFor="email">Email</label>
@@ -75,7 +76,9 @@ export default function Checkout({ }) {
                                     onChange={onChange}
                                     onBlur={() => onBlur(formKeys.email)}
                                 />
-                                {errors.email && <p className={styles.errorMessage}>{errors.email}</p>}
+                                <div className={styles.errorContainer}>
+                                    {errors.email && <p className={styles.errorMessage}>{errors.email}</p>}
+                                </div>
                             </div>
                         </div>
 
@@ -91,7 +94,9 @@ export default function Checkout({ }) {
                                     onChange={onChange}
                                     onBlur={() => onBlur(formKeys.fullName)}
                                 />
-                                {errors.fullName && <p className={styles.errorMessage}>{errors.fullName}</p>}
+                                <div className={styles.errorContainer}>
+                                    {errors.fullName && <p className={styles.errorMessage}>{errors.fullName}</p>}
+                                </div>
                             </div>
 
 
@@ -102,11 +107,14 @@ export default function Checkout({ }) {
                                     type="tel"
                                     name={formKeys.phoneNumber}
                                     id="phoneNum"
+                                    placeholder="+359881234567"
                                     value={values[formKeys.phoneNumber]}
                                     onChange={onChange}
                                     onBlur={() => onBlur(formKeys.phoneNumber)}
                                 />
-                                {errors.phoneNumber && <p className={styles.errorMessage}>{errors.phoneNumber}</p>}
+                                <div className={styles.errorContainer}>
+                                    {errors.phoneNumber && <p className={styles.errorMessage}>{errors.phoneNumber}</p>}
+                                </div>
                             </div>
                         </div>
 
@@ -124,8 +132,9 @@ export default function Checkout({ }) {
                                 />
                             </div>
                         </div>
-                        {errors.address && <p className={styles.errorMessage}>{errors.address}</p>}
-
+                        <div className={styles.errorContainer}>
+                            {errors.address && <p className={styles.errorMessage}>{errors.address}</p>}
+                        </div>
                         <div className={styles.row}>
                             <div className={`${styles.inputWrapper} ${styles.city}`}>
                                 <label htmlFor="city">City</label>
@@ -138,7 +147,9 @@ export default function Checkout({ }) {
                                     onChange={onChange}
                                     onBlur={() => onBlur(formKeys.city)}
                                 />
-                                {errors.city && <p className={styles.errorMessage}>{errors.city}</p>}
+                                <div className={styles.errorContainer}>
+                                    {errors.city && <p className={styles.errorMessage}>{errors.city}</p>}
+                                </div>
                             </div>
 
                             <div className={`${styles.inputWrapper} ${styles.postalCode}`}>
@@ -152,7 +163,9 @@ export default function Checkout({ }) {
                                     onChange={onChange}
                                     onBlur={() => onBlur(formKeys.postalCode)}
                                 />
-                                {errors.postalCode && <p className={styles.errorMessage}>{errors.postalCode}</p>}
+                                <div className={styles.errorContainer}>
+                                    {errors.postalCode && <p className={styles.errorMessage}>{errors.postalCode}</p>}
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -131,7 +131,7 @@ export default function BookDetails() {
                         </li>
                         <li>
                             <p>Publish date</p>
-                            <p>{book.publishDate}</p>
+                            <p>{convert(book.publishDate)}</p>
                         </li>
                         <li>
                             <p>Lanuage</p>
