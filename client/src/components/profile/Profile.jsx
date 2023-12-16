@@ -15,11 +15,12 @@ export default function Profile() {
 
     useEffect(() => {
         orderService.getAll(userId)
-            .then(result => {
-                const descending = [...result];
-                descending.reverse();
-                setOrders(descending);
-            });
+            .then(result => setOrders(result));
+        // .then(result => {
+        //     const descending = [...result];
+        //     descending.reverse();
+        //     setOrders(descending);
+        // });
     }, []);
 
 
