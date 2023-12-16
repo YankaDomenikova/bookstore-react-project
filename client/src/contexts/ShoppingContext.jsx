@@ -13,7 +13,7 @@ export const ShoppingProvider = ({ children }) => {
     const [totalQuantity, setTotalQuantity] = usePersistedState("totalQuantity", 0);
 
     const addToBasketHandler = (product) => {
-        const isInBasket = basketItems.find((item) => item._id === product._id);
+        const isInBasket = basketItems.find(item => item._id === product._id);
         setTotalPrice(price => round(price + product.price));
         setTotalQuantity(quantity => quantity + 1);
 
@@ -22,8 +22,9 @@ export const ShoppingProvider = ({ children }) => {
                 if (item._id === product._id) {
                     return { ...item, basketQuantity: item.basketQuantity + 1 };
                 }
+                else { return item }
             });
-            setBasketItems([...basketItems, updatedBasketItems]);
+            setBasketItems(updatedBasketItems);
         }
         else {
             product.basketQuantity = 1;
