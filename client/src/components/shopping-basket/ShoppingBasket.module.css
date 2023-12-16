@@ -20,12 +20,12 @@
     position: relative;
 }
 
-.basketContent .emptyBasketMessage {
+h3.emptyBasketMessage {
     color: #191919;
     position: absolute;
-    top: 40%;
+    top: 50px;
     left: 50%;
-    transform: translate(-40%, -50%);
+    transform: translate(-50%, -50%);
 }
 
 .basketContent .basketItems {

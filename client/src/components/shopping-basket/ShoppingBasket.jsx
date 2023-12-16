@@ -31,7 +31,7 @@ export default function ShoppingBasket() {
                 <div className={styles.basketContent}>
                     {basketItems.map(item => <ShoppingBasketItem key={item._id} {...item} />)}
 
-                    {basketItems.length === 0 && <h3 className="emptyBasketMessage">Your basket is empty</h3>}
+                    {basketItems.length === 0 && <h3 className={styles.emptyBasketMessage}>Your basket is empty</h3>}
                 </div>
                 <div className={styles.additionalInfo}>
                     <div className={styles.orderDetails}>

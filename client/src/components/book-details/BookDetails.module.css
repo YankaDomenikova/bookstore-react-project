@@ -105,7 +105,7 @@
 .quantity {
     color: #C07A12;
     /* margin-top: 20px; */
-    font-size: 13px;
+    font-size: 11px;
 }
 
 .delivery {
@@ -114,12 +114,12 @@
 }
 
 .delivery p {
-    font-size: 12px;
+    font-size: 10px;
     margin-left: 3px;
 }
 
 .delivery img {
-    height: 20px;
+    height: 15px;
 }
 
 .bookPrice {

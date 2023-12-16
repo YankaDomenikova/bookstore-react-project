@@ -73,6 +73,7 @@ export default function BookDetails() {
     const deleteReviewHandler = async (id) => {
         await reviewService.deleteReview(id);
         setReviews(state => state.filter(r => r._id !== id));
+        toast.success("Review deleted")
     };
 
     return (
@@ -112,10 +113,10 @@ export default function BookDetails() {
                             <QuantityText quantity={book.quantity} />
                         </div>
 
-                        <div className={styles.delivery}>
+                        {book.quantity > 0 && <div className={styles.delivery}>
                             <img src={truck} alt="" />
                             <p>Delivery in 3 - 4 work days</p>
-                        </div>
+                        </div>}
                     </div>
 
                     <h2 className={styles.bookPrice}>$ {book.price}</h2>

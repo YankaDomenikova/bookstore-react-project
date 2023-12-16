@@ -80,6 +80,7 @@
 .buttons .cancelBtn {
     background: #C80D44;
     width: 70px;
+    height: 40px;
     border-radius: 2px;
 }
 
