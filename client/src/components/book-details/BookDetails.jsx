@@ -12,6 +12,10 @@ import { convert } from "../../utils/dateConverter";
 import { calculate } from "../../utils/ratingCalculator";
 
 import StarRatingDisplay from '../star-rating-display/StarRatingDisplay';
+import StarRatingInput from "../star-rating-input/StarRatingInput";
+import EditReviewModal from "../modals/EditReviewModal";
+import ShoppingContext from "../../contexts/ShoppingContext";
+import QuantityText from "../quantity-text/QuantityText";
 
 import styles from './BookDetails.module.css';
 import openBookIcon from '../../assets/book-open-svgrepo-com.svg';
@@ -19,10 +23,7 @@ import bookIcon from '../../assets/book-svgrepo-com.svg';
 import truck from '../../assets/delivery-truck-with-packages-behind-svgrepo-com.svg';
 import editIcon from '../../assets/edit-svgrepo-com.svg';
 import deleteIcon from '../../assets/trash-1-svgrepo-com.svg';
-import StarRatingInput from "../star-rating-input/StarRatingInput";
-import EditReviewModal from "../modals/EditReviewModal";
-import ShoppingContext from "../../contexts/ShoppingContext";
-import QuantityText from "../quantity-text/QuantityText";
+import awardIcon from '../../assets/pin-award-svgrepo-com.svg';
 
 const formKeys = {
     text: 'text',
@@ -93,6 +94,11 @@ export default function BookDetails() {
                             </div>
                         </div>
                     </div>
+
+                    {book.isBestseller && <div className={styles.bestseller}>
+                        <img src={awardIcon} alt="" />
+                        <p>Bestseller</p>
+                    </div>}
 
                     <div className={styles.infoOverview}>
                         <img src={openBookIcon} alt="" />
