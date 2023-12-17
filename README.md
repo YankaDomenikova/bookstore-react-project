@@ -1,7 +1,9 @@
-<style>p{color:#191919;}</style>
-<style>H1{color:#C80D44;}</style>
-<style>H2{color:#C80D44;}</style>
-<style>H3{color:#191919;}</style>
+<style>
+p{color:#191919;}
+H1{color:#C80D44;}
+H2{color:#C80D44;}
+H3{color:#191919;}
+</style>
 
 # Bookstore
 
