@@ -85,7 +85,7 @@ export default function Login() {
                         <Link className={styles.forgotPassword}>Forgot Password?</Link>
                     </div>
 
-                    <input className={styles.loginBtn} type="submit" value="Login" disabled={Object.values(errors).some(x => x !== null)} />
+                    <input className={styles.loginBtn} type="submit" value="Login" />
                 </form>
 
                 <div className={styles.linkAuth}>

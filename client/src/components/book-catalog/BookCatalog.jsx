@@ -24,7 +24,7 @@ export default function BookCatalog() {
                 .then(result => setCategories(result));
 
         } catch (error) {
-            toast.error(error);
+            toast.error(error.message);
         }
     }, []);
 
