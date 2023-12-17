@@ -77,3 +77,15 @@ Logged users have access to the functionalities of guest users, with addition of
 
 ### Order details
 ![Order details](./screenshots/orderdetails.png)  
+
+### Toast notifications
+<table>
+    <tr>
+        <td>
+            <img src="./screenshots/toast1.png">
+        </td>
+        <td>
+            <img src="./screenshots/toast1.png">
+        </td>
+    </tr>
+</table>
