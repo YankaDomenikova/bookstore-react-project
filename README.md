@@ -1,3 +1,8 @@
+<style>p{color:#191919;}</style>
+<style>H1{color:#C80D44;}</style>
+<style>H2{color:#C80D44;}</style>
+<style>H3{color:#191919;}</style>
+
 # Bookstore
 
 Bookstore is a online book shop seling a wide viriety of books for users to browse through and purchase.
@@ -17,16 +22,17 @@ Logged users have access to the functionalities of guest users, with addition of
 * Data validation
 * react-hot-toast for notifications
 * Catalog 
-* Detail for each book
+* Details page for each book
 * Adding products to basket and creating orders 
 * Profile page of user
+* Details page for orders
 
 ## Setup
 1. Clone repository
 
 2. Open the *client* folder in a terminal and run the following commands
    ```bash
-   npm install  // install dependencies
+   npm install 
    npm run dev  
    ```
 
@@ -42,44 +48,37 @@ Logged users have access to the functionalities of guest users, with addition of
 ## Project overview
 
 ### Authentication
-<table>
-<tr>
-    <td>
-        <img src="./screenshots/login.png" width=100% >
-    </td>
-    <td>
-        <img src="./screenshots/register.png" width=100% >
-    </td>
-</tr>
-</table>
+![Login page](./screenshots/login.png)  
+
+![Register page](./screenshots/register.png)  
 
 ### Home 
-![](./screenshots/home.png)  
+![Home](./screenshots/home.png)  
 
 ### Catalog
-![](./screenshots/catalog.png)  
+![Book catalog](./screenshots/catalog.png)  
 
 ### Books by category
-![](./screenshots/bycategory.png)  
+![Books by category](./screenshots/bycategory.png)  
 
 ### Book details
-![](./screenshots/bookdetails.png)  
+![Book details](./screenshots/bookdetails.png)  
 
 ### Reviews
-![](./screenshots/reviews.png) 
-![](./screenshots/edirreview.png)  
+![Reviews](./screenshots/reviews.png) 
+![Edit review](./screenshots/edirreview.png)  
 
-### Basket
-![](./screenshots/basket.png)  
+### Shopping basket
+![Shopping basket](./screenshots/basket.png)  
 
 ### Checkout
-![](./screenshots/checkout.png)  
+![Checkout](./screenshots/checkout.png)  
 
 ### Order success
-![](./screenshots/ordersuccess.png)  
+![Order success](./screenshots/ordersuccess.png)  
 
 ### Profile
-![](./screenshots/profile.png)  
+![User prifile](./screenshots/profile.png)  
 
 ### Order details
-![](./screenshots/orderdetails.png)  
+![Order details](./screenshots/orderdetails.png)  
