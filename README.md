@@ -1,4 +1,4 @@
-<h1 style="color:#C80D44">Bookstore</h1>
+# Bookstore
 
 Bookstore is a online book shop seling a wide viriety of books for users to browse through and purchase.
 
