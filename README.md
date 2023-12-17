@@ -1,11 +1,4 @@
-<style>
-p{color:#191919;}
-H1{color:#C80D44;}
-H2{color:#C80D44;}
-H3{color:#191919;}
-</style>
-
-# Bookstore
+<h1 style="color:#C80D44">Bookstore</h1>
 
 Bookstore is a online book shop seling a wide viriety of books for users to browse through and purchase.
 
