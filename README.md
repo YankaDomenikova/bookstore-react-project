@@ -16,6 +16,8 @@ Logged users have access to the functionalities of guest users, with addition of
 * Client-side routing
 * Data validation
 * react-hot-toast for notifications
+* Google Drive storage for resourse images
+---
 * Catalog 
 * Details page for each book
 * Adding products to basket and creating orders 
