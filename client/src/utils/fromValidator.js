@@ -3,7 +3,7 @@ const passwordPattern = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{8,20}$
 const usernamePattern = /^[a-zA-Z_.]{3,40}$/;
 const postalcodePattern = /^\d{4}$/;
 const fullnamePattern = /^[a-zA-Z\s]+$/;
-const phonenumberPattern = /^(\+359( )?\d{9})$/;
+const phonenumberPattern = /^[\+]?[0-9]{10,12}$/;
 
 export const validate = (key, value) => {
     let error = null;

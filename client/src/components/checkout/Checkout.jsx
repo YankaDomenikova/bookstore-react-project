@@ -107,7 +107,6 @@ export default function Checkout({ }) {
                                     type="tel"
                                     name={formKeys.phoneNumber}
                                     id="phoneNum"
-                                    placeholder="+359881234567"
                                     value={values[formKeys.phoneNumber]}
                                     onChange={onChange}
                                     onBlur={() => onBlur(formKeys.phoneNumber)}
