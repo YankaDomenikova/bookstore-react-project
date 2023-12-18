@@ -194,7 +194,7 @@ export default function BookDetails() {
                         {errors.text && <p className={styles.errorMessage}>{errors.text}</p>}
 
 
-                        <input type="submit" className={styles.sendReview} value="Send revirew" disabled={Object.values(errors).some(x => x !== null)} />
+                        <input type="submit" className={styles.sendReview} value="Send revirew" disabled={Object.values(errors).some(x => x !== null) || !isAuthenticated} />
                     </div>
                 </form>
 
