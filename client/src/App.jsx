@@ -21,9 +21,9 @@ import NotFound from "./components/not-found/NotFound";
 import MainLayout from './layouts/MainLayout';
 import ErrorBoundary from './error-boundaries/ErrorBoundary';
 
-import "./App.module.css";
 import GuestGuard from './route-guards/GuestGuard';
 import AuthGuard from './route-guards/AuthGuard';
+import "./App.module.css";
 
 function App() {
     return (

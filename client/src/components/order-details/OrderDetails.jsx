@@ -115,6 +115,7 @@ export default function OrderDetails() {
                 </div>
                 <div className={styles.orderInfo}>
                     <h4>Contact info</h4>
+                    <p>{order.fullName}</p>
                     <p>{order.email}</p>
                     <p>{order.phoneNumber}</p>
                 </div>
