@@ -85,7 +85,7 @@ Logged users have access to the functionalities of guest users, with addition of
             <img src="./screenshots/toast1.png">
         </td>
         <td>
-            <img src="./screenshots/toast1.png">
+            <img src="./screenshots/toast2.png">
         </td>
     </tr>
 </table>
