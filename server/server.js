@@ -2037,7 +2037,44 @@
             "_id": "fc8c168c-e64f-40b4-b41c-2dcd1feeaf05"
         },
         },
-        orders: {}
+        orders: {
+            "0a025d08-21ac-4877-8b58-cbb8f90397ee":{
+                "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
+                "email": "peter@abv.bg",
+                "fullName": "Peter Ivanov",
+                "phoneNumber": "0881234567",
+                "address": "Main Street 1",
+                "city": "Veliko Tarnovo",
+                "postalCode": "5000",
+                "orderNumber": 1703096268026,
+                "items": [
+                    {
+                        "_id": "8d1f9a76-8f76-4a71-9d23-6152fda8006c",
+                        "title": "The Darcy Myth",
+                        "author": "Rachel Feder",
+                        "quantity": 10,
+                        "price": 19.55,
+                        "format": "Paperback",
+                        "imageUrl": "https://drive.google.com/uc?export=view&id=12jr4dylqMJgq7kXeL-U4m11vntVWwYxp",
+                        "basketQuantity": 1
+                    },
+                    {
+                        "_id": "024d5155-2c67-4c10-b3a5-ae5969c466b3",
+                        "title": "Baumgartner",
+                        "author": "Paul Auster",
+                        "quantity": 3,
+                        "price": 25.11,
+                        "format": "Hardcover",
+                        "imageUrl": "https://drive.google.com/uc?export=view&id=1zzQNptXchrJCHjZHR37IfGQaZszwhz4G",
+                        "basketQuantity": 2
+                    }
+                ],
+                "totalPrice": 69.77,
+                "totalQuantity": 3,
+                "_createdOn": 1703096268057,
+                "_id": "0a025d08-21ac-4877-8b58-cbb8f90397ee"
+            }
+        }
     };
     var rules$1 = {
     	users: {
