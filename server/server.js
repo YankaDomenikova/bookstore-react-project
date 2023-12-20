@@ -1319,6 +1319,11 @@
     var identity = "email";
     var protectedData = {
     	users: {
+    		"12d57ef4-13f1-45ba-a34c-a6638964bbf0": {
+    			email: "yankadomenikova@mail.com",
+    			username: "ydomenikova",
+    			hashedPassword: "83313014ed3e2391aa1332615d2f053cf5c1bfe05ca1cbcb5582443822df6eb1"
+    		},
     		"35c62d76-8152-4626-8712-eeb96381bea8": {
     			email: "peter@abv.bg",
     			username: "Peter",
@@ -2018,8 +2023,7 @@
             // },
          
         },
-        reviews:{
-                
+        reviews:{      
         "ff354507-ed0f-4326-9ec1-eb24cade476a":{
             "_ownerId": "35c62d76-8152-4626-8712-eeb96381bea8",
             "text": "This is a very nice and entertaining book.",
@@ -2073,6 +2077,52 @@
                 "totalQuantity": 3,
                 "_createdOn": 1703096268057,
                 "_id": "0a025d08-21ac-4877-8b58-cbb8f90397ee"
+            },
+            "bb3a9073-8694-4f9b-a01a-c907770f34a5":{
+                "_ownerId": "12d57ef4-13f1-45ba-a34c-a6638964bbf0",
+                "email": "yankadomenikova@mail.com",
+                "fullName": "Yanka Domenikova",
+                "phoneNumber": "0883456789",
+                "address": "Main Street 2",
+                "city": "Sofia",
+                "postalCode": "1000",
+                "orderNumber": 1703096897075,
+                "items": [
+                    {
+                        "_id": "45b0a8c7-d03a-4f32-ae7d-b8dfcd11d922",
+                        "title": "Colors of Film: The Story of Cinema in 50 Palettes",
+                        "author": "Charles Bramesco",
+                        "quantity": 5,
+                        "price": 26,
+                        "format": "Hardcover",
+                        "imageUrl": "https://drive.google.com/uc?export=view&id=1jd5fVZ0Pn5gFwJnhbYsNGfIAsj44dBZc",
+                        "basketQuantity": 1
+                    },
+                    {
+                        "_id": "4fa3da51-b60e-4241-a414-0edd3fd4ef4c",
+                        "title": "Bright Young Women",
+                        "author": "Jessica Knoll",
+                        "quantity": 10,
+                        "price": 26.03,
+                        "format": "Hardcover",
+                        "imageUrl": "https://drive.google.com/uc?export=view&id=1Da0f5jPAnzzI-dkS1AFZUy1KVN6FafFn",
+                        "basketQuantity": 1
+                    },
+                    {
+                        "_id": "6abb875b-81ec-4220-a3e1-5d528f030360",
+                        "title": "Venus in the Blind Spot",
+                        "author": "Junji Ito",
+                        "quantity": 10,
+                        "price": 21.38,
+                        "format": "Hardcover",
+                        "imageUrl": "https://drive.google.com/uc?export=view&id=1BMl9I31xam-ZOZMkvw5Ktar6Cc_nCqs5",
+                        "basketQuantity": 1
+                    }
+                ],
+                "totalPrice": 73.41,
+                "totalQuantity": 3,
+                "_createdOn": 1703096897101,
+                "_id": "bb3a9073-8694-4f9b-a01a-c907770f34a5"
             }
         }
     };
