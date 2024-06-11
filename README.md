@@ -45,7 +45,8 @@ Logged users have access to the functionalities of guest users, with addition of
 ## Project overview
 
 ### Authentication
-![Login page](./screenshots/login.png)  
+
+![Login page](https://github.com/YankaDomenikova/bookstore-react-project/assets/72886793/030a6e2c-c066-45ec-a3a8-393eb42ec179)
 
 ![Register page](./screenshots/register.png)  
 
